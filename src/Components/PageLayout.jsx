@@ -45,7 +45,7 @@ const PageLayout = ({ children }) => {
       {/* Main Content */}
       <div
         className={`flex-grow flex flex-col transition-all duration-300 ${
-          isSidebarOpen && !isDashboard ? "md:ml-[-10px]" : "ml-0"
+          isSidebarOpen && !isDashboard ? "md:ml-[-0px]" : "ml-0"
         } overflow-x-hidden`}
       >
         {/* Header - Hide for Dashboard */}

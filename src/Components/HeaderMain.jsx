@@ -37,7 +37,7 @@ const HeaderMain = () => {
       {/* All Button (visible on all screens) */}
       <span
         onClick={() => setSidebarOpen(true)}
-        className="px-4 py-2 bg-white rounded-lg mr-3 transition duration-300 border-b border-gray-400 hover:bg-gray-400 hover:border-[#3087d1] cursor-pointer"
+        className="px-4 py-2 bg-gray-200 rounded-lg mr-3 transition duration-300 border-b border-gray-400 hover:bg-gray-400 hover:border-[#3087d1] cursor-pointer"
       >
         ☰ All
       </span>
@@ -45,7 +45,7 @@ const HeaderMain = () => {
       {/* Categories Toggle (visible on smaller screens) */}
       <span
         onClick={handleCatButtonClick} // Use the new handler
-        className="lg:hidden px-4 py-2 bg-white rounded-lg ml-auto transition duration-300 border-b border-gray-400 hover:bg-gray-400 hover:border-[#3087d1] cursor-pointer"
+        className="lg:hidden px-4 py-2 bg-gray-200 rounded-lg ml-auto transition duration-300 border-b border-gray-400 hover:bg-gray-400 hover:border-[#3087d1] cursor-pointer"
       >
         ☰ Categories
       </span>
