@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroSection from '../Components/HeroSection'
 import ProductLayout from '../Context/ProductContext'
+import Footer from '../Components/Footer'
 
 
 
@@ -29,6 +30,7 @@ const Home = () => {
  
 />
 <ProductLayout /> {/* Displays dynamic products */}
+<Footer/>
 
 
 
