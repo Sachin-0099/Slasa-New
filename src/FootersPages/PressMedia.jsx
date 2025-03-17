@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Components/Footer";
 
 const PressMedia = () => {
   const pressData = [
@@ -63,6 +64,7 @@ const PressMedia = () => {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

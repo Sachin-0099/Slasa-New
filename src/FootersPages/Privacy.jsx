@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Components/Footer';
 
 const Privacy = () => {
   return (
@@ -109,6 +110,7 @@ const Privacy = () => {
           <li>🌐 <strong>Website:</strong> <a href="https://slasa-e-commerce.vercel.app/">https://slasa-e-commerce.vercel.app/</a></li>
         </ul>
       </section>
+      <Footer />
     </div>
   );
 };

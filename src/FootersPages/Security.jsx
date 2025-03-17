@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Components/Footer";
 
 const Security = () => {
   return (
@@ -94,6 +95,7 @@ const Security = () => {
           <strong> security@slasa.com</strong>
         </p>
       </section>
+      <Footer/>
     </div>
   );
 };

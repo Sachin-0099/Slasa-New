@@ -1,4 +1,5 @@
 import React from "react";
+import Footer from "../Components/Footer";
 
 const Cancellation = () => {
   return (
@@ -64,6 +65,7 @@ const Cancellation = () => {
           <li><strong>Phone:</strong> +971 55 886 63 26</li>
         </ul>
       </section>
+      <Footer />
     </div>
   );
 };

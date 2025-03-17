@@ -3,6 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import HelpSection from "./HelpSection";
 import HelpGrid from "./HelpGrid";
+import Footer from "../Components/Footer";
 
 const FAQ = () => {
   const faqs = [
@@ -53,6 +54,7 @@ const FAQ = () => {
         ))}
       </div>
     </div>
+    <Footer/>
     </>
   );
 };
