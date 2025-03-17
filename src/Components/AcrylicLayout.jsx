@@ -1,9 +1,8 @@
-import React from 'react';
+import React from "react";
 
 function AcrylicLayout() {
   return (
-<div className="max-w-screen-lg mx-auto bg-gradient-to-b from-[#000000] via-[#3087d1] to-[#000000]">
-
+    <div className="max-w-screen-lg mx-auto bg-gradient-to-b from-[#000000] via-[#3087d1] to-[#000000]">
       <div className="flex w-full">
         <div className="flex-1 bg-sky-200 p-8 flex items-center justify-center">
           <div className="text-center">
@@ -30,7 +29,9 @@ function AcrylicLayout() {
         </div>
         <div className="flex-1 bg-sky-200 p-8 flex items-center justify-center">
           <div className="text-center">
-            <h2 className="text-3xl font-semibold mb-2">The Essence of Clarity</h2>
+            <h2 className="text-3xl font-semibold mb-2">
+              The Essence of Clarity
+            </h2>
             <p className="text-lg">Sheer Elegance, Timeless Beauty</p>
           </div>
         </div>

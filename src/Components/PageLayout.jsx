@@ -8,8 +8,8 @@ import HeaderNav from "./HeaderNav";
 const PageLayout = ({ children }) => {
   const [showHeaderNav, setShowHeaderNav] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const location = useLocation(); 
-  const isDashboard = location.pathname === "/mpage"; 
+  const location = useLocation();
+  const isDashboard = location.pathname === "/mpage";
 
   useEffect(() => {
     let timeout;
@@ -31,9 +31,11 @@ const PageLayout = ({ children }) => {
     <div className="flex min-h-screen bg-white overflow-hidden">
       {/* Sidebar - Hide for Dashboard */}
       {!isDashboard && (
-        <div className={`fixed top-0 left-0 h-full z-20 bg-gray-800 transition-all duration-300 ${
-          isSidebarOpen ? "w-0" : "w-0"
-        }`}>
+        <div
+          className={`fixed top-0 left-0 h-full z-20 bg-gray-800 transition-all duration-300 ${
+            isSidebarOpen ? "w-0" : "w-0"
+          }`}
+        >
           <SideMenu
             className={`h-full text-white transition-transform transform ${
               isSidebarOpen ? "translate-x-0 w-64" : "-translate-x-full w-0"

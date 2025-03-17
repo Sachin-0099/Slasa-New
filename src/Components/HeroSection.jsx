@@ -3,7 +3,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const HeroSection = ({ slides = [], title, highlight, subtitle, buttonText, buttonLink }) => {
+const HeroSection = ({
+  slides = [],
+  title,
+  highlight,
+  subtitle,
+  buttonText,
+  buttonLink,
+}) => {
   if (!slides || !Array.isArray(slides)) {
     slides = [];
   }
@@ -42,7 +49,6 @@ const HeroSection = ({ slides = [], title, highlight, subtitle, buttonText, butt
           </div>
         )}
       </div>
-
     </div>
   );
 };

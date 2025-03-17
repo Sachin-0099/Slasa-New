@@ -64,8 +64,12 @@ const HeaderTop = () => {
           B2B Designing Services ⌄
           {hoveredItem === "b2b" && (
             <div className="absolute left-0 top-full mt-2 bg-gray-900 text-white rounded-md shadow-lg p-2 w-44 z-50">
-              <p className="px-4 py-2 hover:bg-gray-700 transition">Custom Designs</p>
-              <p className="px-4 py-2 hover:bg-gray-700 transition">Consulting Services</p>
+              <p className="px-4 py-2 hover:bg-gray-700 transition">
+                Custom Designs
+              </p>
+              <p className="px-4 py-2 hover:bg-gray-700 transition">
+                Consulting Services
+              </p>
             </div>
           )}
         </div>
@@ -81,7 +85,9 @@ const HeaderTop = () => {
           {hoveredItem === "area" && (
             <div className="absolute left-0 top-full mt-2 bg-gray-900 text-white rounded-md shadow-lg p-2 w-40 z-50">
               <p className="px-4 py-2 hover:bg-gray-700 transition">Sharjah</p>
-              <p className="px-4 py-2 hover:bg-gray-700 transition">Abu Dhabi</p>
+              <p className="px-4 py-2 hover:bg-gray-700 transition">
+                Abu Dhabi
+              </p>
               <p className="px-4 py-2 hover:bg-gray-700 transition">Hatta</p>
             </div>
           )}
@@ -90,14 +96,15 @@ const HeaderTop = () => {
 
       {/* Right Section (Hide on smaller screens) */}
       <div className="sm:flex items-center gap-2 md:gap-4 flex-nowrap">
-        <div className=" hidden cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition">Store Locator</div>
-        <div className="hidden  cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition">Help</div>
+        <div className=" hidden cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition">
+          Store Locator
+        </div>
+        <div className="hidden  cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition">
+          Help
+        </div>
         <div className="hidden lg:block cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition">
-  Sell with Us
-</div>
-
-
-
+          Sell with Us
+        </div>
       </div>
     </div>
   );

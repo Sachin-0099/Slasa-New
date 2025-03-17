@@ -73,14 +73,12 @@ const HeaderMain = () => {
           path="/new"
           onClick={closeCategories}
         />
-       
+
         <CategoryItem
           title="Photography & Videography"
           path="/photography"
           onClick={closeCategories}
         />
-
-      
       </div>
 
       {/* Sidebar Menu (mobile view) */}
