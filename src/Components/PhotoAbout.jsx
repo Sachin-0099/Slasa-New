@@ -23,10 +23,12 @@ const PhotoAbout = () => {
             </div>
 
             {/* Description */}
-            <p className="lg:text-lg md:text-sm text-gray-700 text-xs p-2 md:p-3 lg:p-8 leading-4 md:leading-4 lg:leading-10">
+            <p className="lg:text-md md:text-lg text-gray-700 text-xs p-2 md:p-3 lg:p-6 leading-4 md:leading-4 lg:leading-6">Hi, this is Emad Captures—an accomplished photographer and videographer with over a decade of experience capturing the refined details and unique narratives that define each scene.
+            </p>
+            <p className="lg:text-md md:text-lg text-gray-700 text-xs p-2 md:p-3 lg:p-6 leading-4 md:leading-4 lg:leading-6">
               My journey has taken me across the United Arab Emirates, Thailand, parts of Africa, and Pakistan, enriching my creative vision and expertise. Whether it's dynamic social media content, fashion and modeling shoots, immersive 360° real estate coverage, construction timelapses, stunning drone visuals, intimate portraits, food restaurant imagery, or lively corporate events, weddings, birthdays, and product shoots, I bring passion and precision to every project.
             </p>
-            <p className="lg:text-lg ml-2 mt-[-10px] md:text-lg text-gray-700 text-xs p-2 md:p-3 lg:p-4 leading-4 md:leading-4 lg:leading-10">
+            <p className="lg:text-md ml-2  md:text-lg text-gray-700 text-xs p-2 md:p-3 lg:p-4 leading-4 md:leading-4 lg:leading-6">
               Now, I'm excited to elevate my creative horizons further as I venture into Saudi Arabia through a vibrant partnership with “Slasa”, promising fresh perspectives and innovative storytelling in every frame.
             </p>
           </div>

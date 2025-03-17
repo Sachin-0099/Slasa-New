@@ -27,6 +27,10 @@ import Payments from "./FootersPages/Payments";
 import TodaysDeals from "./Pages/TodaysDeals";
 import Shop from "./Pages/Shop";
 import NewArrivals from "./Pages/NewArrivals";
+import YourAccount from "./Components/AccountSection";
+import Wishlist from "./Components/WishList";
+import Cartpage from "./Components/Cartpage";
+import CustomerSection from "./Components/CustomerSection";
 
 // Import CarouselProvider
 
@@ -241,6 +245,40 @@ function App() {
                 </PageLayout>
               }
             />
+            {/* Routing for the sidebarpages */}
+            <Route
+              path="/account"
+              element={
+                <PageLayout>
+                <YourAccount/>
+                </PageLayout>
+              }
+            />
+             <Route
+              path="/wishlist"
+              element={
+                <PageLayout>
+               <Wishlist/>
+                </PageLayout>
+              }
+            />
+             <Route
+              path="/cart"
+              element={
+                <PageLayout>
+               <Cartpage/>
+                </PageLayout>
+              }
+            />
+             <Route
+              path="/customer"
+              element={
+                <PageLayout>
+                <CustomerSection/>
+                </PageLayout>
+              }
+            />
+            
           </Routes>
         </Router>
       </GridProvider>

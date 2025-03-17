@@ -42,17 +42,18 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
         </div>
 
         {/* Image Container - Ensuring layout remains consistent */}
-        <div className="flex overflow-x-auto whitespace-nowrap gap-6 p-4 flex-wrap md:flex-nowrap md:justify-end">
-          {items.map((item, index) => (
-            <img
-              key={index}
-              src={item.image}
-              alt={item.alt}
-              className="w-40 h-40 sm:w-56 sm:h-44 object-cover cursor-pointer"
-              onClick={() => handleClick(item)}
-            />
-          ))}
-        </div>
+        <div className="flex overflow-x-auto whitespace-nowrap gap-4 p-4 flex-nowrap md:flex-wrap md:justify-end">
+  {items.map((item, index) => (
+    <img
+      key={index}
+      src={item.image}
+      alt={item.alt}
+      className="w-40 h-40 sm:w-56 sm:h-44 object-cover cursor-pointer"
+      onClick={() => handleClick(item)}
+    />
+  ))}
+</div>
+
       </div>
     );
   }

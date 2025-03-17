@@ -183,16 +183,7 @@ const SideMenu = ({ isOpen, onClose }) => {
             link="/services-Photography-&-Videography-Setup"
           />
         </ExpandableMenu>
-        <ExpandableMenu
-          title="Maintanance Services"
-          isOpen={openSections.maintanance}
-          toggle={() => toggleSection("maintanance")}
-        >
-          <MenuItem text="Home Maintenance " link="/home-maintenance " />
-          <MenuItem text="Office Maintenance " link="/office " />
-          <MenuItem text="Facility Management " link="/facility" />
-          <MenuItem text="Specialized Services " link="/specialized" />
-        </ExpandableMenu>
+      
         <ExpandableMenu
           title="Other Services"
           isOpen={openSections.others}
@@ -213,75 +204,12 @@ const SideMenu = ({ isOpen, onClose }) => {
         </ExpandableMenu>
       </MenuSection>
 
-      <MenuSection title="Construction & Renovation ">
-        <ExpandableMenu
-          title="New Construction "
-          isOpen={openSections.construction}
-          toggle={() => toggleSection("construction")}
-        >
-          <MenuItem text="Institutional & Public Buildings" link="/public" />
-          <MenuItem
-            text="Commercial & Industrial Construction"
-            link="/commercial"
-          />
-          <MenuItem
-            text="Landscaping & Outdoor Structures"
-            link="/landscaping"
-          />
-          <MenuItem text="Lighting & Ceiling Design" link="/ceiling" />
-        </ExpandableMenu>
 
-        <ExpandableMenu
-          title="Home Renovation "
-          isOpen={openSections.rennovation}
-          toggle={() => toggleSection("rennovation")}
-        >
-          <MenuItem text="Luxury Interior Makeovers" link="/luxury" />
-          <MenuItem text="Smart Home Integration" link="/smart-home" />
-          <MenuItem
-            text="Space Optimization & Partitioning"
-            link="space-optimization"
-          />
-          <MenuItem text="Wall Treatments & Decor" link="/wall-treatments" />
-        </ExpandableMenu>
-        <ExpandableMenu
-          title="Interior Design "
-          isOpen={openSections.design}
-          toggle={() => toggleSection("design")}
-        >
-          <MenuItem text="Kitchen Remodeling" link="/kitchen" />
-          <MenuItem text="Bathroom Renovation" link="/bathroom" />
-          <MenuItem text="Flooring & Tiling" link="/flooring" />
-          <MenuItem text="Energy-Efficient Upgrades" link="/energy" />
-        </ExpandableMenu>
 
-        <ExpandableMenu
-          title="Commercial Space Remodeling "
-          isOpen={openSections.Remodeling}
-          toggle={() => toggleSection("Remodeling")}
-        >
-          <MenuItem text="Retail Store Renovation" link="/retail-store" />
-          <MenuItem text="Office Interior & Fit-Out" link="/Office-interior" />
-          <MenuItem
-            text="Hospitality & Restaurant Upgrade"
-            link="/hospitality"
-          />
-          <MenuItem
-            text="Warehouse & Industrial Facility Renovation"
-            link="/Warehouse"
-          />
-        </ExpandableMenu>
-        <ExpandableMenu
-          title="Structural & Civil Works "
-          isOpen={openSections.Works}
-          toggle={() => toggleSection("Works")}
-        >
-          <MenuItem text="Foundation & Concrete Works" link="/foundation" />
-          <MenuItem text="Masonry & Brickwo" link="/masonry" />
-          <MenuItem text="Steel & Metal Fabrication" link="/steel" />
-          <MenuItem text="Demolition & Site Preparation" link="/demolition" />
-        </ExpandableMenu>
-      </MenuSection>
+
+       
+        
+     
 
       <MenuSection title="Help and Settings">
         <MenuItem text="Your Account" link="/account" />

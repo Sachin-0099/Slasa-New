@@ -10,7 +10,18 @@ const Header = () => {
             <div className='lg:h-full lg:w-[60%] md:h-full md:w-[60%] w-full h-[40vh]'>
                 <div className='flex flex-wrap items-center justify-center'>
                     <img src={logo} alt="" className='lg:w-[90vh] lg:h-[36vh] md:w-[50vh] md:h-[20vh] h-[10vh] w-[30vh] mt-10' />
-                    <p className='lg:text-2xl md:text-xl text-sm p-4 md:p-10 lg:p-10 font-semibold leading-5 md:leading-7 lg:leading-10'>Hi, This is Emad Captures—an accomplished photographer and videographer with over a decade of experience capturing the refined details and unique narratives that define each scene.</p>
+                    <h1
+  className="lg:text-4xl md:text-2xl text-lg p-4 md:p-10 lg:p-10 font-semibold leading-5 md:leading-7 lg:leading-10 text-transparent bg-clip-text relative bottom-20"
+  style={{
+    backgroundImage: "linear-gradient(to right, black, #3087d1, black)",
+    marginTop: "auto", // Adjusts dynamically
+  }}
+>
+  Emad Captures
+</h1>
+
+
+
                 </div>
             </div>
             <div className='lg:h-full lg:w-[72vh] md:h-full md:w-[40vh] w-full h-[40vh]'>

@@ -1,0 +1,97 @@
+Global styles to prevent overflow
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevents side scrolling */
+  }
+  
+  
+  /* Root container */
+  #root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    position: fixed; /* Keeps sidebar fixed on the page */
+    top: 0;
+    left: 0;
+    width: 250px; /* Fixed width for sidebar */
+    height: 100vh;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    flex-shrink: 0; /* Prevents shrinking */
+    z-index: 10;
+    overflow-y: auto;
+   
+     /* Allows scrolling if sidebar content overflows */
+  }
+  
+  /* Main content area */
+  .main-content {
+    flex-grow: 1;
+    margin-left: 0px; /* Keeps space for sidebar */
+    margin-top: 60px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Change from center to stretch */
+    justify-content: flex-start;
+    overflow-x: hidden;
+  }
+  .auth-page .main-content {
+    margin-left: 0 !important; /* Remove left margin for full width */
+    align-items: center; /* Center align the form if needed */
+  }
+  
+  
+  /* Ensure content inside main-content is full width */
+  .content-container {
+    width: 100%; /* Ensures full width */
+    max-width: 1200px; /* Optional: max-width for readability */
+    margin: 0 auto;
+  }
+  
+  /* Ensure all child elements inside main-content are 100% width */
+  .main-content > * {
+    width: 100%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Slightly smaller sidebar for smaller screens */
+    }
+    
+    .main-content {
+      margin-left: 200px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sidebar {
+      width: 100%; /* Full width for mobile */
+      height: auto;
+      position: relative; /* Moves it to flow normally */
+    }
+  
+    .main-content {
+      margin-left: 0; /* Remove left margin since sidebar is above */
+    }
+  
+  
+  }
+  
+  
