@@ -42,6 +42,7 @@ const HeroSection = ({ slides = [], title, highlight, subtitle, buttonText, butt
           </div>
         )}
       </div>
+
     </div>
   );
 };

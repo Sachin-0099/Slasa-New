@@ -145,8 +145,8 @@ const Footer = () => {
       <div className="bg-gray-200 py-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
           <img
-            src="./logo.png"
-            alt="Home Centre"
+            src="Images/Slasa.gif"
+            alt="Slasa"
             className="w-32 rounded-full"
           />
           <p className="text-gray-500 text-sm">Terms & Conditions - Privacy Policy</p>

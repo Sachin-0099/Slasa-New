@@ -33,7 +33,7 @@ const HeaderMain = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-between px-6 bg-white border-b-2 border-gray-400 flex-wrap relative overflow-hidden">
+    <div className="w-full flex items-center justify-between py-2 px-6 bg-white border-b-2 border-gray-400 flex-wrap relative overflow-hidden">
       {/* All Button (visible on all screens) */}
       <span
         onClick={() => setSidebarOpen(true)}

@@ -61,7 +61,7 @@ export const useProductContext = () => useContext(ProductContext);
 
 const ProductSection = ({ title, products }) => {
   return (
-    <div className="border p-4 w-full md:w-1/3 gap-2 shadow-lg border-b-8 border-[#3087d1]">  
+    <div className="border p-4 w-full md:w-1/3 gap-2 shadow-lg border-b-8 ">  
       <h2 className="text-center text-lg font-bold border-b pb-2">{title}</h2>
       <div className="grid grid-cols-2 gap-4 p-4">
         {products.map((product, index) => (
@@ -76,7 +76,7 @@ const ProductSection = ({ title, products }) => {
         ))}
       </div>
       <div className="text-center mt-4">
-      <button className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 px-6 rounded-full text-lg">
+      <button className="bg-gradient-to-b from-[#000000] via-[#3087d1] to-black text-white py-2 mt-4 px-6 rounded-full text-lg">
           See more
         </button>
       </div>
