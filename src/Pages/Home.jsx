@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import Grid from "../Components/Grid";
 import GridData from "../Data/GridData.json";
 import AcrylicLayout from "../Components/AcrylicLayout";
+import HomeSection from "../Components/HomeSection";
 
 const Home = () => {
   const { sectionsData, sectionsData2 } = GridData;
@@ -27,6 +28,7 @@ const Home = () => {
       <ProductLayout /> 
       <Grid sections={sectionsData2} />
       <AcrylicLayout />
+      <HomeSection/>
       <Footer />
     </>
   );

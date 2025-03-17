@@ -2,7 +2,8 @@ import React from "react";
 
 function AcrylicLayout() {
   return (
-    <div className="max-w-screen-lg mx-auto bg-gradient-to-b from-[#000000] via-[#3087d1] to-[#000000]">
+<div className="max-w-screen-lg mx-auto bg-gradient-to-b from-black via-[#3087d1] to-black border-b-6 border-[#3087d1]">
+
       <div className="flex w-full">
         <div className="flex-1 bg-[#7fc2fcfb] p-8 flex items-center justify-center">
           <div className="text-center">
@@ -14,7 +15,7 @@ function AcrylicLayout() {
           <img
             src="/Images/Exclusive22.jpeg"
             alt="Colorful Leaves"
-            className="w-full h-auto block  border-l-4 bg-border-[#3087d1]"
+            className="w-full h-auto block border-l-6 border-[#3087d1]"
           />
         </div>
       </div>
@@ -23,7 +24,7 @@ function AcrylicLayout() {
           <img
             src="/Images/Exclusive23.jpeg"
             alt="Mountain Landscape"
-            className="w-full h-[42vh] block"
+            className="w-full h-[42vh] block border-r-6 border-[#3087d1]"
           />
           <div className="absolute top-0 right-0 h-full w-[1px] bg-gray-300"></div>
         </div>
@@ -39,7 +40,7 @@ function AcrylicLayout() {
           <img
             src="/Images/Exclusive27.jpeg"
             alt="Floral Design"
-            className="w-full h-[42vh] block"
+            className="w-full h-[42vh] block border-l-6 border-[#3087d1]"
           />
         </div>
       </div>

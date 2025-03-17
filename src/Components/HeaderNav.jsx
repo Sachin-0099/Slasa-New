@@ -49,7 +49,7 @@ const HeaderNav = () => {
 
   return (
     <header className="bg-white px-3 sm:px-6 md:px-10 lg:px-20 shadow-md w-full">
-      <div className="flex justify-between items-center py-2 w-full flex-nowrap gap-2">
+      <div className="flex justify-between items-center py-px w-full flex-nowrap gap-2">
         {/* Logo */}
         <div
           className="cursor-pointer flex-shrink-0"

@@ -28,7 +28,7 @@ const HeroSection = ({
   };
 
   return (
-    <div className="relative w-screen h-[80vh] min-h-[500px] flex justify-start">
+    <div className="relative w-screen h-[80vh] min-h-[550px] flex justify-start">
       {/* Background Image Slider */}
       <div className="absolute inset-0 w-screen h-full">
         {slides.length > 0 ? (
