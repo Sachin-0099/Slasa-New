@@ -24,7 +24,7 @@ function AcrylicLayout() {
           <img
             src="/Images/Exclusive23.jpeg"
             alt="Mountain Landscape"
-            className="w-full h-[42vh] block border-r-6 border-[#3087d1]"
+            className="w-full h-auto block border-r-6 border-[#3087d1]"
           />
           <div className="absolute top-0 right-0 h-full w-[1px] bg-gray-300"></div>
         </div>
@@ -40,7 +40,7 @@ function AcrylicLayout() {
           <img
             src="/Images/Exclusive27.jpeg"
             alt="Floral Design"
-            className="w-full h-[42vh] block border-l-6 border-[#3087d1]"
+            className="w-full h-auto block border-l-6 border-[#3087d1]"
           />
         </div>
       </div>
