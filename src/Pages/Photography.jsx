@@ -10,6 +10,7 @@ import {EditData,ExperienceData,PhotoTourData} from '../Data/PhotoData'
 import Footer from '../Components/Footer'
 
 
+
 const Photography = () => {
   return (
     <div>
@@ -17,6 +18,7 @@ const Photography = () => {
     <Header/>
    <PhotoAbout/>
     <Section/>
+  
     <EditSection EditData={EditData}/>
     <PrintSection EditData={EditData}/>
     <Experience ExperienceData={ExperienceData}/>

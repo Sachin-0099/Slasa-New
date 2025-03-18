@@ -1,25 +1,25 @@
 export const PhotoData = [
-    { src: '/Images/phtoSec1.png' },
-    { src: '/Images/photoSec2.png' },
-    { src: '/Images/photoSec3.png' },
-    { src: '/Images/photoSec4.png' },
-    { src: '/Images/photoSec5.png' },
-    { src: '/Images/photoSec6.png' },
-    { src: '/Images/photoSec7.png' },
-    { src: '/Images/photoSec8.png'},
-    { src: '/Images/photoSec9.png' },
-    { src: '/Images/photoSect10.png' },
-    { src: '/Images/photoSec11.png' },
-    { src: '/Images/photoSec12.png' },
+    { src: '/Images/photoSection7.png' },
+    { src: '/Images/photoSection2.png' },
+    { src: '/Images/photoSection3.png' },
+    { src: '/Images/photoSection4.png' },
+    { src: '/Images/photoSection5.png' },
+    { src: '/Images/photoSection6.png' },
+    { src: '/Images/photoSection7.png' },
+    { src: '/Images/photoSec8.jpg'},
+    { src: '/Images/photoSection9.png' },
+    { src: '/Images/photoSection10.png' },
+    { src: '/Images/photoSection3.png' },
+    { src: '/Images/photoSection2.png' },
 ];
 
 export const VideoData = [
-    { src: '/Images/phtoSec1.png' },
-    { src: '/Images/photoSec2.png' },
-    { src: '/Images/photoSec3.png' },
-    { src: '/Images/photoSec4.png' },
-    { src: '/Images/photoSec5.png' },
-    { src: '/Images/photoSec6.png' },
+    { src: '/Video/video1.mp4' },
+    { src: '/Video/video2.mp4' },
+    { src: '/Video/video1.mp4' },
+    { src: '/Video/video4.mp4' },
+    { src: '/Video/video5.mp4' },
+    { src: '/Video/video4.mp4' },
 ];
 
 export const EmadLogo = [
@@ -28,16 +28,16 @@ export const EmadLogo = [
 
 export const EditData = [
     { 
-        src: '/Images/phtoSec1.png',
+        src: '/Images/Edit1.avif',
         name:'Blue Parrot',
         range:'$120-$130'  
      },
-    {   src: '/Images/photoSec2.png',
+    {   src: '/Images/Edit3.avif',
         name:'Fall Winter',
         range:'$120-$130'  
      },
     { 
-        src: '/Images/photoSec3.png',
+        src: '/Images/Edit4.avif',
         name:'Dreamy Swing',
         range:'$120-$130'
      },
@@ -60,3 +60,24 @@ export const PhotoTourData=[
         button:'Inquiry'
     }
 ]
+export const VideoDescription = [
+    {
+        icon: '/Images/youtubeIcon.png',
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, laboriosam eligendi? Quasi quibusdam aspernatur quos corrupti est praesentium error in suscipit voluptates! Nulla consequatur ex ab nesciunt eligendi illo, delectus omnis, voluptas, labore officiis libero',
+        link: 'https://www.youtube.com/@EmadCaptures' // ✅ Now it's a valid absolute URL
+    }
+];
+
+export const PhotoDescription = [
+    {
+        icon: '/Images/instagram.png',
+        description: 'Lorem ipsum dolor sit amet Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, laboriosam eligendi? Quasi quibusdam aspernatur quos corrupti est praesentium error in suscipit voluptates!...',
+        link: 'https://www.instagram.com/emadcaptures'  // ✅ Use full URL
+    }
+];
+
+  
+
+
+
+
