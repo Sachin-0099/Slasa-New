@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ProductCard from "./ProductCard";
-import Acrylic from "../pages/Acrylic";
+
 
 const ProductList = () => {
   const { category } = useParams(); // Get category from URL
