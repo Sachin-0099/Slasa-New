@@ -6,7 +6,7 @@ function AcrylicLayout() {
       
       {/* First Row */}
       <div className="flex w-full flex-col md:flex-row">
-        <div className="flex-1 bg-[#7fc2fcfb] p-8 flex items-center justify-center">
+        <div className="flex-1 bg-[#86bef0fb] p-8 flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-4xl font-semibold mb-2">Shimmer & Shine</h1>
             <p className="text-lg">Today's Acrylic Wonder</p>
@@ -33,7 +33,7 @@ function AcrylicLayout() {
           <div className="absolute top-0 right-0 h-full w-[1px] bg-gray-300"></div>
         </div>
 
-        <div className="flex-1 bg-[#7fc2fcfb] p-8 flex items-center justify-center">
+        <div className="flex-1 bg-[#86bef0fb] p-8 flex items-center justify-center">
           <div className="text-center">
             <h2 className="text-3xl font-semibold mb-2">The Essence of Clarity</h2>
             <p className="text-lg">Sheer Elegance, Timeless Beauty</p>

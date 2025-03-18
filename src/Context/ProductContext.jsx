@@ -12,22 +12,22 @@ export const ProductProvider = ({ children }) => {
 
   const defaultProducts = {
     productsLeft: [
-      { image: "Images/FIN2.jpg", title: "Acrylic Print" },
-      { image: "Images/fin3.jpg", title: "Acrylic Wood" },
-      { image: "Images/FIN4.jpg", title: "Wall Decor" },
+      { image: "Images/Exclusive22.jpeg", title: "Acrylic Print" },
+      { image: "Images/Exclusive24.jpeg", title: "Acrylic Wood" },
+      { image: "Images/Exclusive23.jpeg", title: "Wall Decor" },
       { image: "Images/FIN5.jpg", title: "Neon Festive" },
     ],
     productsRight: [
-      { image: "Images/FIN2.jpg", title: "Acrylic Print" },
-      { image: "Images/fin3.jpg", title: "Acrylic Wood" },
-      { image: "Images/FIN4.jpg", title: "Wall Decor" },
-      { image: "Images/FIN5.jpg", title: "Neon Festive" },
+      { image: "Images/Exclusive27.jpeg", title: "Acrylic Print" },
+      { image: "Images/Exclusive28.jpeg", title: "Acrylic Wood" },
+      { image: "Images/Exclusive26.jpeg", title: "Wall Decor" },
+      { image: "Images/Exclusive25.jpeg", title: "Neon Festive" },
     ],
     productsRight1: [
-      { image: "Images/FIN2.jpg", title: "Acrylic Print" },
-      { image: "Images/fin3.jpg", title: "Acrylic Wood" },
-      { image: "Images/FIN4.jpg", title: "Wall Decor" },
-      { image: "Images/FIN5.jpg", title: "Neon Festive" },
+      { image: "Images/Exclusive19.jpeg", title: "Acrylic Print" },
+      { image: "Images/Exclusive18.jpeg", title: "Acrylic Wood" },
+      { image: "Images/Exclusive16.jpeg", title: "Wall Decor" },
+      { image: "Images/Exclusive15.jpeg", title: "Neon Festive" },
     ],
   };
 

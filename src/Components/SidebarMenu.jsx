@@ -2,6 +2,7 @@ import * as RouterDom from "react-router-dom";
 import React, { useEffect, useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { ChevronDown, ChevronRight } from "lucide-react";
 
 const SideMenu = ({ isOpen, onClose }) => {
   const menuRef = useRef(null);
@@ -43,10 +44,10 @@ const SideMenu = ({ isOpen, onClose }) => {
         &#10006;
       </div>
       <div style={styles.header}>
-        <h2> 👨🏻 Hello, Sign In</h2>
+        <h2> 👨🏻 Hello Users</h2>
       </div>
 
-      <MenuSection title="Trending" className="text-2xl">
+      <MenuSection title="Trending" className="text-xl">
         <ExpandableMenu
           title="Best Sellers ✨"
           isOpen={openSections.sellers}
@@ -222,15 +223,20 @@ const SideMenu = ({ isOpen, onClose }) => {
 };
 
 const ExpandableMenu = ({ title, isOpen, toggle, children }) => {
-  return (
-    <div style={styles.expandableMenu}>
-      <div style={styles.menuItem} onClick={toggle}>
-        <span style={styles.menuText}>{title}</span>
-        <span style={styles.menuArrow}>{isOpen ? "▼" : "▶"}</span>
-      </div>
-      {isOpen && <div style={styles.subMenu}>{children}</div>}
+
+
+return (
+  <div style={styles.expandableMenu}>
+    <div style={styles.menuItem} onClick={toggle}>
+      <span style={styles.menuText}>{title}</span>
+      <span style={styles.menuArrow}>
+        {isOpen ? <ChevronDown size={16} /> : <ChevronRight size={16} />}
+      </span>
     </div>
-  );
+    {isOpen && <div style={styles.subMenu}>{children}</div>}
+  </div>
+);
+
 };
 
 const MenuSection = ({ title, children }) => {

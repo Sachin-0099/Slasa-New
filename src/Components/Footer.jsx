@@ -245,12 +245,12 @@ const Footer = () => {
       </div>
 
       {/* Contact & Copyright */}
-      <div className="bg-gray-200 py-6">
+      <div className="bg-white py-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center px-6">
           <img
-            src="Images/Slasa.gif"
+            src="Images/Untitled design.svg"
             alt="Slasa"
-            className="w-32 rounded-full"
+            className="w-32 "
           />
           <p className="text-gray-500 text-sm">
             Terms & Conditions - Privacy Policy

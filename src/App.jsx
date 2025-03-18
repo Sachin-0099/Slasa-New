@@ -1,9 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home";
 import PageLayout from "./Components/PageLayout";
 import { ProductProvider } from "./Context/ProductContext";
 import { GridProvider } from "./Context/GridContext";
+import { AuthProvider } from "./context/AuthContext";
+import { useAuth } from "./context/AuthContext";
 import ContactUs from "./FootersPages/ContactUs";
 import TrackOrder from "./FootersPages/TrackOrder";
 import Returns from "./FootersPages/Returns";
@@ -19,7 +21,7 @@ import Privacy from "./FootersPages/Privacy";
 import TermsConditions from "./FootersPages/TermsConditions";
 import Shipping from "./FootersPages/Shipping";
 import Sitemap from "./FootersPages/Sitemap";
-import Acrylic from "./Pages/Acrylic";
+import Acrylic from "./pages/Acrylic";
 import Photography from "./Pages/Photography";
 import Security from "./FootersPages/Security";
 import Cancellation from "./FootersPages/Cancellation";
@@ -31,16 +33,43 @@ import YourAccount from "./Components/AccountSection";
 import Wishlist from "./Components/WishList";
 import Cartpage from "./Components/Cartpage";
 import CustomerSection from "./Components/CustomerSection";
+import Checkout from "./Components/Checkout";
+import { useState } from "react";
+import SidebarMenu from "./Components/SidebarMenu";
 
-// Import CarouselProvider
+import { PackageProvider } from "./Context/PackageContext";
+import { VoucherProvider } from "./Context/VoucherContext";
+import { PromotionProvider } from "./Context/PromotionContext";
+import { Navigate } from "react-router-dom"; 
 
-// Replace with your actual API URL
+
+
+
 
 function App() {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const ProtectedRoute = ({ children }) => {
+    const { user } = useAuth();
+    return user ? children : <Navigate to="/signin" />;
+  };
+
   return (
+    <>
+     <SidebarMenu
+        isOpen={isSidebarOpen}
+        onClose={() => setSidebarOpen(false)}
+      />
+   
+       <div style={styles.pageContainer}>
+     <AuthProvider>
+      <PackageProvider>
+        <VoucherProvider>
+          <PromotionProvider>
+    
+       
     <ProductProvider>
       <GridProvider>
-        <Router>
+    
           <Routes>
             <Route
               path="/"
@@ -50,6 +79,14 @@ function App() {
                 </PageLayout>
               }
             />
+               <Route
+                    path="*"
+                    element={
+                      <PageLayout>
+                        <div>404 Not Found</div>
+                      </PageLayout>
+                    }
+                  />
 
             <Route
               path="/deals"
@@ -72,6 +109,14 @@ function App() {
               element={
                 <PageLayout>
                   <NewArrivals />
+                </PageLayout>
+              }
+            />
+             <Route
+              path="/checkout"
+              element={
+                <PageLayout>
+               <Checkout/>  
                 </PageLayout>
               }
             />
@@ -104,6 +149,7 @@ function App() {
               path="/press-media"
               element={
                 <PageLayout>
+                 
                   <PressMedia />
                 </PageLayout>
               }
@@ -258,6 +304,7 @@ function App() {
               path="/wishlist"
               element={
                 <PageLayout>
+                  {<ProtectedRoute />}
                <Wishlist/>
                 </PageLayout>
               }
@@ -266,6 +313,7 @@ function App() {
               path="/cart"
               element={
                 <PageLayout>
+                    {<ProtectedRoute />}
                <Cartpage/>
                 </PageLayout>
               }
@@ -280,9 +328,16 @@ function App() {
             />
             
           </Routes>
-        </Router>
+      
       </GridProvider>
     </ProductProvider>
+    </PromotionProvider>
+    </VoucherProvider>
+    </PackageProvider>
+    </AuthProvider>
+   
+    </div>
+    </>
   );
 }
 const styles = {

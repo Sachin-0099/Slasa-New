@@ -53,7 +53,7 @@ const HeaderMain = () => {
       {/* Categories (visible on larger screens, toggled on mobile) */}
       <div
         ref={categoriesRef}
-        className={`lg:flex-nowrap md:flex-nowrap  gap-3 mr-40 text-md font-semibold bg-white text-[#3087d1] ${
+        className={`lg:flex-nowrap md:flex-nowrap  gap-6 mr-40 text-md font-semibold bg-white !text-[#000000] ${
           isCategoriesOpen ? "block" : "hidden lg:flex"
         } w-full lg:w-auto mt-2 lg:mt-0 md:flex-nowrap`}
       >
