@@ -2,6 +2,8 @@ import React from "react";
 
 function AcrylicLayout() {
   return (
+    <>
+   
     <div className="max-w-screen-xl mx-auto bg-[#4da5f3] p-4 !border-[#3087d1] border-b-4">
       {/* First Row */}
       <div className="flex flex-col md:flex-row w-full">
@@ -14,7 +16,7 @@ function AcrylicLayout() {
         </div>
         <div className="flex-1 overflow-hidden">
           <img
-            src="/Images/Exclusive17.jpeg"
+            src="/Images/Exclusive22.jpeg"
             alt="Bath Accessories"
             className="w-full h-auto md:h-[42vh] object-cover border-l-4 border-[#3087d1]"
           />
@@ -38,7 +40,7 @@ function AcrylicLayout() {
         <div className="flex-1 bg-gradient-to-tr from-[#000000] via-[#3087d1] to-black p-px flex items-center justify-center text-center">
           <div>
             <h2 className="text-3xl font-semibold mb-2 text-white">Tomorrow’s fawaazeer</h2>
-            <p className="text-lg text-white">What tiny details create a dream space for your li'l one?</p>
+            <p className="text-lg text-white">Experience elegance and durability with our crystal-clear acrylic products.</p>
           </div>
         </div>
         <div className="flex-1 flex space-x-2">
@@ -53,8 +55,12 @@ function AcrylicLayout() {
             className="w-1/2 h-auto md:h-[20vh] object-cover"
           />
         </div>
+     
       </div>
+
     </div>
+     <img src="Images/Ex.gif" alt="" className="w-full mt-10"/>
+    </>
   );
 }
 

@@ -42,6 +42,7 @@ import { PackageProvider } from "./Context/PackageContext";
 import { VoucherProvider } from "./Context/VoucherContext";
 import { PromotionProvider } from "./Context/PromotionContext";
 import { Navigate } from "react-router-dom"; 
+import Acrylic from "./Pages/Acrylic";
 
 
 
@@ -82,14 +83,7 @@ function App() {
                 </PageLayout>
               }
             />
-             {/* <Route
-              path="/acrylic"
-              element={
-                <PageLayout>
            
-                </PageLayout>
-              }
-            /> */}
                <Route
                     path="*"
                     element={
@@ -98,12 +92,20 @@ function App() {
                       </PageLayout>
                     }
                   />
-
-            <Route
+                   <Route
               path="/deals"
               element={
                 <PageLayout>
                   <TodaysDeals />
+                </PageLayout>
+              }
+            />
+
+            <Route
+              path="/acrylic"
+              element={
+                <PageLayout>
+                 <Acrylic/>
                 </PageLayout>
               }
             />

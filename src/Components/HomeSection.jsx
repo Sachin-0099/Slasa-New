@@ -9,7 +9,9 @@ const HomeSection = () => {
       <img src="Images/Shimmer.jpeg" alt=""  />
       <img src="Images/Acrylic.png" alt=""  className='w-full'/>
       <img src="Images/Shimmer.jpeg" alt=""  />
+      <img src="Images/Video.mp4" alt="" className='w-full mx-auto' />
       <img src="Images/AcrylicWood.png" alt="" />
+
      
     </div>
   )

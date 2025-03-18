@@ -32,14 +32,17 @@ const Home = () => {
         ]}
       />
       <ProductLayout /> 
+      <AcrylicLayout />
       <ProductSection title="Featured Products" description="Discover our best-selling products, carefully selected to meet all your needs for home renovation and construction projects." className="mt-16" />
+     
+
 
       <div className="flex justify-center gap-4 flex-wrap p-4">
         <ProductCard />
         <ProductList />
       </div>
       <Grid sections={sectionsData2} />
-      <AcrylicLayout />
+    
      
      
       <PromotionOffers promotionId={2} />
