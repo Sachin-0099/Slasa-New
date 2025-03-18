@@ -17,7 +17,8 @@ const HeroSection = ({
 
   const settings = {
     dots: true,
-    dotsClass: "slick-dots !bottom-15 absolute left-1/2 transform -translate-x-1/2 text-white text-2xl",
+    dotsClass:
+      "slick-dots !bottom-5 absolute left-1/2 transform -translate-x-1/2 text-white text-2xl",
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -29,27 +30,25 @@ const HeroSection = ({
       <div className="w-3 h-3 bg-black rounded-full opacity-75 hover:opacity-100"></div>
     ),
   };
-  
-  
 
   return (
-    <div className="relative w-full  h-[70vh] min-h-[50px] flex justify-start">
+    <div className="relative w-full  flex flex-col overflow-hidden">
       {/* Background Image Slider */}
-      <div className="absolute inset-0 w-screen h-full">
+      <div className="w-full ">
         {slides.length > 0 ? (
-          <Slider {...settings} className="h-full">
+          <Slider {...settings}>
             {slides.map((slide, index) => (
               <div key={index} className="w-full h-full">
                 <img
                   src={slide}
                   alt={`Hero Background ${index + 1}`}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
             ))}
           </Slider>
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-white text-2xl">
+          <div className="w-full h-full flex items-center justify-center text-white text-2xl bg-gray-800">
             No slides available
           </div>
         )}
