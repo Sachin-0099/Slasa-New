@@ -6,6 +6,7 @@ import { ProductProvider } from "./Context/ProductContext";
 import { GridProvider } from "./Context/GridContext";
 import { AuthProvider } from "./context/AuthContext";
 import { useAuth } from "./context/AuthContext";
+
 import ContactUs from "./FootersPages/ContactUs";
 import TrackOrder from "./FootersPages/TrackOrder";
 import Returns from "./FootersPages/Returns";
