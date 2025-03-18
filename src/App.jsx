@@ -22,7 +22,7 @@ import Privacy from "./FootersPages/Privacy";
 import TermsConditions from "./FootersPages/TermsConditions";
 import Shipping from "./FootersPages/Shipping";
 import Sitemap from "./FootersPages/Sitemap";
-import Acrylic from "./pages/Acrylic";
+
 import Photography from "./Pages/Photography";
 import Security from "./FootersPages/Security";
 import Cancellation from "./FootersPages/Cancellation";
@@ -42,6 +42,8 @@ import { PackageProvider } from "./Context/PackageContext";
 import { VoucherProvider } from "./Context/VoucherContext";
 import { PromotionProvider } from "./Context/PromotionContext";
 import { Navigate } from "react-router-dom"; 
+
+
 
 
 
@@ -80,6 +82,14 @@ function App() {
                 </PageLayout>
               }
             />
+             {/* <Route
+              path="/acrylic"
+              element={
+                <PageLayout>
+           
+                </PageLayout>
+              }
+            /> */}
                <Route
                     path="*"
                     element={
@@ -163,14 +173,7 @@ function App() {
                 </PageLayout>
               }
             />
-            <Route
-              path="/acrylic"
-              element={
-                <PageLayout>
-                  <Acrylic />
-                </PageLayout>
-              }
-            />
+           
             <Route
               path="/payments"
               element={
