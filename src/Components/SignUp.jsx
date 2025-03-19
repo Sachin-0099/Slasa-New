@@ -43,18 +43,19 @@ const SignUp = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("https://your-api.com/api/signup", {
+      const response = await axios.post("https://api/user/signup", {
         email,
         password,
       });
 
-      const { token } = response.data; // Extract JWT token from response
+      const { token, user } = response.data; // Extract JWT token and user data
 
-      // ✅ Save token in localStorage
+      // ✅ Save token and user info in localStorage
       localStorage.setItem("authToken", token);
+      localStorage.setItem("user", JSON.stringify(user));
 
       alert("Signup successful! Redirecting...");
-      navigate("/dashboard"); // Redirect to dashboard
+      navigate("/"); // Redirect to home/dashboard
     } catch (error) {
       console.error("Signup error:", error.response?.data || error.message);
       setError(error.response?.data?.message || "Signup failed! Try again.");

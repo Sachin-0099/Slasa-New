@@ -1,9 +1,7 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
-
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -11,6 +9,13 @@ const SignIn = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { setUser } = useAuth(); 
+
+  // Redirect if already logged in
+  useEffect(() => {
+    if (localStorage.getItem("authToken")) {
+      navigate("/");
+    }
+  }, [navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,19 +27,20 @@ const SignIn = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("https://your-api.com/api/signin", {
+      const response = await axios.post("https://your-api.com/api/user/Login", {
         email,
         password,
       });
 
-      const { token } = response.data; 
+      const { token, user } = response.data;
 
-    
+      // Store token & user data
       localStorage.setItem("authToken", token);
-      setUser(token);
+      localStorage.setItem("user", JSON.stringify(user));
+      setUser(user);
 
       alert("Login successful! Redirecting...");
-      navigate("/"); 
+      navigate("/");
     } catch (error) {
       console.error("Login error:", error.response?.data || error.message);
       alert(error.response?.data?.message || "Invalid credentials!");
@@ -44,7 +50,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="flex h-screen w-full items-center justify-center px-4 mt-[-60px]">
+    <div className="flex h-screen w-full items-center justify-center px-4">
       <div className="bg-white p-10 rounded-3xl shadow-xl w-full max-w-lg">
         <h2 className="text-3xl font-extrabold text-center text-[#3087d1] mb-8">
           Sign In
@@ -81,12 +87,24 @@ const SignIn = () => {
 
           <button
             type="submit"
-            className="w-full !bg-[#3087d1] text-white py-3 rounded-xl hover:bg-[#4c6ef5] transition-all duration-300 transform active:scale-95"
+            className="w-full bg-[#3087d1] text-white py-3 rounded-xl hover:bg-[#4c6ef5] transition-all duration-300 transform active:scale-95"
             disabled={loading}
           >
             {loading ? "Signing In..." : "Sign In"}
           </button>
-        <a href="/signup">  <p className="text-[#3087d1] text-center p-2">New to Slasa ? Create an Account</p></a>
+
+          <div className="text-center mt-4">
+            <Link to="/forgot-password" className="text-[#3087d1] hover:underline">
+              Forgot Password?
+            </Link>
+          </div>
+
+          <p className="text-[#3087d1] text-center p-2 mt-2">
+            New to Slasa?{" "}
+            <Link to="/signup" className="font-medium hover:underline">
+              Create an Account
+            </Link>
+          </p>
         </form>
       </div>
     </div>

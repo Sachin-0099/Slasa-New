@@ -43,6 +43,60 @@ import { VoucherProvider } from "./Context/VoucherContext";
 import { PromotionProvider } from "./Context/PromotionContext";
 import { Navigate } from "react-router-dom"; 
 import Acrylic from "./Pages/Acrylic";
+import AllTime from "./SidebarPages/BestSellers/AllTime";
+import Exclusive from "./SidebarPages/BestSellers/Exclusive";
+import TopRated from "./SidebarPages/BestSellers/TopRated";
+import StaffPick from "./SidebarPages/BestSellers/StaffPick"; 
+import MdfWood from './SidebarPages/AcrylicAccessories/MdfWood';
+import Sheets from './SidebarPages/AcrylicAccessories/Sheets';
+import Wood from './SidebarPages/AcrylicAccessories/Wood';
+import Comparisons from './SidebarPages/CustomerReviews/Comparisons';
+import Verified from './SidebarPages/CustomerReviews/Verified';
+import Flash from './SidebarPages/Trending/Flash';
+import Bundle from './SidebarPages/Trending/Bundle';
+import Clearance from './SidebarPages/Trending/Clearance';
+import BackinStock from './SidebarPages/NewArrivals/BackinStock';
+import Handmade from './SidebarPages/NewArrivals/Handmade';
+import Influencer from './SidebarPages/NewArrivals/Influencer';
+import MostSold from './SidebarPages/NewArrivals/MostSold';
+import CanvasArt from './SidebarPages/UvPrinting/CanvasArt';
+import Frames from './SidebarPages/UvPrinting/Frames';
+import Panels from './SidebarPages/UvPrinting/Panels';
+import Prints from './SidebarPages/UvPrinting/Prints';
+import WallDecor from './SidebarPages/UvPrinting/WallDecor';  
+import CustomizeWood from './SidebarPages/Wood/CustomizeWood';
+import Ramadan from './SidebarPages/Wood/Ramadan';
+import WoodEasel from './SidebarPages/Wood/WoodEasel';
+import WoodFrame from './SidebarPages/Wood/WoodFrame';
+import WoodSheet from './SidebarPages/Wood/WoodSheet';
+import WoodShelves from './SidebarPages/Wood/WoodShelves';
+import Fresh from './SidebarPages/Flowers/Fresh';
+import Indoor from './SidebarPages/Flowers/Indoor';
+import LimitedEdition from './SidebarPages/Flowers/LimitedEdittion';
+import Outdoor from './SidebarPages/Flowers/Outdoor';
+import CelebrationNeon from './SidebarPages/Neon/CelebrationNeon';
+import Customize from './SidebarPages/Neon/Customize';
+import FestivalNeon from './SidebarPages/Neon/FestivalNeon';
+import Office from './SidebarPages/Neon/Office';
+import Corporate from './SidebarPages/Photography/Corporate';
+import EventPhotography from './SidebarPages/Photography/EventPhotography';
+import EventSetup from './SidebarPages/Event/EventSetup';
+import PhotographySetup from './SidebarPages/Event/PhotographySetup';
+import Product from './SidebarPages/Photography/Product';
+import Promotional from './SidebarPages/Photography/Promotional';
+import SpecialPhotography from './SidebarPages/Photography/SpecialPhotography';
+import Banner from './SidebarPages/OtherServices/Banner'
+import Exhibition from "./SidebarPages/OtherServices/Exhibtion";
+import FlagStand from "./SidebarPages/OtherServices/FlagStand";
+import Flex from "./SidebarPages/OtherServices/Flex";
+import Led from "./SidebarPages/OtherServices/Led";
+import Lighting from "./SidebarPages/OtherServices/Lighting";
+import Merchandising from "./SidebarPages/OtherServices/Merchandising";
+import Safety from "./SidebarPages/OtherServices/Safety";
+import SolarLights from "./SidebarPages/OtherServices/SolarLights";
+import StreetSigns from "./SidebarPages/OtherServices/StreetSigns";
+import VehicleBranding from "./SidebarPages/OtherServices/VehicleBranding";
+
 
 
 
@@ -332,6 +386,434 @@ function App() {
                 </PageLayout>
               }
             />
+            {/* Routing for the sidebarPages */}
+            <Route
+              path="/all-time"
+              element={
+                <PageLayout>
+               <AllTime/>
+                </PageLayout>
+              }
+            />
+              <Route
+              path="/exclusive"
+              element={
+                <PageLayout>
+             <Exclusive/>
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/staff-pick"
+              element={
+                <PageLayout>
+                  <StaffPick />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/top-rated"
+              element={
+                <PageLayout>
+                  <TopRated />
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/mdf-wood"
+              element={
+              <PageLayout>
+                <MdfWood />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/sheets"
+              element={
+              <PageLayout>
+                <Sheets />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/wood"
+              element={
+              <PageLayout>
+                <Wood />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/comparisons"
+              element={
+                <PageLayout>
+                 <Comparisons/>
+                </PageLayout>
+              }
+            />
+           
+            <Route
+              path="/verified"
+              element={
+                <PageLayout>
+                <Verified/>
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/flash"
+              element={
+              <PageLayout>
+                <Flash />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/bundle"
+              element={
+              <PageLayout>
+                <Bundle />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/clearance"
+              element={
+              <PageLayout>
+                <Clearance />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/back-in-stock"
+              element={
+              <PageLayout>
+                <BackinStock />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/handmade"
+              element={
+              <PageLayout>
+                <Handmade />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/influencer"
+              element={
+              <PageLayout>
+                <Influencer />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/most-sold"
+              element={
+              <PageLayout>
+                <MostSold />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/canvas-art"
+              element={
+              <PageLayout>
+                <CanvasArt />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/frames"
+              element={
+              <PageLayout>
+                <Frames />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/panels"
+              element={
+              <PageLayout>
+              <Panels/>
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/prints"
+              element={
+              <PageLayout>
+                <Prints />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/wall-decor"
+              element={
+              <PageLayout>
+                <WallDecor />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/customize-wood"
+              element={
+              <PageLayout>
+                <CustomizeWood />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/ramadan"
+              element={
+              <PageLayout>
+                <Ramadan />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/wood-easel"
+              element={
+              <PageLayout>
+                <WoodEasel />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/wood-frame"
+              element={
+              <PageLayout>
+                <WoodFrame />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/wood-sheet"
+              element={
+              <PageLayout>
+                <WoodSheet />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/wood-shelves"
+              element={
+              <PageLayout>
+                <WoodShelves />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/fresh"
+              element={
+              <PageLayout>
+                <Fresh />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/indoor"
+              element={
+              <PageLayout>
+                <Indoor />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/limited-edition"
+              element={
+              <PageLayout>
+                <LimitedEdition />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/outdoor"
+              element={
+              <PageLayout>
+                <Outdoor />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/celebration-neon"
+              element={
+              <PageLayout>
+                <CelebrationNeon />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/customize"
+              element={
+              <PageLayout>
+                <Customize />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/festival-neon"
+              element={
+              <PageLayout>
+                <FestivalNeon />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/office"
+              element={
+              <PageLayout>
+                <Office />
+              </PageLayout>
+              }
+            />
+
+            <Route
+              path="/corporate"
+              element={
+              <PageLayout>
+                <Corporate />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/event-photography"
+              element={
+              <PageLayout>
+                <EventPhotography />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/product"
+              element={
+              <PageLayout>
+                <Product />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/promotional"
+              element={
+              <PageLayout>
+                <Promotional />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/special-photography"
+              element={
+              <PageLayout>
+                <SpecialPhotography />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/event-setup"
+              element={
+              <PageLayout>
+                <EventSetup />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/photography-setup"
+              element={
+              <PageLayout>
+                <PhotographySetup />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/banner"
+              element={
+              <PageLayout>
+              <Banner />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/exhibition"
+              element={
+              <PageLayout>
+              <Exhibition />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/flag-stand"
+              element={
+              <PageLayout>
+              <FlagStand />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/flex"
+              element={
+              <PageLayout>
+              <Flex />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/led"
+              element={
+              <PageLayout>
+              <Led />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/lighting"
+              element={
+              <PageLayout>
+              <Lighting />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/merchandising"
+              element={
+              <PageLayout>
+              <Merchandising />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/safety"
+              element={
+              <PageLayout>
+              <Safety />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/solar-lights"
+              element={
+              <PageLayout>
+              <SolarLights />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/street-signs"
+              element={
+              <PageLayout>
+              <StreetSigns />
+              </PageLayout>
+              }
+            />
+            <Route
+              path="/vehicle-branding"
+              element={
+              <PageLayout>
+              <VehicleBranding />
+              </PageLayout>
+              }
+            />
+
             
           </Routes>
       

@@ -53,8 +53,8 @@ const SideMenu = ({ isOpen, onClose }) => {
           isOpen={openSections.sellers}
           toggle={() => toggleSection("sellers")}
         >
-          <MenuItem text="Top Rated by Customers" link="/top" />
-          <MenuItem text="All-Time-Best-Seller" link="/all-time-best" />
+          <MenuItem text="Top Rated by Customers" link="/top-rated" />
+          <MenuItem text="All-Time-Best-Seller" link="/all-time" />
           <MenuItem text="Staff Pick" link="/staff-pick" />
           <MenuItem text="Exclusive Online Offers" link="/exclusive" />
         </ExpandableMenu>
@@ -63,8 +63,8 @@ const SideMenu = ({ isOpen, onClose }) => {
           isOpen={openSections.products}
           toggle={() => toggleSection("products")}
         >
-          <MenuItem text="Flash Deals" link="/flash-deals" />
-          <MenuItem text="Bundle Offers" link="/bundle-offers" />
+          <MenuItem text="Flash Deals" link="/flash" />
+          <MenuItem text="Bundle Offers" link="/bundle" />
           <MenuItem text="Clearance Sale" link="/clearance" />
         </ExpandableMenu>
         <ExpandableMenu
@@ -84,7 +84,7 @@ const SideMenu = ({ isOpen, onClose }) => {
         >
           <MenuItem text="Verified Customer Testimonials" link="/verified" />
           <MenuItem text="Before & After Comparisons" link="/comparisons" />
-          <MenuItem text="Exclusive Online Offers" link="/exclusive" />
+
         </ExpandableMenu>
       </MenuSection>
 
@@ -96,8 +96,8 @@ const SideMenu = ({ isOpen, onClose }) => {
         >
           <MenuItem text="Acrylic sheets" link="/sheets" />
 
-          <MenuItem text="Acrylic Wood" link="/wood" />
-          <MenuItem text="Mdf Wood" link="/mwood" />
+          <MenuItem text="Acrylic Wood" link="/mdf-wood" />
+          <MenuItem text="Mdf Wood" link="/wood" />
         </ExpandableMenu>
 
         <ExpandableMenu
@@ -105,11 +105,11 @@ const SideMenu = ({ isOpen, onClose }) => {
           isOpen={openSections.UV}
           toggle={() => toggleSection("UV")}
         >
-          <MenuItem text="Custom Frames" link="/Custome-frames" />
-          <MenuItem text="Acrylic Prints" link="/acrylic-prints" />
+          <MenuItem text="Custom Frames" link="/frames" />
+          <MenuItem text="Acrylic Prints" link="/prints" />
           <MenuItem text="Wall Decor" link="/wall-decor" />
           <MenuItem text="Canvas Art" link="/canvas-art" />
-          <MenuItem text="Decorative Panels" link="/decorative" />
+          <MenuItem text="Decorative Panels" link="/panels" />
         </ExpandableMenu>
 
         <ExpandableMenu
@@ -117,12 +117,12 @@ const SideMenu = ({ isOpen, onClose }) => {
           isOpen={openSections.Wood}
           toggle={() => toggleSection("Wood")}
         >
-          <MenuItem text="Wood Easel Canvas" link="/easel" />
-          <MenuItem text="Wood Sheet" link="/wood-Sheet" />
+          <MenuItem text="Wood Easel Canvas" link="/wood-easel" />
+          <MenuItem text="Wood Sheet" link="/wood-sheet" />
           <MenuItem text="Wood Shelves" link="/wood-shelves" />
           <MenuItem text="Customize Wood" link="/customize-wood" />
           <MenuItem text="Wood Frame" link="/wood-frame" />
-          <MenuItem text="Ramadan & Eid Wood" link="/ramadan-&-Eid-Wood" />
+          <MenuItem text="Ramadan & Eid Wood" link="/ramadan" />
         </ExpandableMenu>
         <ExpandableMenu
           title="Neon "
@@ -131,7 +131,7 @@ const SideMenu = ({ isOpen, onClose }) => {
         >
           <MenuItem text="Festival Neon" link="/festival-neon" />
           <MenuItem text="Celebration Neon" link="/celebration-neon" />
-          <MenuItem text="Office & Event" link="/office-&-event" />
+          <MenuItem text="Office & Event" link="/office" />
           <MenuItem text="Customize" link="/customize" />
         </ExpandableMenu>
 
@@ -140,38 +140,25 @@ const SideMenu = ({ isOpen, onClose }) => {
           isOpen={openSections.Flowers}
           toggle={() => toggleSection("Flowers")}
         >
-          <MenuItem text="Fresh Flowers" link="/fresh-flowers" />
-          <MenuItem text="Indoor Plants" link="/indoor-plants" />
+          <MenuItem text="Fresh Flowers" link="/fresh" />
+          <MenuItem text="Indoor Plants" link="/indoor" />
           <MenuItem text="Limited Edition" link="/limited-edition" />
-          <MenuItem text="Outdoor Plants" link="/outdoor-plants" />
+          <MenuItem text="Outdoor Plants" link="/outdoor" />
         </ExpandableMenu>
       </MenuSection>
 
       <MenuSection title="Services">
-        <ExpandableMenu
-          title="Printing Services "
-          isOpen={openSections.services}
-          toggle={() => toggleSection("services")}
-        >
-          <MenuItem text="Digital Printing" link="/digital-Printing" />
-          <MenuItem text="Offset Printing" link="/offset-printing" />
-          <MenuItem text="Speciality Printing" link="/speciality-prinitng" />
-          <MenuItem text="Large Format Printing" link="/large-format" />
-          <MenuItem
-            text="Personalized and custom printing"
-            link="/custom-printing"
-          />
-        </ExpandableMenu>
+       
         <ExpandableMenu
           title="Photography & Videography "
           isOpen={openSections.photography}
           toggle={() => toggleSection("photography")}
         >
-          <MenuItem text="Event Photography " link="/event" />
+          <MenuItem text="Event Photography " link="/event-photography" />
           <MenuItem text="Corporate Shoots " link="/corporate" />
           <MenuItem text="Product Photography " link="/product" />
           <MenuItem text="Promotional Videos" link="/promotional" />
-          <MenuItem text="Special Videography Services" link="/Special-video" />
+          <MenuItem text="Special Videography Services" link="/Special-photography" />
         </ExpandableMenu>
         <ExpandableMenu
           title="Exhibition & Events "
@@ -181,7 +168,7 @@ const SideMenu = ({ isOpen, onClose }) => {
           <MenuItem text="Event Setup" link="/event-setup" />
           <MenuItem
             text="Photography & Videography Setup"
-            link="/services-Photography-&-Videography-Setup"
+            link="/photography-setup"
           />
         </ExpandableMenu>
       
@@ -191,16 +178,16 @@ const SideMenu = ({ isOpen, onClose }) => {
           toggle={() => toggleSection("others")}
         >
           <MenuItem text="Vehicle Branding" link="/vehicle-branding" />
-          <MenuItem text="Safety Equipments" link="/safety-equipments" />
-          <MenuItem text="Lighting poles" link="/lighting-poles" />
+          <MenuItem text="Safety Equipments" link="/safety" />
+          <MenuItem text="Lighting poles" link="/lighting" />
           <MenuItem text="Banner" link="/banner" />
           <MenuItem text="Solar Lights" link="/solar-lights" />
 
           <MenuItem text="Flag Stand" link="/flag-stand" />
           <MenuItem text="Street signs" link="/Street-signs" />
-          <MenuItem text="Led & Neon Signage" link="/led-neon" />
+          <MenuItem text="Led & Neon Signage" link="/led" />
           <MenuItem text="Exbition stand" link="/exhibition" />
-          <MenuItem text="Merchanding stands" link="/Merchanding" />
+          <MenuItem text="Merchanding stands" link="/merchandising" />
           <MenuItem text="Flex Face Signage" link="/flex" />
         </ExpandableMenu>
       </MenuSection>
