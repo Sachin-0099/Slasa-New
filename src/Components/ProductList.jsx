@@ -14,10 +14,10 @@ const ProductList = () => {
     setLoading(true);
     setError(null);
 
-    let apiUrl = "https://dummyjson.com/products?limit=8"; // Fetch only 10 products
+    let apiUrl = "https://dummyjson.com/products?limit=9"; // Fetch only 10 products
 
     if (category && category !== "all") {
-      apiUrl = `https://dummyjson.com/products/category/${Acrylic}?limit=8`; // Fetch only 10 products from a category
+      apiUrl = `http://api.slasaetrade.com/api/product/getproducts?category=Acrylic%20Product&maxPrice=200&minPrice=150&page=5&productName=GlassDoor&search=AcrylicG&seller=Emad&size=10&sort=NEWEST`; // Fetch only 10 products from a category
     }
     
 

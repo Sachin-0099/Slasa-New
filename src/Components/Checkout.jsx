@@ -83,7 +83,7 @@ const Checkout = () => {
     <div>
       <div style={{ backgroundColor: "#3087d1",opacity:"4", padding: "30px",borderRadius:"20px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <img src="logo.png" alt="Home Centre Logo" style={{ height: "80px" }} />
+          <img src="Untitled design.svg" alt="Home Centre Logo" style={{ height: "80px" }} />
           <div>
             <p>Call 1800-212-7500</p>
             <p>Monday-Sunday, 10 AM-8 PM</p>
@@ -184,11 +184,10 @@ const Checkout = () => {
       </div>
 
       <div style={{ backgroundColor: "#f0f0f0", padding: "20px", textAlign: "center", fontSize: "0.8em" }}>
-        <p>&copy; 2025 RNA Intellectual Property Limited</p>
+        <p>&copy; 2025 Slasa</p>
         <p>Privacy Policy - Terms of Use - Terms & Conditions</p>
       </div>
     </div>
   );
 };
-
 export default Checkout;

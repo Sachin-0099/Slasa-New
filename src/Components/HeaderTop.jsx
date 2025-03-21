@@ -5,19 +5,19 @@ const HeaderTop = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   return (
-    <div className="relative bg-black text-white h-6 text-sm px-4 py-0 flex justify-center items-center flex-wrap overflow-visible z-40">
+    <div className="relative bg-black text-white h-11 text-md px-6 py-0 flex justify-center items-center flex-wrap overflow-visible z-40">
       {/* Left Section (Hide on smaller screens) */}
       <div className="hidden sm:flex items-center gap-4 flex-wrap">
         {/* Free Shipping */}
         <div
-          className="relative flex items-center gap-2 cursor-pointer px-3 py- rounded-md hover:bg-gray-800 transition"
+          className="relative flex items-center gap-2 cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition"
           onMouseEnter={() => setHoveredItem("shipping")}
           onMouseLeave={() => setHoveredItem(null)}
         >
           <FaShippingFast size={14} />
           <span>Free Shipping</span>
           {hoveredItem === "shipping" && (
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1 bg-gray-900 text-white text-xs rounded-md shadow-lg p-2 w-48 text-center z-50">
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1 bg-gray-900 text-white text-sm rounded-md shadow-lg p-2 w-48 text-center z-50">
               Enjoy free shipping on all orders above $50!
             </div>
           )}
@@ -25,7 +25,7 @@ const HeaderTop = () => {
 
         {/* Click and Collect */}
         <div
-          className="relative flex items-center gap-2 cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition"
+          className="relative flex items-center gap-2 cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition"
           onMouseEnter={() => setHoveredItem("collect")}
           onMouseLeave={() => setHoveredItem(null)}
         >
@@ -40,13 +40,13 @@ const HeaderTop = () => {
 
         {/* Warranty */}
         <div
-          className="relative flex items-center gap-2 cursor-pointer px-3 py-1 rounded-md hover:bg-gray-800 transition"
+          className="relative flex items-center gap-2 cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition"
           onMouseEnter={() => setHoveredItem("warranty")}
           onMouseLeave={() => setHoveredItem(null)}
         >
           <span>Warranty</span>
           {hoveredItem === "warranty" && (
-            <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1 bg-gray-900 text-white text-xs rounded-md shadow-lg p-2 w-48 text-center z-50">
+            <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1 bg-gray-900 text-white text-xs rounded-md shadow-lg p-3 w-48 text-center z-50">
               Get up to 2 years of warranty on selected products.
             </div>
           )}
@@ -90,15 +90,16 @@ const HeaderTop = () => {
 
       {/* Right Section (Hide on smaller screens) */}
       <div className="hidden sm:flex items-center gap-2 md:gap-3 flex-nowrap">
-        <div className="cursor-pointer px-3 py-0.5 rounded-md hover:bg-gray-800 transition">
+        <div className="cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition">
           Store Locator
         </div>
-        <div className="cursor-pointer px-3 py-0.5 rounded-md hover:bg-gray-800 transition">
+        <div className="cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition">
           Help
         </div>
-        <div className="hidden lg:block cursor-pointer px-3 py-0.5 rounded-md hover:bg-gray-800 transition">
-          Sell with Us
-        </div>
+        <a href="/sell-with-us" className="hidden !text-white lg:block cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition">
+              Sell with Us
+        </a>
+
       </div>
     </div>
   );

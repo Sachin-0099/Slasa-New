@@ -16,7 +16,7 @@ const PageLayout = ({ children }) => {
     const handleScroll = () => {
       clearTimeout(timeout);
       timeout = setTimeout(() => {
-        setShowHeaderNav(window.scrollY <= 50);
+        setShowHeaderNav(window.scrollY <= 20);
       }, 100);
     };
 
@@ -55,12 +55,14 @@ const PageLayout = ({ children }) => {
           <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
             {showHeaderNav && <HeaderTop />}
             <HeaderNav />
-            <HeaderMain />
+            {showHeaderNav && <HeaderMain />}
+           
+          
           </div>
         )}
 
         {/* Page Content - Full Width */}
-        <div className="w-full px-0 md:px-0 lg:px-0 xl:px-0 pt-[130px]">
+        <div className="w-full px-0 md:px-0 lg:px-0 xl:px-0 pt-[203px]">
           {children}
         </div>
       </div>

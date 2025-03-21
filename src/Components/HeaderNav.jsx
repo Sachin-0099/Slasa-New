@@ -16,6 +16,7 @@ const HeaderNav = () => {
   const [cartItems, setCartItems] = useState(0);
   const [user, setUser] = useState(null);
   const spanRef = useRef(null);
+  const [dropdownWidth, setDropdownWidth] = useState("auto");
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/categories")
@@ -37,6 +38,12 @@ const HeaderNav = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (spanRef.current) {
+      setDropdownWidth(`${spanRef.current.offsetWidth + 30}px`); // Adjust width dynamically
+    }
+  }, [selectedCategory]);
+
   const handleSignIn = () => {
     navigate(user ? "/profile" : "/signin");
   };
@@ -48,7 +55,7 @@ const HeaderNav = () => {
   };
 
   return (
-    <header className="bg-white px-3 sm:px-6 md:px-10 lg:px-20 shadow-md w-full">
+    <header className="bg-white px-3 mt-1 sm:px-6 md:px-10 lg:px-10 shadow-md w-full">
       <div className="flex justify-between items-center py-px w-full flex-nowrap gap-2">
         {/* Logo */}
         <div
@@ -58,36 +65,42 @@ const HeaderNav = () => {
           <img
             src="/Images/Untitled design.svg"
             alt="Logo"
-            className="h-10 sm:h-12 md:h-14 w-auto object-contain"
+            className="h-25 sm:h-25 md:h-25 w-auto object-contain"
           />
         </div>
 
         {/* Search Bar */}
-        <div className="flex-grow flex justify-center px-2 sm:px-3 max-w-lg">
-          <div className="flex items-center bg-white rounded-md overflow-hidden border border-gray-300 shadow-sm w-full">
+        <div className="flex-grow flex justify-center px-2 sm:px-3 max-w-2xl">
+          <div className="flex items-center rounded-sm overflow-hidden border border-[#3087d1] w-full">
             {/* Category Dropdown */}
             <div className="relative flex-shrink-0">
               <select
-                className="text-xs sm:text-sm px-2 h-9 sm:h-10 border-r border-gray-300 outline-none cursor-pointer bg-[#3087d1] text-white"
+                className="text-xs sm:text-sm px-2 h-10  border-r py-2 outline-none cursor-pointer bg-[#3087d1] text-white pr-6"
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 style={{
-                  minWidth: "auto",
-                  width: `${spanRef.current ? spanRef.current.offsetWidth + 20 : 50}px`,
+                  width: dropdownWidth, // Dynamically calculated width
+                  appearance: "none",
+                  WebkitAppearance: "none",
+                  MozAppearance: "none",
                 }}
               >
                 {categories.map((category, index) => (
-                  <option key={index} value={category}>
+                  <option key={index} value={category} className="text-black bg-white">
                     {category}
                   </option>
                 ))}
               </select>
-              <span
-                ref={spanRef}
-                className="absolute invisible whitespace-nowrap px-2"
-              >
+
+              {/* Hidden Span for Dynamic Width Calculation */}
+              <span ref={spanRef} className="absolute invisible whitespace-nowrap px-2">
                 {selectedCategory}
               </span>
+
+              {/* Custom Dropdown Arrow */}
+              <div className="absolute text-white right-2 top-1/2 transform -translate-y-1/2 pointer-events-none">
+                ▼
+              </div>
             </div>
 
             {/* Search Input */}
@@ -102,10 +115,10 @@ const HeaderNav = () => {
 
             {/* Search Button */}
             <button
-              className="px-3 h-9 sm:h-10 flex items-center justify-center bg-blue-500"
+              className="px-3 py-1 h-10 sm:h-10 flex items-center justify-center bg-[#3087d1]"
               onClick={handleSearch}
             >
-              <FaSearch className="text-white text-lg" />
+              <FaSearch className="text-white text-md" />
             </button>
           </div>
         </div>

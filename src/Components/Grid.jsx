@@ -60,7 +60,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
 
   return (
     <div className="bg-white p-4 shadow rounded-lg">
-      <h3 className="font-bold text-center border-b text-lg">{title}</h3>
+      <h3 className="font-bold text-center border-b text-2xl">{title}</h3>
       <div className="grid grid-cols-2 gap-2 mt-2">
         {items.map((item, index) => (
           <div
@@ -74,10 +74,13 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
         ))}
       </div>
       {linkText && (
-        <a href={linkHref} className="text-[#3087d1] text-lg text-center relative block mt-2">
-          {linkText}
-        </a>
-      )}
+  <a href={linkHref} className="relative block mt-2 text-center">
+    <button className="bg-gradient-to-r from-[#3087d1] via-black to-[#3087d1] text-white text-lg text-center px-4 py-2 rounded-lg shadow-lg">
+      {linkText}
+    </button>
+  </a>
+)}
+
     </div>
   );
 };

@@ -41,11 +41,11 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="max-w-xs bg-gray-100 shadow-lg overflow-hidden cursor-pointer hover:shadow-xl transition-all p-4 rounded-lg">
+    <div className="max-w-xs bg-gray-100 shadow-lg mt-4 overflow-hidden cursor-pointer hover:shadow-xl transition-all p-4 rounded-lg">
       <div className="relative">
         <Link to={`/product/${product.id}`}>
           <img
-            src={product?.image || "./Images/Exclusive26.jpeg"}
+            src={product?.image || "./Images/Exclusive18.jpeg"}
             alt={product?.title || "Product"}
             className="w-full h-50 object-cover rounded-lg"
           />
@@ -62,20 +62,37 @@ const ProductCard = ({ product }) => {
         </Link>
         <button
   onClick={toggleWishlist}
-  className="absolute top-1 right-2 p-px rounded-full transition-all duration-300 shadow-md hover:scale-110 border-2 !bg-white"
+  className="absolute top-1 right-2 p-2 rounded-full transition-all duration-300 shadow-md border-2 !bg-white w-8 h-8 flex items-center justify-center"
 >
-  <Heart
-    size={20}
-    className={`transition-all duration-300 ${
-      isWishlisted ? "text-white fill-[#3087d1]" : "text-[#3087d1] fill-transparent"
-    }`}
-  />
+  <div className="transition-all duration-300">
+    <Heart
+      size={15} // Default size
+      className={`transition-all duration-300 ${
+        isWishlisted ? "scale-150 text-white fill-[#3087d1]" : "scale-125 text-[#3087d1] fill-transparent"
+      }`}
+    />
+  </div>
 </button>
+
 
 
       </div>
       <div className="p-3">
-        <h3 className="text-lg font-semibold mt-2 text-[#3087d1]">{product.title}</h3>
+      <h3
+  className="text-lg font-semibold mt-2 relative"
+  style={{
+    background: "linear-gradient(90deg, #4ca6ff, #3087d1)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
+  {product.title}
+</h3>
+
+
+
+
+
         <p className="text-gray-800 font-bold">Price: ${product.price}</p>
         <div className="flex items-center mt-1">
           <span className="text-yellow-500">{"★".repeat(product.rating)}</span>
@@ -88,7 +105,7 @@ const ProductCard = ({ product }) => {
           <button onClick={buyNow} className="!bg-[#3087d1] text-white px-3 py-2 text-sm rounded-md">
             Buy Now
           </button>
-          <button onClick={addToCart} className="bg-gray-300 text-black px-3 py-2 text-sm rounded-md">
+          <button onClick={addToCart} className="bg-gray-300 text-white px-3 py-2 text-sm rounded-md">
             Add to Cart
           </button>
         </div>

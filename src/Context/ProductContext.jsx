@@ -61,8 +61,13 @@ export const useProductContext = () => useContext(ProductContext);
 
 const ProductSection = ({ title, products }) => {
   return (
-    <div className="border p-4 w-full md:w-1/3 gap-2 shadow-lg border-b-8 ">
-      <h2 className="text-center text-lg font-bold border-b pb-2">{title}</h2>
+<div className="relative p-4 mt-6 w-full md:w-1/3 gap-2 shadow-lg border-b-8 border">
+  <div className="absolute bottom-[-8px] left-0 w-full h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
+
+
+
+   <h2 className="text-center text-2xl font-bold border-b-8 border-[#3087d1] pb-2">{title}</h2>
+
       <div className="grid grid-cols-2 gap-4 p-4">
         {products.map((product, index) => (
           <div key={index} className="text-center">
@@ -71,12 +76,12 @@ const ProductSection = ({ title, products }) => {
               alt={product.title}
               className="w-full h-32 object-cover rounded"
             />
-            <p className="mt-2 font-semibold">{product.title}</p>
+            <p className="mt-2 ">{product.title}</p>
           </div>
         ))}
       </div>
-      <div className="text-center mt-4">
-        <button className="bg-gradient-to-b from-[#000000] via-[#3087d1] to-black text-white py-2 mt-4 px-6 rounded-full text-lg">
+      <div className="text-center mt-0">
+        <button className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 mt-0 px-6 rounded-full text-lg">
           See more
         </button>
       </div>
@@ -87,7 +92,7 @@ const ProductSection = ({ title, products }) => {
 const ProductLayout = () => {
   const { products } = useProductContext();
   return (
-    <div className="flex lg:flex-nowrap flex-wrap justify-center gap-4 p-4">
+    <div className="flex lg:flex-nowrap flex-wrap justify-center gap-4 p-8">
       <ProductSection
         title="Pick Up Where You Left"
         products={products.productsLeft}

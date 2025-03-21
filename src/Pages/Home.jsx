@@ -26,7 +26,7 @@ const Home = () => {
       
          
          
-          "Images/Acrylic.png",
+          "Images/HeroAcrylic.jpg",
 
          
         ]}

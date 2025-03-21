@@ -5,10 +5,10 @@ const About = () => {
     <>
     <div className='min-h-[50vh] w-screen flex flex-wrap my-5 lg:flex-col md:flex-col sm:flex-row justify-center items-center'>
         <div className='min-h-[50vh] w-[100%] flex flex-wrap'>
-            <div className='mt-8 lg:h-full lg:w-[40%] md:h-full md:w-[40%] w-full h-[40vh]'>
+            <div className='mt-8 lg:h-full lg:w-[60%] md:h-full md:w-[40%] w-full h-[40vh]'>
                 <img src={about2} className='w-full h-full object-contain'/>
             </div>
-            <div className='lg:h-full lg:w-[50%] md:h-full md:w-[60%] w-full h-[50vh]'>
+            <div className='lg:h-full lg:w-[40%] md:h-full md:w-[60%] w-full h-[50vh]'>
                 <div className='flex flex-wrap items-center justify-center'>
                 <h1 className="lg:text-6xl md:text-3xl mb-2 text-3xl font-semibold bg-gradient-to-bl from-black via-[#3087d1] to-black text-transparent bg-clip-text underline underline-offset-8">
   About Us

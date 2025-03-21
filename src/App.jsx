@@ -96,6 +96,8 @@ import Safety from "./SidebarPages/OtherServices/Safety";
 import SolarLights from "./SidebarPages/OtherServices/SolarLights";
 import StreetSigns from "./SidebarPages/OtherServices/StreetSigns";
 import VehicleBranding from "./SidebarPages/OtherServices/VehicleBranding";
+import EmptyCart from "./Components/EmptyCart";
+import SellwithUs from "./Components/SellwithUs";
 
 
 
@@ -370,14 +372,28 @@ function App() {
               }
             />
              <Route
-              path="/cart"
+              path="/empty"
               element={
                 <PageLayout>
-                    {<ProtectedRoute />}
-               <Cartpage/>
+                  <EmptyCart/>
+                 
+              
                 </PageLayout>
               }
             />
+            {/* Routing for empty Cart */}
+            <Route
+              path="/cart"
+              element={
+                <PageLayout>
+                   
+                   <Cartpage/>
+            
+                </PageLayout>
+              }
+            />
+          
+
              <Route
               path="/customer"
               element={
@@ -810,6 +826,15 @@ function App() {
               element={
               <PageLayout>
               <VehicleBranding />
+              </PageLayout>
+              }
+            />
+            {/* Routing for the topNav */}
+            <Route
+              path="/sell-with-us"
+              element={
+              <PageLayout>
+             <SellwithUs/>
               </PageLayout>
               }
             />

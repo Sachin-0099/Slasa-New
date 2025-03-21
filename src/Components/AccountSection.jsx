@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import {
   FaBox,
   FaHeart,
@@ -16,8 +17,30 @@ import {
 import { motion } from "framer-motion";
 
 const YourAccount = () => {
+  const navigate = useNavigate(); // Hook to redirect users after logout
+
+  // Function to handle logout
+  const handleLogout = async () => {
+    try {
+      await axios.post(
+        "http://localhost:5000/api/logout", // Backend logout API
+        {},
+        { withCredentials: true } // Include credentials if authentication is cookie-based
+      );
+
+      // Clear authentication data from storage
+      localStorage.removeItem("authToken");
+      sessionStorage.removeItem("authToken");
+
+      // Redirect user to login page
+      navigate("/login");
+    } catch (error) {
+      console.error("Logout failed:", error);
+    }
+  };
+
   return (
-    <div className="min-h-screen  flex items-center justify-center px-6 py-12 overflow-x-hidden">
+    <div className="min-h-screen flex items-center justify-center px-6 py-12 overflow-x-hidden">
       <motion.div
         className="w-full max-w-5xl bg-white shadow-2xl rounded-2xl overflow-hidden"
         initial={{ opacity: 0, y: 20 }}
@@ -42,6 +65,7 @@ const YourAccount = () => {
           <h3 className="text-2xl font-semibold text-gray-800 mb-3">Want to log out?</h3>
           <p className="text-gray-600">Make sure to save your changes before logging out.</p>
           <motion.button
+            onClick={handleLogout}
             className="mt-6 flex items-center gap-2 !bg-[#3087D1] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}

@@ -9,13 +9,12 @@ const SignUp = () => {
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // For navigation
+  const navigate = useNavigate(); 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError(null); // Reset error state
+    setError(null);
 
-    // ✅ Form Validations
     if (!email || !password || !confirmPassword) {
       setError("All fields are required!");
       return;
@@ -43,19 +42,17 @@ const SignUp = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("https://api/user/signup", {
+      const response = await axios.post("http://api.slasaetrade.com/api/user/signup", {
         email,
         password,
       });
 
-      const { token, user } = response.data; // Extract JWT token and user data
-
-      // ✅ Save token and user info in localStorage
+      const { token, user } = response.data;
       localStorage.setItem("authToken", token);
       localStorage.setItem("user", JSON.stringify(user));
 
       alert("Signup successful! Redirecting...");
-      navigate("/"); // Redirect to home/dashboard
+      navigate("/");
     } catch (error) {
       console.error("Signup error:", error.response?.data || error.message);
       setError(error.response?.data?.message || "Signup failed! Try again.");
@@ -65,79 +62,70 @@ const SignUp = () => {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center ">
-      <div className="bg-white p-10 rounded-3xl shadow-xl w-96 transform transition-all hover:scale-105">
+    <div className="flex min-h-screen items-center justify-center">
+      <div className="bg-white p-10 rounded-3xl shadow-xl w-96">
         <h2 className="text-3xl font-extrabold text-center text-[#3087d1] mb-8">Sign Up</h2>
-
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
-
         <form onSubmit={handleSubmit}>
-          {/* Email Input */}
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-medium mb-2">Email</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-[#4c6ef5] transition-all"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl"
               placeholder="Enter your email"
               required
             />
           </div>
 
-          {/* Password Input */}
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-medium mb-2">Password</label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-[#4c6ef5] transition-all"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl"
               placeholder="Enter your password"
               required
             />
           </div>
 
-          {/* Confirm Password Input */}
           <div className="mb-6">
             <label className="block text-gray-700 text-sm font-medium mb-2">Confirm Password</label>
             <input
               type="password"
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
-              className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:outline-none focus:border-[#4c6ef5] transition-all"
+              className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl"
               placeholder="Confirm your password"
               required
             />
           </div>
 
-          {/* Terms and Conditions Checkbox */}
-          <div className="flex items-center mb-6 p-8">
-            <label className="flex items-center text-sm text-gray-600">
-              <input
-                type="checkbox"
-                className="mr-2"
-                checked={agreeTerms}
-                onChange={() => setAgreeTerms(!agreeTerms)}
-              />{" "}
+          <div className="flex items-center mb-6">
+            <input
+              type="checkbox"
+              checked={agreeTerms}
+              onChange={() => setAgreeTerms(!agreeTerms)}
+              className="mr-2"
+            />
+            <label className="text-sm text-gray-600">
               I agree to the <Link to="/terms" className="text-[#4c6ef5] hover:underline">terms and conditions</Link>
             </label>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full !bg-[#3087d1] text-white py-3 rounded-xl hover:bg-[#4c6ef5] transition-all duration-300 transform active:scale-95"
+            className="w-full bg-[#3087d1] text-white py-3 rounded-xl hover:bg-[#4c6ef5]"
             disabled={loading}
           >
             {loading ? "Signing Up..." : "Sign Up"}
           </button>
         </form>
 
-        {/* Redirect to Sign In */}
         <p className="text-center text-sm text-gray-600 mt-6">
-          Already have an account?{" "}
-          <Link to="/signin" className="text-[#4c6ef5] hover:underline">Sign In</Link>
+          Already have an account? <Link to="/signin" className="text-[#4c6ef5] hover:underline">Sign In</Link>
         </p>
       </div>
     </div>

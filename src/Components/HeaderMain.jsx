@@ -33,11 +33,11 @@ const HeaderMain = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-between py-px px-6 bg-white border-b-2 border-gray-400 flex-wrap relative overflow-hidden">
+    <div className="w-full flex items-center justify-between py-px px-6 lg:px-55 bg-white border-b-2 border-gray-400 flex-wrap relative overflow-hidden">
       {/* All Button (visible on all screens) */}
       <span
         onClick={() => setSidebarOpen(true)}
-        className="px-4 py-2 bg-gray-200 rounded-lg mr-3 transition duration-300 border-b border-gray-400 hover:bg-gray-400 hover:border-[#3087d1] cursor-pointer"
+        className="px-4 py-1.5 bg-[#3087d1] rounded-lg  transition duration-300 border-b border-gray-400 hover:bg-gray-400 hover:border-[#3087d1] cursor-pointer text-white"
       >
         ☰ All
       </span>
@@ -53,7 +53,7 @@ const HeaderMain = () => {
       {/* Categories (visible on larger screens, toggled on mobile) */}
       <div
         ref={categoriesRef}
-        className={`lg:flex-nowrap md:flex-nowrap  gap-6 mr-40 text-md font-semibold bg-white !text-[#000000] ${
+        className={`lg:flex-nowrap md:flex-nowrap  gap-4 mr-14 text-lg font-semibold bg-white !text-[#000000] ${
           isCategoriesOpen ? "block" : "hidden lg:flex"
         } w-full lg:w-auto mt-2 lg:mt-0 md:flex-nowrap`}
       >
