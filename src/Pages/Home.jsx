@@ -46,7 +46,7 @@ const Home = () => {
      
      
       <PromotionOffers promotionId={2} />
-      <HomeCategories/>
+      {/* <HomeCategories/> */}
       <HomeSection/>
       <PromotionOffers promotionId={1} />
       {homepageVouchers.map((voucher, index) => (

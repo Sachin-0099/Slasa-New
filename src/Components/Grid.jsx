@@ -59,7 +59,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
   }
 
   return (
-    <div className="bg-white p-4 shadow rounded-lg py-6">
+    <div className="bg-white p-4 shadow rounded-lg py-4">
       <h3 className="font-bold text-center border-b text-2xl">{title}</h3>
       <div className="grid grid-cols-2 gap-2 mt-2">
         {items.map((item, index) => (
