@@ -49,6 +49,7 @@ const SignUp = () => {
 
       const { token, user } = response.data;
       localStorage.setItem("authToken", token);
+      console.log(token);
       localStorage.setItem("user", JSON.stringify(user));
 
       alert("Signup successful! Redirecting...");

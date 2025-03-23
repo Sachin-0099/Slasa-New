@@ -13,7 +13,7 @@ export const ProductProvider = ({ children }) => {
   const defaultProducts = {
     productsLeft: [
       { image: "Images/Exclusive22.jpeg", title: "Acrylic Print" },
-      { image: "Images/Exclusive24.jpeg", title: "Acrylic Wood" },
+      { image: "Images/WallD1.avif", title: "Acrylic Wood" },
       { image: "Images/Exclusive23.jpeg", title: "Wall Decor" },
       { image: "Images/FIN5.jpg", title: "Neon Festive" },
     ],

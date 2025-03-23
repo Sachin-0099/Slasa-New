@@ -8,24 +8,32 @@ import HeaderNav from "./HeaderNav";
 const PageLayout = ({ children }) => {
   const [showHeaderNav, setShowHeaderNav] = useState(true);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const location = useLocation();
   const isDashboard = location.pathname === "/mpage";
 
   useEffect(() => {
-    let timeout;
     const handleScroll = () => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        setShowHeaderNav(window.scrollY <= 20);
-      }, 100);
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY < 20) {
+        setShowHeaderNav(true);
+      } else if (currentScrollY < lastScrollY) {
+        // If user scrolls up, show navbar
+        setShowHeaderNav(true);
+      } else {
+        // If user scrolls down, hide navbar
+        setShowHeaderNav(false);
+      }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => {
-      clearTimeout(timeout);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <div className="flex min-h-screen bg-white overflow-hidden">
@@ -52,12 +60,10 @@ const PageLayout = ({ children }) => {
       >
         {/* Header - Hide for Dashboard */}
         {!isDashboard && (
-          <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
-            {showHeaderNav && <HeaderTop />}
+          <div className={`fixed top-0 left-0 w-full z-50 bg-white shadow-lg transition-transform duration-300 ${showHeaderNav ? "translate-y-0" : "-translate-y-full"}`}>
+            <HeaderTop />
             <HeaderNav />
-            {showHeaderNav && <HeaderMain />}
-           
-          
+            <HeaderMain />
           </div>
         )}
 

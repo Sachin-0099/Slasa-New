@@ -5,7 +5,7 @@ import logo from '/Images/logo.png'
 const Header = () => {
   return (
     <>
-    <div className='min-h-[60vh] w-screen flex flex-wrap lg:flex-col md:flex-col sm:flex-row justify-start items-center'>
+    <div className='min-h-[60vh] w-screen flex flex-wrap lg:flex-col md:flex-col sm:flex-row justify-start items-center mb-18'>
         <div className='h-[60vh] w-[100%] flex flex-wrap'>
             <div className='lg:h-full lg:w-[40%] md:h-full md:w-[50%] w-full h-[20vh]'>
                 <div className='flex flex-wrap items-center justify-center'>
@@ -16,8 +16,9 @@ const Header = () => {
 
                 </div>
             </div>
-            <div className='lg:h-full bg-blue-500 lg:w-[60%] md:h-full md:w-[50%] w-full h-[35vh]'>
-                <img src={about} className='w-full h-full object-cover'/>
+            <div className='lg:h-full bg-blue-500 lg:w-[60%] md:h-full md:w-[50%] w-full h-[25vh]'>
+                <img src={about} className='w-full lg:h-[70vh] md:h-[50vh] h-[40vh] object-cover'/>
+                            {/* <img src={about2} className='w-full  object-cover' /> */}
             </div>
         </div>
     </div>

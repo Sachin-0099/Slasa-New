@@ -98,6 +98,8 @@ import StreetSigns from "./SidebarPages/OtherServices/StreetSigns";
 import VehicleBranding from "./SidebarPages/OtherServices/VehicleBranding";
 import EmptyCart from "./Components/EmptyCart";
 import SellwithUs from "./Components/SellwithUs";
+import ProductDetail from "./Components/ProductDetail";
+import ProductList from "./Components/ProductList";
 
 
 
@@ -392,6 +394,27 @@ function App() {
                 </PageLayout>
               }
             />
+              <Route
+              path="/detial"
+              element={
+                <PageLayout>
+                   
+              <ProductDetail/>
+            
+                </PageLayout>
+              }
+            />
+              <Route
+              path="/list"
+              element={
+                <PageLayout>
+                   
+                 <ProductList/>
+            
+                </PageLayout>
+              }
+            />
+
           
 
              <Route
