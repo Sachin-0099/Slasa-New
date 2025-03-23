@@ -8,22 +8,22 @@ const PhotoSectionCard = ({ PhotoData, title, width, Description }) => {
         {title}
       </h1>
       {Description.map((desc, index) => (
-        <p key={index} className='lg:px-10 lg:mx-50 md:mx-30 lg:py-5 py-2 mx-5 text-gray-500 md:text-xl text-sm lg:text-xl'>
+        <p key={index} className='lg:px-10 lg:mx-50 md:mx-30 lg:py-5 py-2 mx-5 text-gray-500 md:text-xl text-sm lg:text-xl text-center'>
           {desc.description}
         </p>
       ))}
       <div className='h-full w-full flex items-center justify-center'>
-        <div className='h-[80%] lg:w-[70%] md:w-[70%] w-[90%] mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
+        <div className='h-[80%] lg:w-[70%] md:w-[70%] w-[90%] mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center '>
           {PhotoData.map((photo, index) => (
-            <div key={index} className='lg:h-[30vh] lg:w-[40vh] md:h-[25vh] md:w-[40vh] h-[25vh] w-[18vh]'>
+            <div key={index} className='lg:h-[30vh] lg:w-[40vh] md:h-[25vh] md:w-[40vh] h-[25vh] w-[22vh] flex justify-center items-center '>
               <img src={photo.src} className='h-full w-full object-cover' alt='Photo' />
             </div>
           ))}
         </div>
       </div>
       {Description.map((des, index) => (
-        <div key={index} className='w-[40%] h-[10%] flex lg:py-5 py-2 items-center justify-center mt-[-50] mb-10'>
-          <img src={des.icon} alt='Icon' className='lg:w-[10vh] md:w-[8vh] w-[5vh]' />
+        <div key={index} className='w-[40%] h-[10%] flex lg:py-5 py-2 items-center  justify-center mt-[-50] mb-10'>
+          <img src={des.icon} alt='Icon' className='lg:w-[10vh] md:w-[8vh] w-[5vh] '  />
           <a
             href={des.link.startsWith('http') ? des.link : `https://${des.link}`}
             target='_blank'

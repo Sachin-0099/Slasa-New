@@ -3,7 +3,7 @@ import about2 from "/Images/about2.png";
 
 const About = () => {
   return (
-    <div className="min-h-[50vh] w-full flex flex-col md:flex-row items-center justify-center mb-10 sm:py-2 md:py-4 mt-[-16px] ">
+    <div className="min-h-[50vh] w-full flex flex-col md:flex-row items-center justify-center mb-10    ">
       {/* Left Section - Image */}
       <div className="w-full md:w-[60%] lg:w-[60%] flex justify-center items-center ">
         <img
