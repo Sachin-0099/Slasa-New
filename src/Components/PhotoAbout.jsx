@@ -14,7 +14,7 @@ const About = () => {
       </div>
 
       {/* Right Section - About Text */}
-      <div className="w-full md:w-[40%] lg:w-[40%] flex flex-col justify-between items-center h-full px-6 md:px-8 lg:px-12  lg:py-6 md:py-4 ">
+      <div className="w-full md:w-[40%] lg:w-[40%] flex flex-col justify-between items-center h-full px-6 md:px-8 lg:px-12  lg:py-6 md:py-4 sm:py-4 ">
 
 
         <h1 className="text-2xl md:text-3xl lg:text-6xl font-semibold bg-gradient-to-bl from-black via-[#3087d1] to-black text-transparent bg-clip-text hover:underline hover:underline-offset-8 hover:decoration-[#3087D1] text-center md:text-left p-2">
