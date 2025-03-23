@@ -102,10 +102,10 @@ const ProductCard = ({ product }) => {
         </div>
         <p className="text-gray-600 text-sm mt-1">{product.shipping}</p>
         <div className="mt-3 flex gap-2">
-          <button onClick={buyNow} className="!bg-[#3087d1] text-white px-3 py-2 text-sm rounded-md">
+          <button onClick={buyNow} className="!bg-gradient-to-b from-[#3087d1] via-[#000000] to-[#3087d1] text-white px-3 py-2 text-sm rounded-md">
             Buy Now
           </button>
-          <button onClick={addToCart} className="bg-gray-300 text-white px-3 py-2 text-sm rounded-md">
+          <button onClick={addToCart} className="!bg-gradient-to-b from-[#3087d1] via-[#000000] to-[#3087d1] text-white text-white px-3 py-2 text-sm rounded-md">
             Add to Cart
           </button>
         </div>

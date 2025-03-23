@@ -20,7 +20,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
         />
         <h3 className="font-bold text-lg">{title}</h3>
         <p className="text-sm">{items[0].caption}</p>
-        <button className="bg-gradient-to-b from-[#000000] via-[#3087d1] to-black text-white py-2 mt-4 px-6 rounded-full text-lg">
+        <button className="!bg-gradient-to-b from-[#3087d1] via-[#000000] to-[#3087d1] text-white py-2 mt-4 px-6 rounded-full text-lg">
           See more
         </button>
       </div>
@@ -59,7 +59,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
   }
 
   return (
-    <div className="bg-white p-4 shadow rounded-lg">
+    <div className="bg-white p-4 shadow rounded-lg py-6">
       <h3 className="font-bold text-center border-b text-2xl">{title}</h3>
       <div className="grid grid-cols-2 gap-2 mt-2">
         {items.map((item, index) => (
@@ -75,7 +75,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
       </div>
       {linkText && (
   <a href={linkHref} className="relative block mt-2 text-center">
-    <button className="bg-gradient-to-r from-[#3087d1] via-black to-[#3087d1] text-white text-lg text-center px-4 py-2 rounded-lg shadow-lg">
+    <button className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white text-lg text-center px-4 py-2 rounded-lg shadow-lg">
       {linkText}
     </button>
   </a>

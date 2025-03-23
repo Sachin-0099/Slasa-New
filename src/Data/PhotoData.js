@@ -64,7 +64,7 @@ export const ExperienceData=[
     {
         src:'/Images/experience.png',
         title:'Experience',
-        description:"WELCOME TO THE EXPERIENCE,WHERE DREAMS BECOME REALITY, AND EVERY WOMAN GETS TO BE THE HEROINE OF HER OWN FAIRYTALE. THE EXPERIENCE IS MORE THAN JUST A PHOTO SHOOT; IT'S A JOURNEY INTO A REALM OF ENCHANTMENT. IT'S MAKING TIME FOR YOU AND UNDERSTANDING YOUR VISION.",
+        description:"Welcome to the experience, where dreams become reality, and every woman gets to be the heroine of her own fairytale. The experience is more than just a photo shoot; it's a journey into a realm of enchantment. It's making time for you and understanding your vision..",
         button:'Book Now'
     },
    
@@ -74,7 +74,7 @@ export const PhotoTourData=[
     {
         src:'/Images/photoTour.png',
         title:'Photo Tour',
-        description:"WELCOME TO THE EXPERIENCE, WHERE DREAMS BECOME REALITY, AND EVERY WOMAN GETS TO BE THE HEROINE OF HER OWN FAIRYTALE. THE EXPERIENCE IS MORE THAN JUST A PHOTO SHOOT; IT’S A JOURNEY INTO A REALM OF ENCHANTMENT. IT’S MAKING TIME FOR YOU AND UNDERSTANDING YOUR VISION.",
+        description:"Welcome to the experience, where dreams become reality, and every woman gets to be the heroine of her own fairytale. The experience is more than just a photo shoot; it’s a journey into a realm of enchantment. It’s making time for you and understanding your vision..",
         button:'Inquiry'
     }
 ]

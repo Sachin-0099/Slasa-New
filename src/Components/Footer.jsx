@@ -3,9 +3,9 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700">
+    <footer className="bg-gray-100 text-gray-700 ">
       {/* Subscription & App Download Section */}
-      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-gray-300">
+      <div className="max-w-7xl mx-auto px-0 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-gray-300">
         {/* Subscription Section */}
         <div>
           <h3 className="font-semibold text-xl mb-2">
@@ -26,26 +26,24 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Download Our Apps Section */}
-        <div className="ml-40">
-          <h3 className="font-semibold text-xl mb-2">Download our apps</h3>
-          <p className="text-gray-500 mb-4">
-            Shop our products and offers on-the-go.
-          </p>
-          <div className="flex space-x-4">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Google Play"
-              className="w-36"
-            />
+       {/* Download Our Apps Section */}
+<div className="px-4 md:px-200 lg:px-50 ">
+  <h3 className="font-semibold text-xl mb-2 text-center md:text-left">
+    Download our apps
+  </h3>
+  <p className="text-gray-500 mb-4 text-center md:text-left">
+    Shop our products and offers on-the-go.
+  </p>
+  <div className="flex flex-wrap justify-center md:justify-start space-x-4 ">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+      alt="Google Play"
+      className="w-32 md:w-36"
+    />
+   
+  </div>
+</div>
 
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Google Play"
-              className="w-36"
-            />
-          </div>
-        </div>
       </div>
 
       {/* Links Section */}

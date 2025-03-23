@@ -61,7 +61,7 @@ export const useProductContext = () => useContext(ProductContext);
 
 const ProductSection = ({ title, products }) => {
   return (
-<div className="relative p-4 mt-6 w-full md:w-1/3 gap-2 shadow-lg border-b-8 border">
+<div className="relative p-4 mt-6 w-full md:w-1/3 gap-2 shadow-lg border-b-8 border ">
   <div className="absolute bottom-[-8px] left-0 w-full h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
 
 

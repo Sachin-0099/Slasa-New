@@ -4,9 +4,9 @@
         "title": "Pick up where you left off",
         "items": [
           { "image": "/Images/Acrylic1.avif", "alt": "Item 1", "caption": "Acrylic Triangle" },
-          { "image": "/Images/Exclusive22.jpeg", "alt": "Item 2", "caption": "Canvas Decor..." },
-          { "image": "/Images/Exclusive21.jpeg", "alt": "Item 3", "caption": "Wall Decor..." },
-          { "image": "/Images/Exclusive15.jpeg", "alt": "Item 4", "caption": "Canvas Art..." }
+          { "image": "/Images/Exclusive22.jpeg", "alt": "Item 2", "caption": "Canvas Decor" },
+          { "image": "/Images/Exclusive21.jpeg", "alt": "Item 3", "caption": "Wall Decor" },
+          { "image": "/Images/Exclusive15.jpeg", "alt": "Item 4", "caption": "Canvas Art" }
         ],
         "linkText": "See more",
         "linkHref": "#"
@@ -15,9 +15,9 @@
         "title": "Continue shopping deals",
         "items": [
           { "image": "/Images/Exclusive5.jpeg", "alt": "Model 1", "caption": "Acrylic Triangle." },
-          { "image": "/Images/Exclusive4.jpeg", "alt": "Model 2" , "caption": "Canvas Decor..."},
-          { "image": "/Images/Exclusive6.jpeg", "alt": "Model 3" , "caption": "Wall Decor..." },
-          { "image": "/Images/Exclusive2.jpeg", "alt": "Model 4", "caption": "Canvas Art..." }
+          { "image": "/Images/Exclusive4.jpeg", "alt": "Model 2" , "caption": "Canvas Decor"},
+          { "image": "/Images/Exclusive6.jpeg", "alt": "Model 3" , "caption": "Wall Decor" },
+          { "image": "/Images/Exclusive2.jpeg", "alt": "Model 4", "caption": "Canvas Art" }
         ],
         "linkText": "See all deals",
         "linkHref": "#"
@@ -26,9 +26,9 @@
         "title": "Buy again",
         "items": [
           { "image": "/Images/Exclusive.jpeg", "alt": "Tide", "caption": "Acrylic Triangle " },
-          { "image": "/Images/Exclusive7.jpeg", "alt": "Trimmer", "caption": "Canvas Decor..." },
-          { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion", "caption": "Wall Decor..."  },
-          { "image": "/Images/Exclusive32.jpeg", "alt": "Lotion", "caption": "Canvas Art..." }
+          { "image": "/Images/Exclusive7.jpeg", "alt": "Trimmer", "caption": "Canvas Decor" },
+          { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion", "caption": "Wall Decor"  },
+          { "image": "/Images/Exclusive32.jpeg", "alt": "Lotion", "caption": "Canvas Art" }
         ],
         "linkText": "More in Buy Again",
         "linkHref": "#"
@@ -55,10 +55,10 @@
       {
         "title": "Continue Shopping for",
         "items": [
-          { "image": "/Images/acrylicSheets.avif", "alt": "Item 1", "caption": "Acrylic Triangle ." },
-          { "image": "/Images/cult.jpeg", "alt": "Item 2", "caption": "Canvas Decor..." },
-          { "image": "/Images/Exclusive28.jpeg", "alt": "Item 3", "caption": "Wall Decor..." },
-          { "image": "/Images/Exclusive25.jpeg", "alt": "Item 4", "caption": "Canvas Art..." }
+          { "image": "/Images/acrylicSheets.avif", "alt": "Item 1", "caption": "Acrylic Triangle " },
+          { "image": "/Images/cult.jpeg", "alt": "Item 2", "caption": "Canvas Decor" },
+          { "image": "/Images/Exclusive28.jpeg", "alt": "Item 3", "caption": "Wall Decor" },
+          { "image": "/Images/Exclusive25.jpeg", "alt": "Item 4", "caption": "Canvas Art" }
         ],
         "linkText": "See more",
         "linkHref": "#"
@@ -66,10 +66,10 @@
       {
         "title": "More items to be consider",
         "items": [
-          { "image": "/Images/Exclusive5.jpeg", "alt": "Model 1" , "caption": "Acrylic Triangle ."},
-          { "image": "/Images/Exclusive4.jpeg", "alt": "Model 2", "caption": "Canvas Decor..." },
-          { "image": "/Images/Exclusive6.jpeg", "alt": "Model 3", "caption": "Wall Decor..."  },
-          { "image": "/Images/Exclusive4.jpeg", "alt": "Model 4", "caption": "Canvas Art..." }
+          { "image": "/Images/Exclusive5.jpeg", "alt": "Model 1" , "caption": "Acrylic Triangle "},
+          { "image": "/Images/Exclusive4.jpeg", "alt": "Model 2", "caption": "Canvas Decor" },
+          { "image": "/Images/Exclusive6.jpeg", "alt": "Model 3", "caption": "Wall Decor"  },
+          { "image": "/Images/Exclusive4.jpeg", "alt": "Model 4", "caption": "Canvas Art" }
         ],
         "linkText": "See all deals",
         "linkHref": "#"
@@ -77,10 +77,10 @@
       {
         "title": "Pick up where You left",
         "items": [
-          { "image": "/Images/Exclusive.jpeg", "alt": "Tide", "caption": "Acrylic Triangle ." },
-          { "image": "/Images/Exclusive7.jpeg", "alt": "Trimmer", "caption": "Canvas Decor..." },
-          { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion" , "caption": "Wall Decor..." },
-          { "image": "/Images/Exclusive.jpeg", "alt": "Lotion", "caption": "Canvas Art..." }
+          { "image": "/Images/Exclusive.jpeg", "alt": "Tide", "caption": "Acrylic Triangle" },
+          { "image": "/Images/Exclusive7.jpeg", "alt": "Trimmer", "caption": "Canvas Decor" },
+          { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion" , "caption": "Wall Decor" },
+          { "image": "/Images/Exclusive.jpeg", "alt": "Lotion", "caption": "Canvas Art" }
         ],
         "linkText": "More in Buy Again",
         "linkHref": "#"
@@ -110,10 +110,10 @@
         {
           "title": "Pick up where you left off",
           "items": [
-            { "image": "/Images/Acrylic1.avif", "alt": "Item 1", "caption": "Acrylic Triangle.." },
-            { "image": "/Images/Acrylic2.jpeg", "alt": "Item 2", "caption": "Canvas Decor..." },
-            { "image": "/Images/Exclusive21.jpeg", "alt": "Item 3", "caption": "Wall Decor..." },
-            { "image": "/Images/Exclusive15.jpeg", "alt": "Item 4", "caption": "Canvas Art..." }
+            { "image": "/Images/Acrylic1.avif", "alt": "Item 1", "caption": "Acrylic Triangle" },
+            { "image": "/Images/Acrylic2.jpeg", "alt": "Item 2", "caption": "Canvas Decor" },
+            { "image": "/Images/Exclusive21.jpeg", "alt": "Item 3", "caption": "Wall Decor" },
+            { "image": "/Images/Exclusive15.jpeg", "alt": "Item 4", "caption": "Canvas Art" }
           ],
           "linkText": "See more",
           "linkHref": "#"
@@ -122,9 +122,9 @@
           "title": "Continue shopping deals",
           "items": [
             { "image": "/Images/Exclusive5.jpeg", "alt": "Model 1", "caption": "Acrylic "},
-            { "image": "/Images/Exclusive4.jpeg", "alt": "Model 2", "caption": "Canvas Decor..." },
-            { "image": "/Images/Exclusive6.jpeg", "alt": "Model 3", "caption": "Wall Decor..."  },
-            { "image": "/Images/Exclusive2.jpeg", "alt": "Model 4", "caption": "Canvas Art..." }
+            { "image": "/Images/Exclusive4.jpeg", "alt": "Model 2", "caption": "Canvas Decor" },
+            { "image": "/Images/Exclusive6.jpeg", "alt": "Model 3", "caption": "Wall Decor"  },
+            { "image": "/Images/Exclusive2.jpeg", "alt": "Model 4", "caption": "Canvas Art" }
           ],
           "linkText": "See all deals",
           "linkHref": "#"
@@ -132,10 +132,10 @@
         {
           "title": "Buy again",
           "items": [
-            { "image": "/Images/Exclusive.jpeg", "alt": "Tide", "caption": "Acrylic Triangle shape..." },
-            { "image": "/Images/Exclusive7.jpeg", "alt": "Trimmer", "caption": "Canvas Decor..."  },
-            { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion", "caption": "Wall Decor..."  },
-            { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion" , "caption": "Canvas Art..."}
+            { "image": "/Images/Exclusive.jpeg", "alt": "Tide", "caption": "Acrylic Triangle shape" },
+            { "image": "/Images/Exclusive7.jpeg", "alt": "Trimmer", "caption": "Canvas Decor"  },
+            { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion", "caption": "Wall Decor"  },
+            { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion" , "caption": "Canvas Art"}
           ],
           "linkText": "More in Buy Again",
           "linkHref": "#"
@@ -157,9 +157,9 @@
               "discountPrice": "-4% AED 42,9.00", 
               "originalPrice": "M.R.P:  AED 44,9.00" 
             },
-            { "image": "/Images/Exclusive22.jpeg", "alt": "Decor 2" , "caption": "Canvas Art..."},
-            { "image": "/Images/Exclusive27.jpeg", "alt": "Decor 3" , "caption": "Canvas Art..."},
-            { "image": "/Images/Exclusive29.jpeg", "alt": "Decor 4", "caption": "Canvas Art..." }
+            { "image": "/Images/Exclusive22.jpeg", "alt": "Decor 2" , "caption": "Canvas Art"},
+            { "image": "/Images/Exclusive27.jpeg", "alt": "Decor 3" , "caption": "Canvas Art"},
+            { "image": "/Images/Exclusive29.jpeg", "alt": "Decor 4", "caption": "Canvas Art" }
           ],
           "specialLayout": "highlightDeal"
         }
