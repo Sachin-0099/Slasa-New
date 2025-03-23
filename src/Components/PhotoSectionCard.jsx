@@ -15,7 +15,7 @@ const PhotoSectionCard = ({PhotoData,title,width,Description}) => {
           <div className='h-full w-full flex items-center justify-center'>
             <div className='h-[80%]  lg:w-[70%] md:w-[70%] w-[90%] mt-10 flex flex-wrap lg:flex-col-3 md:flex-col-2 sm:flex-col-2 items-center justify-around'>
                 {PhotoData.map((photo,index)=>(
-                     <div key={index} className='lg:h-[34vh] bg-red-300 lg:w-[40vh] md:h-[25vh] md:w-[40vh] h-[25vh] w-[18vh] '>
+                     <div key={index} className='lg:h-[34vh] lg:w-[40vh] md:h-[25vh] md:w-[40vh] h-[25vh] w-[18vh] '>
                       <img src={photo.src} className='h-[25vh]'/>
                      </div>
                 ))}
