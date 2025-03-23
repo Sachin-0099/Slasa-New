@@ -41,7 +41,7 @@ const VideoSectionCard = ({ PhotoData, title, width, Description }) => {
       </div>
 
       {Description.map((des, index) => (
-        <div key={index} className="w-[40%] h-[10%] flex lg:py-15 items-center justify-center my-[-20]">
+        <div key={index} className="w-[40%] h-[10%] flex lg:py-15 pt-10 items-center justify-center my-[-20]">
           <img src={des.icon} alt="icon" className="lg:w-[10vh] md:w-[8vh] w-[5vh]" />
           <a
             href={des.link.startsWith("http") ? des.link : `https://${des.link}`}

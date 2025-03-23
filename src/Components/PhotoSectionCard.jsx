@@ -22,7 +22,7 @@ const PhotoSectionCard = ({ PhotoData, title, width, Description }) => {
         </div>
       </div>
       {Description.map((des, index) => (
-        <div key={index} className='w-[40%] h-[10%] flex lg:py-5 py-2 items-center  justify-center mt-[-50] mb-10'>
+        <div key={index} className='w-[40%] h-[10%] flex lg:py-5 pt-10 items-center  justify-center mt-[-50] mb-10'>
           <img src={des.icon} alt='Icon' className='lg:w-[10vh] md:w-[8vh] w-[5vh] '  />
           <a
             href={des.link.startsWith('http') ? des.link : `https://${des.link}`}
