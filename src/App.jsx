@@ -394,26 +394,8 @@ function App() {
                 </PageLayout>
               }
             />
-              <Route
-              path="/detial"
-              element={
-                <PageLayout>
-                   
-              <ProductDetail/>
-            
-                </PageLayout>
-              }
-            />
-              <Route
-              path="/list"
-              element={
-                <PageLayout>
-                   
-                 <ProductList/>
-            
-                </PageLayout>
-              }
-            />
+                    <Route path="/list" element={<ProductList />} />
+                    <Route path="/product/:id" element={<ProductDetail/>} />
 
           
 

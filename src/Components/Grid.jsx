@@ -38,7 +38,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
           </div>
           <p className="text-lg font-bold text-red-600">{items[0].discountPrice}</p>
           <p className="text-gray-500 text-sm line-through">{items[0].originalPrice}</p>
-          <p className="text-blue-600">prime</p>
+          <p className="text-[#3087d1]">prime</p>
         </div>
 
         {/* Image Container - Ensuring layout remains consistent */}

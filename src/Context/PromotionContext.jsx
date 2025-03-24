@@ -26,10 +26,10 @@ export const PromotionProvider = ({ children }) => {
     },
     {
       id: 2,
-      title: "Top-Quality Construction Materials | Best Deals",
+      title: "Top-Quality Acrylic Products | Best Deals",
       image: "/Images/Exclusive26.jpeg",
       brand: "Slasa Build",
-      description: "High-quality materials for all your construction needs at unbeatable prices.",
+      description: "Explore high-quality acrylic products with exceptional clarity, durability.",
       price: "$500.00"
     },
     {

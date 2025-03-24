@@ -9,8 +9,8 @@ const HomeSection = () => {
       <img src="Images/Shimmer.jpeg" alt="" className='mt-5'  />
       <img src="Images/Acrylic.png" alt=""  className='w-full mt-5'/>
       <img src="Images/Shimmer.jpeg" alt="" className='mt-5' />
-      <img src="Images/Video.mp4" alt="" className='w-full  mt-5' />
-      <img src="Images/AcrylicWood.png" alt="" />
+      <img src="Images/Video.mp4" alt="" className='w-full  mt-5 mb-20' />
+      <img src="Images/AcrylicWood.png" alt="" className='mt-10 mb-20' />
 
      
     </div>

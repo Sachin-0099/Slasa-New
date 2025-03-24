@@ -33,9 +33,12 @@ const PromotionOffers = ({ promotionId }) => {
               <p className="font-bold">{promotion.brand}</p>
               <p className="text-xs">{promotion.description}</p>
               <p className="font-semibold">Price: {promotion.price}</p>
-              <button className="bg-[#3087d1] text-white px-5 py-2 mt-3 w-full rounded text-sm transition-transform hover:scale-105">
-                Explore
-              </button>
+              <a href={promotion.link} target="_blank" rel="noopener noreferrer">
+  <button className="bg-gradient-to-b from-[#3087d1] via-[] to-[#3087d1] text-white px-5 py-2 mt-3 w-full rounded text-sm transition-transform hover:scale-105">
+    Explore
+  </button>
+</a>
+
               <a href={promotion.link} target="_blank" rel="noopener noreferrer">
                 <img
                   src="/Images/easel8.avif"

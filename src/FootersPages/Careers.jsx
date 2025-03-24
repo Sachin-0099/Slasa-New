@@ -26,14 +26,14 @@ const Careers = () => {
       id: 2,
       title: "Job Categories",
       description: "Find the right job for you at Slasa.",
-      image: "Images/Bedroom.jpeg",
+      image: "Images/Exclusive27.jpeg",
       link: "#",
     },
     {
       id: 3,
       title: "Locations",
       description: "View Slasa's office locations worldwide.",
-      image: "Images/Acrylic1.avif",
+      image: "Images/Exclusive28.jpeg",
       link: "#",
     },
   ];

@@ -25,7 +25,7 @@ const About = () => {
       {/* Video Section */}
       <div className="relative w-full h-[600px]">
       <video
-  src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
+  src="https://youtu.be/qA3u1J3iFkU?si=WGjZ_sa1gOSBRE-6"
   className="w-full h-full object-cover"
   autoPlay
   loop

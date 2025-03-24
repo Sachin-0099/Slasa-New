@@ -15,7 +15,8 @@ const ProductDetail = () => {
   // Fetch product if not available in state
   useEffect(() => {
     if (!initialProduct) {
-      axios.get(`https://run.mocky.io/v3/ee83b3db-2f99-45c4-b963-47a38b571a30${id}`)
+      axios.get(`https://run.mocky.io/v3/ee83b3db-2f99-45c4-b963-47a38b571a30/${id}`)
+
         .then((response) => {
           setProduct({
             ...response.data,

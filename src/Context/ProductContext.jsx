@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Create Product Context
 const ProductContext = createContext();
@@ -16,8 +17,8 @@ const defaultSections = [
   {
     title: "Extra for You",
     products: [
-      { image: "Images/Exclusive27.jpeg", title: "Acrylic Print" },
-      { image: "Images/Exclusive28.jpeg", title: "Acrylic Wood" },
+      { image: "Images/Exclusive.jpeg", title: "Acrylic Print" },
+      { image: "Images/Exclusive2.jpeg", title: "Acrylic Wood" },
       { image: "Images/Exclusive26.jpeg", title: "Wall Decor" },
       { image: "Images/Exclusive25.jpeg", title: "Neon Festive" },
     ],
@@ -61,13 +62,15 @@ export const ProductProvider = ({ children }) => {
 export const useProductContext = () => useContext(ProductContext);
 
 const ProductSection = ({ title, products }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative p-4 mt-6 w-full md:w-1/3 gap-2 shadow-lg border-b-8 border">
       <div className="absolute bottom-[-8px] left-0 w-full h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
       <h2 className="text-center text-2xl font-bold border-b-8 border-[#3087d1] pb-2">{title}</h2>
       <div className="grid grid-cols-2 gap-4 p-4">
         {products.map((product, index) => (
-          <div key={index} className="text-center">
+          <div key={index} className="text-center cursor-pointer" onClick={() => navigate(`/product-details/${product.title.replace(/\s+/g, '-').toLowerCase()}`)}>
             <img
               src={product.image}
               alt={product.title}
@@ -78,7 +81,10 @@ const ProductSection = ({ title, products }) => {
         ))}
       </div>
       <div className="text-center mt-0">
-        <button className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 mt-0 px-6 rounded-full text-lg">
+        <button 
+          className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 mt-0 px-6 rounded-full text-lg"
+          onClick={() => navigate("/products")}
+        >
           See more
         </button>
       </div>

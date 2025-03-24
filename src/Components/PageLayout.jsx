@@ -63,12 +63,12 @@ const PageLayout = ({ children }) => {
           <div className={`fixed top-0 left-0 w-full z-50 bg-white shadow-lg transition-transform duration-300 ${showHeaderNav ? "translate-y-0" : "-translate-y-full"}`}>
             <HeaderTop />
             <HeaderNav />
-            <HeaderMain />
+            {/* <HeaderMain /> */}
           </div>
         )}
 
         {/* Page Content - Full Width */}
-        <div className="w-full px-0 md:px-0 lg:px-0 xl:px-0 pt-[203px]">
+        <div className="w-full px-0 md:px-0 lg:px-0 xl:px-0 pt-[150px]">
           {children}
         </div>
       </div>

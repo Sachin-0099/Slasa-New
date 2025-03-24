@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 
 const OurStory = () => {
   const images = [
-    "./logo.png",
+    "/Images/Untitled design.svg",
     "/Images/Exclusive.jpeg",
     "/Images/Exclusive25.jpeg",
     "/Images/Exclusive3.jpeg",
