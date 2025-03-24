@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import SideMenu from "./SidebarMenu";
 import HeaderTop from "./HeaderTop";
@@ -6,8 +6,22 @@ import HeaderNav from "./HeaderNav";
 
 const PageLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [hideHeaderTop, setHideHeaderTop] = useState(false);
   const location = useLocation();
   const isDashboard = location.pathname === "/mpage";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setHideHeaderTop(true); // Hide when scrolling past 30px
+      } else {
+        setHideHeaderTop(false); // Show only when at the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div className="flex min-h-screen bg-white overflow-hidden">
@@ -34,14 +48,14 @@ const PageLayout = ({ children }) => {
       >
         {/* Header - Always Visible */}
         {!isDashboard && (
-          <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
-            <HeaderTop />
+          <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg transition-all duration-300">
+            {!hideHeaderTop && <HeaderTop />}
             <HeaderNav />
           </div>
         )}
 
         {/* Page Content */}
-        <div className="w-full px-0 md:px-0 lg:px-0 xl:px-0 pt-[135px]  mt-10 lg:mt-0 md:mt-2">
+        <div className="w-full px-0 md:px-0 lg:px-0 xl:px-0 pt-[135px] mt-10 lg:mt-0 md:mt-2">
           {children}
         </div>
       </div>
