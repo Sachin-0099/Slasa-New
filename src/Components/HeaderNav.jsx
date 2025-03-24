@@ -8,7 +8,7 @@ const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="py-3 bg-white shadow-md w-full transition-all duration-300 ease-in-out">
+    <header className="py-2 bg-white shadow-md w-full transition-all duration-300 ease-in-out">
       <div className="px-4 md:px-8 flex items-center justify-between">
         {/* Logo */}
         <div className="w-32 h-18">
