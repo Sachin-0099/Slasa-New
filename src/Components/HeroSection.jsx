@@ -32,18 +32,19 @@ const HeroSection = ({
   };
 
   return (
-    <div className="relative w-full  flex flex-col overflow-hidden">
+    <div className="relative w-full flex flex-col overflow-hidden">
       {/* Background Image Slider */}
-      <div className="w-full ">
+      <div className="w-full h-[20vh]  md:h-[30vh] lg:h-[40vh] xl:h-[50vh]">
         {slides.length > 0 ? (
           <Slider {...settings}>
             {slides.map((slide, index) => (
-              <div key={index} className="w-full h-full">
-                <img
-                  src={slide}
-                  alt={`Hero Background ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
+              <div key={index} className="w-full h-[20vh] bg-red-300 md:h-[30vh] lg:h-[40vh] xl:h-[50vh]">
+              <img
+  src={slide}
+  alt={`Hero Background ${index + 1}`}
+  className="w-full h-full object-fit object-center bg-white"
+/>
+
               </div>
             ))}
           </Slider>
