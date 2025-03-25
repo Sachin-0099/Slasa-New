@@ -93,5 +93,12 @@ Global styles to prevent overflow
   
   
   }
+  /* Hide the navbar carousel on larger screens */
+@media (min-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
+
   
   

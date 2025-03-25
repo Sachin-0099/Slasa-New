@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import SideMenu from "./SidebarMenu";
 import HeaderTop from "./HeaderTop";
 import HeaderNav from "./HeaderNav";
+import HeaderMain from "./HeaderMain";
 
 const PageLayout = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -51,6 +52,7 @@ const PageLayout = ({ children }) => {
           <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg transition-all duration-300">
             {!hideHeaderTop && <HeaderTop />}
             <HeaderNav />
+            <HeaderMain/>
           </div>
         )}
 
