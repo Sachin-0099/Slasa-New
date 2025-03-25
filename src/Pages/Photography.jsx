@@ -5,7 +5,7 @@ import Section from '../Components/Section'
 import EditSection from '../Components/EditSection'
 
 import Experience from '../Components/Experience'
-import Phototour from '../Components/Phototour'
+import Phototour from '../Components/Phototour.jsx'
 import {EditData,ExperienceData,PhotoTourData,GraphicsData} from '../Data/PhotoData'
 import Footer from '../Components/Footer'
 import GraphicsSection from '../Components/GraphicsSection'

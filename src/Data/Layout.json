@@ -1,0 +1,86 @@
+[
+    {
+      "id": 1,
+      "image": "/Images/Exclusive.jpeg",
+      "label": "NEW",
+      "price": "AED 249",
+      "title": "Tamara Alabaster Decorative Tray"
+    },
+    {
+      "id": 2,
+      "image": "Images/Exclusive.jpeg",
+      "label": "NEW",
+      "price": "AED 99",
+      "title": "Tamara Decorative Tray with Glass Dome"
+    },
+    {
+      "id": 3,
+      "image": "Images/Exclusive.jpeg",
+      "label": "RAMADAN",
+      "price": "AED 199",
+      "title": "Tamara Textilia Decorative Tray"
+    },
+    {
+      "id": 4,
+      "image": "/Images/Exclusive.jpeg",
+      "label": "NEW",
+      "price": "AED 249",
+      "title": "Tamara Alabaster Decorative Tray"
+    },
+    {
+      "id": 5,
+      "image": "Images/Exclusive.jpeg",
+      "label": "NEW",
+      "price": "AED 99",
+      "title": "Tamara Decorative Tray with Glass Dome"
+    },
+    {
+      "id": 6,
+      "image": "Images/Exclusive.jpeg",
+      "label": "RAMADAN",
+      "price": "AED 199",
+      "title": "Tamara Textilia Decorative Tray"
+    },
+    {
+        "id": 7,
+        "image": "/Images/Exclusive.jpeg",
+        "label": "NEW",
+        "price": "AED 249",
+        "title": "Tamara Alabaster Decorative Tray"
+      },
+      {
+        "id": 8,
+        "image": "Images/Exclusive.jpeg",
+        "label": "NEW",
+        "price": "AED 99",
+        "title": "Tamara Decorative Tray with Glass Dome"
+      },
+      {
+        "id": 9,
+        "image": "Images/Exclusive.jpeg",
+        "label": "RAMADAN",
+        "price": "AED 199",
+        "title": "Tamara Textilia Decorative Tray"
+      },
+      {
+        "id": 10,
+        "image": "/Images/Exclusive.jpeg",
+        "label": "NEW",
+        "price": "AED 249",
+        "title": "Tamara Alabaster Decorative Tray"
+      },
+      {
+        "id": 11,
+        "image": "Images/Exclusive.jpeg",
+        "label": "NEW",
+        "price": "AED 99",
+        "title": "Tamara Decorative Tray with Glass Dome"
+      },
+      {
+        "id": 12,
+        "image": "Images/Exclusive.jpeg",
+        "label": "RAMADAN",
+        "price": "AED 199",
+        "title": "Tamara Textilia Decorative Tray"
+      }
+  ]

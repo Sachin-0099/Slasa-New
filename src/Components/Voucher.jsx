@@ -5,7 +5,12 @@ const Voucher = ({ title, subtitle, discount, sale, categories, imageUrl, button
     <div className=" mt-10 mb-6 bg-white p-6 rounded-lg shadow-lg">
       {/* Header */}
       <div className="text-center">
-        <h1 className="text-3xl font-bold text-[#3087d1]">{title}</h1>
+      <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#000000] via-[#3087d1] to-[#000000] inline-block">
+  {title}
+</h1>
+
+
+
       </div>
 
       {/* Voucher Section */}

@@ -100,6 +100,7 @@ import EmptyCart from "./Components/EmptyCart";
 import SellwithUs from "./Components/SellwithUs";
 import ProductDetail from "./Components/ProductDetail";
 import ProductList from "./Components/ProductList";
+import Layout from "./Components/Layout";
 
 
 
@@ -141,6 +142,15 @@ function App() {
                 </PageLayout>
               }
             />
+            <Route
+              path="/layout"
+              element={
+                <PageLayout>
+                <Layout/>
+                </PageLayout>
+              }
+            />
+            
            
                <Route
                     path="*"

@@ -48,34 +48,36 @@ const HeaderNav = () => {
           <div className="flex items-center space-x-4 sm:space-x-5">
             {/* Desktop Navigation - hidden on mobile/tablet */}
             <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-              {["Acrylic", "Shops", "Photography & Videography"].map((item, index) => (
-                <a
-                  key={index}
-                  className="text-base xl:text-lg font-medium hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1"
-                  href="#"
-                >
-                  {item}
-                </a>
-              ))}
+              <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/acrylic">Acrylic</a>
+              <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/shop">Shops</a>
+              <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/photography">Photography & Videography</a>
             </nav>
 
             {/* Desktop Icons - hidden on mobile/tablet */}
             <div className="hidden lg:flex items-center space-x-4 xl:space-x-5">
-              <a className="flex items-center text-base xl:text-lg hover:text-[#3087d1]" href="#">
+              <a className="flex items-center text-base xl:text-lg hover:text-[#3087d1]" href="/signin">
                 <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center text-sm font-bold">
                   S
                 </div>
                 <span className="ml-2">Sign Up / Sign In</span>
               </a>
-              <CiHeart size={24} className="cursor-pointer hover:text-[#3087d1]" />
-              <FiShoppingBag size={24} className="cursor-pointer hover:text-[#3087d1]" />
+              <a href="/wishlist">
+                <CiHeart size={24} className="cursor-pointer hover:text-[#3087d1]" />
+              </a>
+              <a href="/cart">
+                <FiShoppingBag size={24} className="cursor-pointer hover:text-[#3087d1]" />
+              </a>
               <CiGlobe size={24} className="cursor-pointer hover:text-[#3087d1]" />
             </div>
 
             {/* Mobile Icons - visible only on mobile/tablet */}
             <div className="flex items-center space-x-4 sm:space-x-5 lg:hidden">
-              <CiHeart size={22} className="cursor-pointer hover:text-[#3087d1]" />
-              <FiShoppingBag size={22} className="cursor-pointer hover:text-[#3087d1]" />
+              <a href="/wishlist">
+                <CiHeart size={22} className="cursor-pointer hover:text-[#3087d1]" />
+              </a>
+              <a href="/cart">
+                <FiShoppingBag size={22} className="cursor-pointer hover:text-[#3087d1]" />
+              </a>
             </div>
           </div>
         </div>

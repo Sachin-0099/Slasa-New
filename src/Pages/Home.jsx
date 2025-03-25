@@ -13,6 +13,8 @@ import ProductList from "../Components/ProductList";
 import PromotionOffers from "../Components/PromotionOffers";
 import { useVouchers } from "../Context/VoucherContext";
 import Voucher from "../Components/Voucher";
+import ProductGrid from "../Components/ProductGrid";
+import CategoryGrid from "../Components/CategoryGrid";
 
 const Home = () => {
   const { sectionsData, sectionsData2 } = GridData;
@@ -31,8 +33,11 @@ const Home = () => {
          
         ]}
       />
+    
+     
       <ProductLayout /> 
       <AcrylicLayout />
+      <ProductGrid/>
       <ProductSection title="Featured Products" description="Discover our best-selling products, carefully selected to meet all your needs for home renovation and construction projects." className="mt-16" />
      
 
@@ -41,11 +46,14 @@ const Home = () => {
         <ProductCard />
         <ProductList />
       </div>
+    
       <Grid sections={sectionsData2} />
+
     
      
      
       <PromotionOffers promotionId={2} />
+      <CategoryGrid/>
       {/* <HomeCategories/> */}
       <HomeSection/>
       <PromotionOffers promotionId={1} />

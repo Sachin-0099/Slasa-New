@@ -18,7 +18,10 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
           className="w-60 mt-2 cursor-pointer rounded-lg"
           onClick={() => handleClick(items[0])}
         />
-        <h3 className="font-bold text-lg">{title}</h3>
+     <h3 className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-b from-black via-[#3087d1] to-black">
+  {title}
+</h3>
+
         <p className="text-sm">{items[0].caption}</p>
         <button className="!bg-gradient-to-b from-[#3087d1] via-[#000000] to-[#3087d1] text-white py-2 mt-4 px-6 rounded-full text-lg">
           See more
@@ -31,7 +34,10 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
     return (
       <div className="bg-white p-4 shadow rounded-lg flex flex-col md:flex-row justify-between items-center col-span-1 md:col-span-2 lg:col-span-3 xl:col-span-4">
         <div className="flex-1 text-center md:text-left">
-          <h1 className="font-bold text-lg">{title}</h1>
+        <h1 className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1]">
+  {title}
+</h1>
+
           <p className="text-sm">{items[0].caption}</p>
           <div className="bg-red-600 text-white px-2 py-1 inline-block mt-2">
             Limited time deal
