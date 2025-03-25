@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import fallbackData from "../Data/products.json"; // Import fallback JSON
+import fallbackData from "../Data/Products.json"; // Import fallback JSON
 
 const defaultImage = "Images/default.jpg"; // Default image path
 
