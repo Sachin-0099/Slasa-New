@@ -86,12 +86,25 @@
         "linkHref": "#"
       },
       {
+        "title": "Pick up where You left",
+        "items": [
+          { "image": "/Images/Exclusive.jpeg", "alt": "Tide", "caption": "Acrylic Triangle" },
+          { "image": "/Images/Exclusive7.jpeg", "alt": "Trimmer", "caption": "Canvas Decor" },
+          { "image": "/Images/Exclusive9.jpeg", "alt": "Lotion" , "caption": "Wall Decor" },
+          { "image": "/Images/Exclusive.jpeg", "alt": "Lotion", "caption": "Canvas Art" }
+        ],
+        "linkText": "More in Buy Again",
+        "linkHref": "#"
+      },
+      {
         "title": "Keep Shopping for",
         "items": [
           { "image": "/Images/Exclusive.jpeg", "alt": "Amazon Business", "caption": "+ Top B2B deals !!" }
         ],
         "specialLayout": "bulkDiscounts"
       },
+     
+      
       {
         "title": "Acrylic Wood",
         "items": [

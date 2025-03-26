@@ -2,10 +2,10 @@ import React from 'react';
 
 const ProductSection = ({ title, description }) => {
   return (
-    <div className="w-screen mt-15 mb-5"> {/* Full width */}
-      <div className="bg-gradient-to-b from-black via-[#3087d1] to-black pl-10 text-white py-2 w-full max-w-none"> 
-        <h1 className="text-2xl font-bold">{title}</h1> {/* Larger title */}
-        <p className="text-lg">{description}</p> {/* Bigger text */}
+    <div className="w-full mt-6 mb-5 "> {/* Responsive padding */}
+      <div className="bg-gradient-to-b from-black via-[#3087d1] to-black text-white py-2 px-4 md:px-10  shadow-lg"> 
+        <h1 className="text-xl md:text-3xl font-bold">{title}</h1> {/* Responsive title size */}
+        <p className="text-sm md:text-lg mt-2">{description}</p> {/* Responsive text size */}
       </div>
     </div>
   );

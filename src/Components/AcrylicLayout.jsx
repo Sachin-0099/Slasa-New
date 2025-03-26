@@ -6,7 +6,7 @@ function AcrylicLayout() {
 
   return (
     <>
-      <div className="max-w-screen-xl mt-2 md:mt-6 mx-auto bg-[#6db4f3] p-2 md:p-4">
+      <div className="max-w-screen-xl mt-2 md:mt-8 mx-auto bg-[#6db4f3] p-2 md:p-4">
         {/* First Row */}
         <div className="flex flex-col md:flex-row w-full gap-2">
           <div
@@ -79,7 +79,7 @@ function AcrylicLayout() {
         </div>
       </div>
 
-      <img src="Images/text3.gif" alt="Promotion" className="w-full max-w-screen-xl mx-auto h-auto mt-2 md:mt-3" />
+      {/* <img src="Images/text3.gif" alt="Promotion" className="w-full max-w-screen-xl mx-auto h-auto mt-2 md:mt-3" /> */}
     </>
   );
 }

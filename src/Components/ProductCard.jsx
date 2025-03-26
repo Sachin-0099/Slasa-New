@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="max-w-xs bg-gray-100 shadow-lg mt-4 overflow-hidden cursor-pointer hover:shadow-xl transition-all p-4 rounded-lg mb-10">
+    <div className="max-w-xs bg-gray-100 shadow-lg mt-6 overflow-hidden cursor-pointer hover:shadow-xl transition-all  rounded-lg ">
       <div className="relative">
         <Link to={`/product/${product.id}`}>
           <img

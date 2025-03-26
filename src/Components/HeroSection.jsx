@@ -33,7 +33,7 @@ const HeroSection = ({
   };
 
   return (
-    <div className="relative w-full flex flex-col overflow-hidden">
+    <div className="relative w-full flex flex-col overflow-hidden mb-5 ">
       {/* Background Image Slider */}
       <div className="w-full h-[30vh]  md:h-[30vh] lg:h-[40vh] xl:h-[60vh]">
         {slides.length > 0 ? (

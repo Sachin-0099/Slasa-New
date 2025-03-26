@@ -36,7 +36,7 @@ const ProductGrid = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full bg-white p-6 sm:p-8 md:p-10 lg:p-12">
+    <div className="flex justify-center items-center w-full  p-6 sm:p-8 md:p-10 lg:p-12 mt-6">
       {/* Carousel for small screens */}
       <div className="block sm:hidden w-full max-w-md">
         <Slider {...settings}>
