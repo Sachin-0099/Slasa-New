@@ -26,7 +26,7 @@ const CategoryGrid = () => {
   }, []);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-8">
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-4 md:p-8">
       {categories.map((category, index) => (
         <div
           key={index}
@@ -42,7 +42,10 @@ const CategoryGrid = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] opacity-50"></div>
             </div>
           </div>
-          <p className="text-center mt-4 text-lg font-semibold">{category.name}</p>
+          {/* Added hidden md:block to toggle visibility */}
+          <p className="text-center mt-4 text-2xl ">
+            {category.name}
+          </p>
         </div>
       ))}
     </div>
