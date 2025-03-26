@@ -18,7 +18,8 @@ const HeroSection = ({
   const settings = {
     dots: true,
     dotsClass:
-      "slick-dots !bottom-5 absolute left-1/2 transform -translate-x-1/2 text-white text-2xl",
+    "slick-dots absolute left-1/2 transform -translate-x-1/2 text-white text-2xl md:!bottom-5 !bottom-2",
+  
     infinite: true,
     speed: 500,
     slidesToShow: 1,
