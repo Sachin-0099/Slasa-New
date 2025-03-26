@@ -3,8 +3,8 @@ import '../App.css'; // For any custom CSS, though Tailwind handles most styling
 
 const HeaderMain = () => {
   return (
-    <div className="App border border-l-2 border-black mt-[-10px]">
-      <nav className="navbar bg-white p-0">
+    <div className="App  border-black mt-[-10px]">
+      <nav className="navbar border bg-white p-0">
         <div className="flex justify-start space-x-4 py-2 overflow-x-auto no-scrollbar">
           {/* Category 1 */}
           <div className="flex-shrink-0 px-3 border-l-2 border-black h-full">

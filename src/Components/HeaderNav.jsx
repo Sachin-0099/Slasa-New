@@ -17,7 +17,7 @@ const HeaderNav = () => {
           <div className="flex items-center">
             {/* Hamburger Menu Button - visible on mobile and tablet */}
             <button
-              className="lg:hidden flex items-center text-black !bg-white hover:text-[#3087d1] mr-2"
+              className=" flex items-center text-black !bg-white hover:text-[#3087d1] mr-2"
               onClick={() => setIsMenuOpen(true)}
             >
               <MdOutlineMenu size={30} />
@@ -83,7 +83,7 @@ const HeaderNav = () => {
         </div>
 
         {/* Mobile Search Bar - visible only on mobile */}
-        <div className="md:hidden px-4 sm:px-6 py-2">
+        <div className="md:hidden px-4 sm:px-6 py-2 mt-[-20px]">
           <div className="relative w-full">
             <input
               className="h-10 w-full bg-white rounded-md pl-10 pr-4 outline-none border border-gray-300 shadow-sm focus:border-[#3087d1]"

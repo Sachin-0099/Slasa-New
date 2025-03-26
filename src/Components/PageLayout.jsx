@@ -11,6 +11,7 @@ const PageLayout = ({ children }) => {
   const location = useLocation();
   const isDashboard = location.pathname === "/mpage";
 
+  // Effect for handling scroll event to hide the HeaderTop
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 30) {
@@ -20,7 +21,10 @@ const PageLayout = ({ children }) => {
       }
     };
 
+    // Attach scroll event listener
     window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on unmount
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -50,9 +54,10 @@ const PageLayout = ({ children }) => {
         {/* Header - Always Visible */}
         {!isDashboard && (
           <div className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg transition-all duration-300">
+            {/* Conditionally render HeaderTop based on scroll */}
             {!hideHeaderTop && <HeaderTop />}
             <HeaderNav />
-            <HeaderMain/>
+            <HeaderMain />
           </div>
         )}
 
