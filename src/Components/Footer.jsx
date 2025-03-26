@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 ">
+    <footer className="bg-gray-100 text-gray-700 px-2 ">
       {/* Subscription & App Download Section */}
       <div className="max-w-7xl mx-auto px-0 py-10 grid grid-cols-1 md:grid-cols-2 gap-8 border-b border-gray-300">
         {/* Subscription Section */}

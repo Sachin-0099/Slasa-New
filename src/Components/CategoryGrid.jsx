@@ -2,10 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const fallbackCategories = [
-  { name: "Wall Decor", image: "/Images/Exclusive27.jpeg" },
-  { name: "Uv Printing", image: "/Images/Exclusive29.jpeg" },
-  { name: "Acrylic Wood", image: "/Images/Exclusive4.jpeg" },
-  { name: "Best Sellers", image: "/Images/Exclusive3.jpeg" },
+
+  { name: "Wall Decor", image: "/Images/WD1.jpg" },
+  { name: "Uv Printing", image: "/Images/WD2.jpg" },
+  { name: "Acrylic Wood", image: "/Images/WD3.jpg" },
+  { name: "Best Sellers", image: "/Images/WD4.jpg" },
 ];
 
 const CategoryGrid = () => {
