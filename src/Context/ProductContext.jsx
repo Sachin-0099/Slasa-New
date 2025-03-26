@@ -67,30 +67,34 @@ const ProductSection = ({ title, products }) => {
   return (
     <div className="relative p-4 mt-6 w-full md:w-1/3 gap-2 shadow-lg border-b-8 border">
       <div className="absolute bottom-[-8px] left-0 w-full h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
-      <h2 className="text-center text-3xl font-bold border-b-8 border-[#3087d1] pb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] block w-full">
-  {title}
-</h2>
+      <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold border-b-8 border-[#3087d1] pb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] block w-full">
+        {title}
+      </h2>
 
-
-
-
-
-
-      <div className="grid grid-cols-2 gap-4 p-4">
+      {/* Product Grid */}
+      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
         {products.map((product, index) => (
-          <div key={index} className="text-center cursor-pointer" onClick={() => navigate(`/product-details/${product.title.replace(/\s+/g, '-').toLowerCase()}`)}>
+          <div
+            key={index}
+            className="text-center cursor-pointer"
+            onClick={() =>
+              navigate(
+                `/product-details/${product.title.replace(/\s+/g, "-").toLowerCase()}`
+              )
+            }
+          >
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-32 object-cover rounded"
+              className="w-full h-32 sm:h-40 md:h-48 object-cover rounded"
             />
-            <p className="mt-2">{product.title}</p>
+            <p className="mt-2 text-xs sm:text-sm md:text-base">{product.title}</p>
           </div>
         ))}
       </div>
       <div className="text-center mt-0">
-        <button 
-          className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 mt-0 px-6 rounded-full text-lg"
+        <button
+          className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 mt-0 px-6 rounded-full text-sm sm:text-base"
           onClick={() => navigate("/products")}
         >
           See more
