@@ -64,7 +64,7 @@ const ProductSection = ({ title, products }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative p-3 md:p-4 mt-4 w-full sm:w-1/2 md:w-1/3 shadow-lg border-b-8 border ">
+    <div className="relative p-3 md:p-4 mt-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 shadow-lg border-b-8 border rounded-lg">
       <div className="absolute bottom-[-8px] left-0 w-full h-[6px] sm:h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
       <h2 className="text-center text-lg sm:text-xl md:text-2xl font-bold border-b-4 sm:border-b-8 border-[#3087d1] pb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1]">
         {title}
@@ -84,7 +84,7 @@ const ProductSection = ({ title, products }) => {
               alt={product.title}
               className="w-full h-28 sm:h-32 md:h-36 object-cover rounded"
             />
-            <p className="mt-1 text-xs sm:text-sm md:text-base font-medium">
+            <p className="mt-1 text-xs sm:text-sm md:text-base font-medium text-black">
               {product.title}
             </p>
           </div>
@@ -106,7 +106,7 @@ const ProductLayout = () => {
   const { sections } = useProductContext();
 
   return (
-    <div className="flex flex-wrap justify-center gap-3 p-4 sm:p-8">
+    <div className="flex flex-wrap justify-center gap-3 p-4 sm:p-8 lg:flex-nowrap">
       {sections.map((section, index) => (
         <ProductSection key={index} title={section.title} products={section.products} />
       ))}
