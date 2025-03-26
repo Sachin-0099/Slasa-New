@@ -17,6 +17,8 @@ Global styles to prevent overflow
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
    
   }
   

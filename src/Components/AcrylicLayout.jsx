@@ -19,7 +19,7 @@ function AcrylicLayout() {
             <p className="text-xs sm:text-sm md:text-base text-white">
               Price drop | Only for today
             </p>
-            <button className="mt-2 md:mt-3 px-3 py-1.5 md:px-5 md:py-2 bg-white text-black rounded-md text-sm md:text-base">
+            <button className="mt-2 md:mt-3 px-3 py-1.5 md:px-5 md:py-2 !bg-gradient-to-b from-[#3087d1] via-[#000000] to-[#3087d1] text-white rounded-md text-sm md:text-base">
               Shop now
             </button>
           </div>
@@ -27,7 +27,7 @@ function AcrylicLayout() {
             className="relative w-full md:flex-1 overflow-hidden cursor-pointer"
             onClick={() => navigate("/product-details/acrylic-bath-accessories")}
           >
-            <div className="absolute top-0 left-0 w-[4px] md:w-[6px] lg:w-[8px] h-full bg-[#3087d1]"></div>
+            {/* <div className="absolute top-0 left-0 w-[4px] md:w-[6px] lg:w-[8px] h-full bg-[#3087d1]"></div> */}
             <img
               src="/Images/WD1.jpg"
               alt="Bath Accessories"
