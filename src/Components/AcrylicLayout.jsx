@@ -6,7 +6,7 @@ function AcrylicLayout() {
 
   return (
     <>
-      <div className="max-w-screen-xl mt-2 md:mt-8 mx-auto bg-[#6db4f3] p-2 md:p-4">
+      <div className="max-w-screen-xl mt-2 md:mt-8 mx-auto bg-[#6db4f3] p-2 md:p-4 ">
         {/* First Row */}
         <div className="flex flex-col md:flex-row w-full gap-2">
           <div
@@ -70,7 +70,7 @@ function AcrylicLayout() {
               onClick={() => navigate("/product-details/decor-3")}
             />
             <img
-              src="/Images/WD5.jpg"
+              src="/Images/WD2.jpg"
               alt="Decor 4"
               className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover cursor-pointer"
               onClick={() => navigate("/product-details/decor-4")}

@@ -15,6 +15,7 @@ import { useVouchers } from "../Context/VoucherContext";
 import Voucher from "../Components/Voucher";
 import ProductGrid from "../Components/ProductGrid";
 import CategoryGrid from "../Components/CategoryGrid";
+import Animation from "../Components/Animation";
 
 const Home = () => {
   const { sectionsData, sectionsData2 } = GridData;
@@ -33,6 +34,7 @@ const Home = () => {
          
         ]}
       />
+      <Animation/>
     
      
       <ProductLayout /> 
