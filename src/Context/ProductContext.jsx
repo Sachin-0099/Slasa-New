@@ -86,9 +86,12 @@ const ProductSection = ({ title, products }) => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-32 sm:h-40 md:h-48 object-cover rounded"
+              className="w-full h-32 sm:h-40 md:h-44 object-cover rounded"
             />
-            <p className="mt-2 text-xs sm:text-sm md:text-base">{product.title}</p>
+           <p className="mt-2 text-sm sm:text-base md:text-lg ">
+  {product.title}
+</p>
+
           </div>
         ))}
       </div>
