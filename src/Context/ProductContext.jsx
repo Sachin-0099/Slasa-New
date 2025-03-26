@@ -64,7 +64,8 @@ const ProductSection = ({ title, products }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative p-3 md:p-4 mt-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 shadow-lg border-b-8 border rounded-lg">
+<div className="relative p-3 md:p-4 mt-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/3 shadow-lg border-b-8 border border-gray-300">
+
       <div className="absolute bottom-[-8px] left-0 w-full h-[6px] sm:h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
       <h2 className="text-center text-lg sm:text-xl md:text-2xl font-bold border-b-4 sm:border-b-8 border-[#3087d1] pb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1]">
         {title}
