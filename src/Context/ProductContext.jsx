@@ -1,7 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-// Create Product Context
 const ProductContext = createContext();
 
 const defaultSections = [
@@ -65,39 +64,35 @@ const ProductSection = ({ title, products }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative p-4 mt-6 w-full md:w-1/3 gap-2 shadow-lg border-b-8 border">
-      <div className="absolute bottom-[-8px] left-0 w-full h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
-      <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold border-b-8 border-[#3087d1] pb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] block w-full">
+    <div className="relative p-3 md:p-4 mt-4 w-full sm:w-1/2 md:w-1/3 shadow-lg border-b-8 border ">
+      <div className="absolute bottom-[-8px] left-0 w-full h-[6px] sm:h-[8px] bg-gradient-to-r from-[#000000] via-[#3087d1] to-[#000000]"></div>
+      <h2 className="text-center text-lg sm:text-xl md:text-2xl font-bold border-b-4 sm:border-b-8 border-[#3087d1] pb-2 text-transparent bg-clip-text bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1]">
         {title}
       </h2>
 
-      {/* Product Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
+      <div className="grid grid-cols-2 gap-3 p-2 sm:p-4">
         {products.map((product, index) => (
           <div
             key={index}
             className="text-center cursor-pointer"
             onClick={() =>
-              navigate(
-                `/product-details/${product.title.replace(/\s+/g, "-").toLowerCase()}`
-              )
+              navigate(`/product-details/${product.title.replace(/\s+/g, "-").toLowerCase()}`)
             }
           >
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-32 sm:h-40 md:h-44 object-cover rounded"
+              className="w-full h-28 sm:h-32 md:h-36 object-cover rounded"
             />
-           <p className="mt-2 text-sm sm:text-base md:text-lg ">
-  {product.title}
-</p>
-
+            <p className="mt-1 text-xs sm:text-sm md:text-base font-medium">
+              {product.title}
+            </p>
           </div>
         ))}
       </div>
-      <div className="text-center mt-0">
+      <div className="text-center mt-2">
         <button
-          className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 mt-0 px-6 rounded-full text-sm sm:text-base"
+          className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white py-2 px-4 sm:px-6 rounded-full text-xs sm:text-sm md:text-base"
           onClick={() => navigate("/products")}
         >
           See more
@@ -111,7 +106,7 @@ const ProductLayout = () => {
   const { sections } = useProductContext();
 
   return (
-    <div className="flex lg:flex-nowrap flex-wrap justify-center gap-4 p-8">
+    <div className="flex flex-wrap justify-center gap-3 p-4 sm:p-8">
       {sections.map((section, index) => (
         <ProductSection key={index} title={section.title} products={section.products} />
       ))}
