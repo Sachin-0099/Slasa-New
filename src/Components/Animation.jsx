@@ -6,7 +6,7 @@ const Animation = () => {
       <img 
         src="Images/text1.gif" 
         alt="Animation" 
-       className='px-20'
+        className='px-20 '
       />
     </div>
   );

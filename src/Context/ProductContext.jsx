@@ -7,10 +7,10 @@ const defaultSections = [
   {
     title: "Pick Up Where You Left",
     products: [
-      { image: "Images/Exclusive22.jpeg", title: "Acrylic Print" },
-      { image: "Images/WallD1.avif", title: "Acrylic Wood" },
-      { image: "Images/Exclusive23.jpeg", title: "Wall Decor" },
-      { image: "Images/FIN5.jpg", title: "Neon Festive" },
+      { image: "Images/WD1.jpg", title: "Acrylic Print" },
+      { image: "Images/WD4.jpg", title: "Acrylic Wood" },
+      { image: "Images/WD2.jpg", title: "Wall Decor" },
+      { image: "Images/WD3.jpg", title: "Neon Festive" },
     ],
   },
   {

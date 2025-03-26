@@ -110,8 +110,8 @@
         "items": [
           { "image": "/Images/eael4.avif", "alt": "Decor 1", "caption": "The Beautiful Decor for your Beautiful wall", "discountPrice": "-4% ₹42,9.00", "originalPrice": "M.R.P: ₹44,9.00" },
           { "image": "/Images/easel7.avif", "alt": "Decor 2" },
-          { "image": "/Images/eael4.avif", "alt": "Decor 3" },
-          { "image": "/Images/easel7.avif", "alt": "Decor 4" }
+          { "image": "/Images/eael4.avif", "alt": "Decor 3" }
+         
         ],
         "specialLayout": "highlightDeal"
       }
