@@ -43,8 +43,7 @@ const CategoryGrid = () => {
               <div className="absolute inset-0 bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] opacity-50"></div>
             </div>
           </div>
-          {/* Added hidden md:block to toggle visibility */}
-          <p className="text-center mt-4 text-2xl ">
+          <p className="text-center mt-3 text-lg md:text-xl font-semibold text-white bg-gradient-to-b from-[#3087d1] via-[#000000] to-[#3087d1] px-4 py-2 rounded-md shadow-md transition duration-300 ease-in-out hover:bg-blue-500">
             {category.name}
           </p>
         </div>
