@@ -25,10 +25,10 @@ const defaultSections = [
   {
     title: "More for You",
     products: [
-      { image: "Images/Exclusive19.jpeg", title: "Acrylic Print" },
-      { image: "Images/Exclusive18.jpeg", title: "Acrylic Wood" },
-      { image: "Images/Exclusive16.jpeg", title: "Wall Decor" },
-      { image: "Images/Exclusive15.jpeg", title: "Neon Festive" },
+      { image: "Images/WD6.jpg", title: "Acrylic Print" },
+      { image: "Images/Wd7.jpg", title: "Acrylic Wood" },
+      { image: "Images/WD2.jpg", title: "Wall Decor" },
+      { image: "Images/WD3.jpg", title: "Neon Festive" },
     ],
   },
 ];

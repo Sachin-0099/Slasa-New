@@ -2,32 +2,62 @@
     {
       "id": 1,
       "title": "Sample Product 1",
-      "image": "/Images/Exclusive.jpeg",
+      "image": "/Images/WD1.jpg",
       "price": "10.99"
     },
     {
       "id": 2,
       "title": "Sample Product 2",
-      "image": "/Images/Exclusive2.jpeg",
+      "image": "/Images/WD2.jpg",
       "price": "15.99"
     },
     {
       "id": 3,
       "title": "Sample Product 3",
-      "image": "/Images/Exclusive4.jpeg",
+      "image": "/Images/Wd7.jpg",
       "price": "20.99"
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Sample Product 3",
-        "image": "/Images/Exclusive7.jpeg",
+        "image": "/Images/WD6.jpg",
         "price": "20.99"
       },
       {
-        "id": 3,
+        "id": 5,
         "title": "Sample Product 5",
+        "image": "/Images/Wd7.jpg",
+        "price": "20.99"
+      },
+      {
+        "id": 6,
+        "title": "Sample Product 1",
+        "image": "/Images/Exclusive.jpeg",
+        "price": "10.99"
+      },
+      {
+        "id": 7,
+        "title": "Sample Product 2",
+        "image": "/Images/Exclusive2.jpeg",
+        "price": "15.99"
+      },
+      {
+        "id": 8,
+        "title": "Sample Product 3",
         "image": "/Images/Exclusive4.jpeg",
         "price": "20.99"
-      }
+      },
+      {
+          "id": 9,
+          "title": "Sample Product 3",
+          "image": "/Images/Exclusive7.jpeg",
+          "price": "20.99"
+        },
+        {
+          "id": 10,
+          "title": "Sample Product 5",
+          "image": "/Images/WD1.jpg",
+          "price": "20.99"
+        }
   ]
   
