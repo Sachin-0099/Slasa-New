@@ -25,7 +25,7 @@ const HeaderNav = () => {
 
             {/* Logo Container - centered on mobile */}
             <div className="flex justify-center flex-grow lg:flex-grow-0">
-              <div className="w-36 sm:w-40 h-20 sm:h-22">
+              <div className="w-36 sm:w-40 h-20 sm:h-22 sm:mr-12">
                 <img 
                   src="/Images/Untitled design.svg" 
                   alt="Logo" 
