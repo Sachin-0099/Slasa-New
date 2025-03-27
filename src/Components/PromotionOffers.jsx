@@ -52,7 +52,7 @@ const PromotionOffers = ({ promotionId }) => {
                 className="w-full h-[250px] sm:h-[350px] mt-2 object-cover rounded-lg cursor-pointer transition-transform hover:scale-90"
               />
             </a>
-            <div className="mt-3 text-sm flex flex-col items-center sm:items-start text-center sm:text-left">
+            <div className="mt-3 text-sm flex flex-col items-center sm:items-start text-center sm:text-left w-full">
   <p className="font-bold text-[#3087d1]">{promotion.brand}</p>
   <p className="text-xs text-gray-600">{promotion.description}</p>
   <p className="font-semibold text-gray-800">Price: {promotion.price}</p>
@@ -63,14 +63,15 @@ const PromotionOffers = ({ promotionId }) => {
     </button>
   </a>
 
-  <a href={promotion.link} target="_blank" rel="noopener noreferrer">
+  <a href={promotion.link} target="_blank" rel="noopener noreferrer" className="w-full">
     <img
       src="/Images/easel8.avif"
       alt="Sale"
-      className=" w-full h-[150px] sm:h-[200px] object-cover pt-2 rounded-lg cursor-pointer transition-transform hover:scale-90"
+      className="w-full h-[150px] sm:h-[200px] object-cover pt-2 rounded-lg cursor-pointer transition-transform hover:scale-90 block mx-auto"
     />
   </a>
 </div>
+
 
 
           </div>  
