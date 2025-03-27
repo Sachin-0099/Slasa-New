@@ -12,7 +12,7 @@ const HeaderNav = () => {
   return (
     <>
       <header className="py-2 bg-white shadow-md w-full">
-      <div className="px-4 sm:px-6 md:px-8 flex items-center justify-between flex-wrap py-2">
+      <div className="px-4 sm:px-6 md:px-8 flex items-center justify-between flex-wrap">
           {/* Left section - Hamburger and Logo */}
           <div className="flex items-center flex-1 md:flex-none">
             {/* Hamburger Menu Button - visible on mobile/tablet */}
@@ -85,12 +85,13 @@ const HeaderNav = () => {
         </div>
 
         {/* Mobile Search Bar - visible only on mobile */}
-        <div className="md:hidden px-4 sm:px-6 py-2 mt-[-20px]">
+        <div className="md:hidden px-4 sm:px-6 py-2 mt-0 mt-[-20px]">
           <div className="relative w-full">
-            <input
-              className="h-10 w-full bg-white rounded-md pl-10 pr-4  border border-gray-300 shadow-sm focus:border-[#3087d1]"
-              placeholder="What do you want ?"
-            />
+          <input
+  className="h-10 w-full bg-white rounded-md pl-10 pr-4 border border-gray-300 shadow-sm focus:border-[#3087d1] placeholder-gray-600"
+  placeholder="What do you want?"
+/>
+
             <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#3087d1]" size={20} />
           </div>
         </div>
