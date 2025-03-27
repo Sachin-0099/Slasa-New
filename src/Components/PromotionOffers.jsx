@@ -67,12 +67,13 @@ const PromotionOffers = ({ promotionId }) => {
     <img
       src="/Images/easel8.avif"
       alt="Sale"
-      className="w-full h-[150px] sm:h-[200px] object-cover pt-2 rounded-lg cursor-pointer transition-transform hover:scale-90"
+      className=" w-full h-[150px] sm:h-[200px] object-cover pt-2 rounded-lg cursor-pointer transition-transform hover:scale-90"
     />
   </a>
 </div>
 
-          </div>
+
+          </div>  
 
           {/* Right Side - Grid for larger screens, Carousel for small screens */}
           <div className="hidden md:grid grid-rows-3 gap-4">
