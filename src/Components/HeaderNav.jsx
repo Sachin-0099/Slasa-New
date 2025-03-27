@@ -85,7 +85,7 @@ const HeaderNav = () => {
         </div>
 
         {/* Mobile Search Bar - visible only on mobile */}
-        <div className="md:hidden px-4 sm:px-6 py-2 mt-0 mt-[-20px]">
+        <div className="md:hidden px-6 sm:px-8 py-2 mt-0 mt-[-20px]">
           <div className="relative w-full">
           <input
   className="h-10 w-full bg-white rounded-md pl-10 pr-4 border border-gray-300 shadow-sm focus:border-[#3087d1] placeholder-gray-600"
