@@ -15,7 +15,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
         <img
           src={items[0].image}
           alt={items[0].alt}
-          className="w-full max-w-60 mt-2 cursor-pointer rounded-lg"
+          className="w-full max-w-70 mt-2 cursor-pointer rounded-lg "
           onClick={() => handleClick(items[0])}
         />
        <h3 className="font-bold text-lg sm:text-xl md:text-2xl text-black text-center">
@@ -23,7 +23,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
 </h3>
 
         <p className="text-sm text-center px-2">{items[0].caption}</p>
-        <button className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white text-base px-4 py-2 rounded-lg w-32">
+        <button className="bg-gradient-to-b from-[#3087d1] via-black to-[#3087d1] text-white text-base px-4 py-4 rounded-lg w-32">
 
           See more
         </button>
