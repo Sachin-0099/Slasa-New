@@ -12,24 +12,26 @@ const HeaderNav = () => {
   return (
     <>
       <header className="py-2 bg-white shadow-md w-full">
-        <div className="px-4 sm:px-6 md:px-8 flex items-center justify-between flex-wrap">
+      <div className="px-4 sm:px-6 md:px-8 flex items-center justify-between flex-wrap py-2">
           {/* Left section - Hamburger and Logo */}
-          <div className="flex items-center">
-            {/* Hamburger Menu Button - visible on mobile and tablet */}
+          <div className="flex items-center flex-1 md:flex-none">
+            {/* Hamburger Menu Button - visible on mobile/tablet */}
             <button
-              className=" flex items-center text-black !bg-white hover:text-[#3087d1] mr-2"
+              className=" flex items-center text-black hover:text-[#3087d1] mr-2 !bg-white"
               onClick={() => setIsMenuOpen(true)}
             >
               <MdOutlineMenu size={30} />
             </button>
 
-            {/* Logo */}
-            <div className="w-36 sm:w-40 h-20 sm:h-22">
-              <img 
-                src="/Images/Untitled design.svg" 
-                alt="Logo" 
-                className="w-full h-full object-contain" 
-              />
+            {/* Logo Container - centered on mobile */}
+            <div className="flex justify-center flex-grow lg:flex-grow-0">
+              <div className="w-36 sm:w-40 h-20 sm:h-22">
+                <img 
+                  src="/Images/Untitled design.svg" 
+                  alt="Logo" 
+                  className="w-full h-full object-contain" 
+                />
+              </div>
             </div>
           </div>
 
