@@ -43,7 +43,20 @@ const Layout = () => {
   });
 
   return (
-    <div className="font-sans bg-white p-4 md:p-6 max-w-screen-lg mx-auto">
+    <div className="bg-white p-4 md:p-6 max-w-screen-lg mx-auto">
+      {/* Breadcrumbs */}
+      <nav className="text-gray-600 text-sm mb-2">
+        Home / Furniture / Bedroom / Dressers, Mirrors & Stools
+      </nav>
+
+      {/* Page Title and Description */}
+     <div className="pb-4">
+     <h2 className="text-2xl font-bold">Dressers, Mirrors & Stools</h2>
+      <p className="text-gray-500 text-sm">
+        Spruce up your <strong>bedroom</strong> with an extensive selection of dressers, <strong>vanity mirrors</strong>, and stools available at Slasa. Whether you're giving your space a fresh look or completing a full-scale makeover...
+      </p>
+     </div>
+
       {/* Filters Section */}
       <div className="flex flex-wrap justify-between items-center mb-4 gap-2">
         <div className="text-lg font-semibold">Filters</div>

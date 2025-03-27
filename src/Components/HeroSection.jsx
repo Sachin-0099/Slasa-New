@@ -43,7 +43,7 @@ const HeroSection = ({
               <img
   src={slide}
   alt={`Hero Background ${index + 1}`}
-  className="w-full h-full object-cover object-center bg-white"
+  className="w-full h-full object-fit object-center bg-white"
 />
 
               </div>

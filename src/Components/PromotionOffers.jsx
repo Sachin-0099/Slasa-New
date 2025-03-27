@@ -33,11 +33,12 @@ const PromotionOffers = ({ promotionId }) => {
     <div className="px-4 ">
   
     <div className="mt-10 mb-12 bg-white border-4 border-[#3087d1]  shadow-lg  mt-18 py-8 rounded-lg ">
-      <h2 className="text-2xl font-bold text-[#3087d1] flex items-center gap-2 mb-6">
-        <span className="border-t-2 border-[#3087d1] w-20 md:w-32"></span>
-        Promotion And Offers
-        <span className="border-t-2 border-[#3087d1] flex-grow"></span>
-      </h2>
+    <h2 className="text-2xl font-bold text-[#3087d1] flex items-center gap-2 mb-6">
+  <span className="border-t-2 border-[#3087d1] w-20 md:w-32 flex-grow"></span>
+  Promotion And Offers
+  <span className="border-t-2 border-[#3087d1] w-20 md:w-32 flex-grow"></span>
+</h2>
+
      
 
       <div className="max-w-screen-xl mx-auto px-4">
