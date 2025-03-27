@@ -32,7 +32,7 @@ const PromotionOffers = ({ promotionId }) => {
   return (
     <div className="px-4 ">
   
-    <div className="mt-10 mb-10 bg-white border-4 border-[#3087d1] p-4 shadow-lg px-4 mt-18 py-8 rounded-lg ">
+    <div className="mt-10 mb-12 bg-white border-4 border-[#3087d1]  shadow-lg  mt-18 py-8 rounded-lg ">
       <h2 className="text-2xl font-bold text-[#3087d1] flex items-center gap-2 mb-6">
         <span className="border-t-2 border-[#3087d1] w-20 md:w-32"></span>
         Promotion And Offers
@@ -52,23 +52,26 @@ const PromotionOffers = ({ promotionId }) => {
                 className="w-full h-[250px] sm:h-[350px] mt-2 object-cover rounded-lg cursor-pointer transition-transform hover:scale-90"
               />
             </a>
-            <div className="mt-3 text-sm">
-              <p className="font-bold">{promotion.brand}</p>
-              <p className="text-xs">{promotion.description}</p>
-              <p className="font-semibold">Price: {promotion.price}</p>
-              <a href={promotion.link} target="_blank" rel="noopener noreferrer">
-                <button className="bg-gradient-to-b from-[#3087d1] to-[#3087d1] text-white px-5 py-2 mt-3 w-full rounded text-sm transition-transform hover:scale-105">
-                  Explore
-                </button>
-              </a>
-              <a href={promotion.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src="/Images/easel8.avif"
-                  alt="Sale"
-                  className="w-full h-[150px] sm:h-[200px] object-cover p-2 rounded-lg cursor-pointer transition-transform hover:scale-90"
-                />
-              </a>
-            </div>
+            <div className="mt-3 text-sm flex flex-col items-center sm:items-start text-center sm:text-left">
+  <p className="font-bold text-[#3087d1]">{promotion.brand}</p>
+  <p className="text-xs text-gray-600">{promotion.description}</p>
+  <p className="font-semibold text-gray-800">Price: {promotion.price}</p>
+
+  <a href={promotion.link} target="_blank" rel="noopener noreferrer">
+    <button className="bg-gradient-to-b from-[#3087d1] to-[#3087d1] text-white px-5 py-2 mt-3 w-full rounded text-sm transition-transform hover:scale-105">
+      Explore
+    </button>
+  </a>
+
+  <a href={promotion.link} target="_blank" rel="noopener noreferrer">
+    <img
+      src="/Images/easel8.avif"
+      alt="Sale"
+      className="w-full h-[150px] sm:h-[200px] object-cover pt-2 rounded-lg cursor-pointer transition-transform hover:scale-90"
+    />
+  </a>
+</div>
+
           </div>
 
           {/* Right Side - Grid for larger screens, Carousel for small screens */}
