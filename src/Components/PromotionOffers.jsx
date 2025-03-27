@@ -27,14 +27,18 @@ const PromotionOffers = ({ promotionId }) => {
     autoplay: true,
     autoplaySpeed: 3000,
   };
+  
 
   return (
-    <div className="mt-10 mb-10 bg-white border-4 border-[#3087d1] p-4 shadow-lg px-4 mt-18 py-8 ">
+    <div className="px-4 ">
+  
+    <div className="mt-10 mb-10 bg-white border-4 border-[#3087d1] p-4 shadow-lg px-4 mt-18 py-8 rounded-lg ">
       <h2 className="text-2xl font-bold text-[#3087d1] flex items-center gap-2 mb-6">
         <span className="border-t-2 border-[#3087d1] w-20 md:w-32"></span>
         Promotion And Offers
         <span className="border-t-2 border-[#3087d1] flex-grow"></span>
       </h2>
+     
 
       <div className="max-w-screen-xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-6">
@@ -98,6 +102,7 @@ const PromotionOffers = ({ promotionId }) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
