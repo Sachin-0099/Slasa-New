@@ -101,6 +101,11 @@ import SellwithUs from "./Components/SellwithUs";
 import ProductDetail from "./Components/ProductDetail";
 import ProductList from "./Components/ProductList";
 import Layout from "./Components/Layout";
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
+
+
+
 
 
 
@@ -110,6 +115,15 @@ import Layout from "./Components/Layout";
 
 
 function App() {
+  const { i18n } = useTranslation();
+
+useEffect(() => {
+  const savedLanguage = localStorage.getItem("language") || "en";
+  i18n.changeLanguage(savedLanguage);
+  
+  // Set direction attribute for RTL languages
+  document.documentElement.setAttribute("dir", savedLanguage === "ar" ? "rtl" : "ltr");
+}, [i18n]);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const ProtectedRoute = ({ children }) => {
     const { user } = useAuth();

@@ -14,8 +14,10 @@ const HeaderNav = () => {
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    localStorage.setItem("language", lng); // Store language in localStorage
     setShowLanguageDropdown(false);
   };
+  
 
   return (
     <>
@@ -94,9 +96,12 @@ const HeaderNav = () => {
                   <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
                     Français
                   </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("de")}>
-                    Deutsch
+                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
+                  हिन्दी
                   </button>
+                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
+    Arabic
+    </button>
                 </div>
               )}
             </div>
@@ -126,8 +131,11 @@ const HeaderNav = () => {
     <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
       Français
     </button>
-    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("de")}>
-      Deutsch
+    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
+    हिन्दी
+    </button>
+    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
+    Arabic
     </button>
   </div>
 )}

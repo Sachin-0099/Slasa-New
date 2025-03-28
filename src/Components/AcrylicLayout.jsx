@@ -30,7 +30,7 @@ function AcrylicLayout() {
           >
             {/* <div className="absolute top-0 left-0 w-[4px] md:w-[6px] lg:w-[8px] h-full bg-[#3087d1]"></div> */}
             <img
-              src="/Images/WD1.jpg"
+              src="/Images/image 1.jpg"
               alt="Bath Accessories"
               className="w-full h-auto aspect-square md:aspect-[4/3] object-cover"
             />

@@ -101,6 +101,16 @@ Global styles to prevent overflow
     display: none;
   }
 }
+html[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+html[dir="ltr"] {
+  direction: ltr;
+  text-align: left;
+}
+
 
   
   
