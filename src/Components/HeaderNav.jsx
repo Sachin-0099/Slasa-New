@@ -96,16 +96,16 @@ const HeaderNav = () => {
          document.documentElement.dir === "rtl" ? "left-0" : "right-0"
        } mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50`}
      >
-          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 !bg-white" onClick={() => changeLanguage("en")}>
             English
           </button>
-          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 !bg-white" onClick={() => changeLanguage("fr")}>
             Français
           </button>
-          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 !bg-white" onClick={() => changeLanguage("hi")}>
             हिन्दी
           </button>
-          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 !bg-white" onClick={() => changeLanguage("ar")}>
             Arabic
           </button>
         </div>
