@@ -112,25 +112,26 @@ const HeaderNav = () => {
             </a>
 
             {/* Mobile Language Selector */}
-            <div className="relative">
+            <div className="relative text-black">
               <CiGlobe
                 size={22}
                 className="cursor-pointer hover:text-[#3087d1]"
                 onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
               />
-              {showLanguageDropdown && (
-                <div className="absolute right-0 mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md">
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
-                    English
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
-                    Français
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("de")}>
-                    Deutsch
-                  </button>
-                </div>
-              )}
+            {showLanguageDropdown && (
+  <div className="absolute right-0 mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50">
+    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
+      English
+    </button>
+    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
+      Français
+    </button>
+    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("de")}>
+      Deutsch
+    </button>
+  </div>
+)}
+
             </div>
           </div>
 
