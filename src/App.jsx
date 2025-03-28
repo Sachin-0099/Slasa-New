@@ -103,6 +103,8 @@ import ProductList from "./Components/ProductList";
 import Layout from "./Components/Layout";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import { LanguageProvider } from "./Context/LanguageContext"; 
+
 
 
 
@@ -116,15 +118,21 @@ import { useEffect } from "react";
 
 function App() {
   const { i18n } = useTranslation();
-
-useEffect(() => {
-  const savedLanguage = localStorage.getItem("language") || "en";
-  i18n.changeLanguage(savedLanguage);
-  
-  // Set direction attribute for RTL languages
-  document.documentElement.setAttribute("dir", savedLanguage === "ar" ? "rtl" : "ltr");
-}, [i18n]);
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  // Function to change language dynamically
+  const changeLanguage = (lang) => {
+    i18n.changeLanguage(lang);
+    localStorage.setItem("language", lang);
+    document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+  };
+
+  // Apply saved language on page load
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language") || "en";
+    changeLanguage(savedLanguage);
+  }, []);
+
   const ProtectedRoute = ({ children }) => {
     const { user } = useAuth();
     return user ? children : <Navigate to="/signin" />;
@@ -138,6 +146,7 @@ useEffect(() => {
       />
    
        <div style={styles.pageContainer}>
+        <LanguageProvider>
      <AuthProvider>
       <PackageProvider>
         <VoucherProvider>
@@ -877,6 +886,7 @@ useEffect(() => {
     </VoucherProvider>
     </PackageProvider>
     </AuthProvider>
+    </LanguageProvider>
    
     </div>
     </>

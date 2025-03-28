@@ -10,19 +10,21 @@ import { useTranslation } from "react-i18next"; // Import useTranslation
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
-  const { t, i18n } = useTranslation(); // Extract 't' for translations
+  const { t, i18n } = useTranslation(); 
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
-    localStorage.setItem("language", lng); // Store language in localStorage
+    localStorage.setItem("language", lng);
+    document.documentElement.setAttribute("dir", lng === "ar" ? "rtl" : "ltr");
     setShowLanguageDropdown(false);
   };
+  
   
 
   return (
     <>
       <header className="py-2 bg-white shadow-md w-full">
-        <div className="px-2 sm:px-6 md:px-8 flex items-center justify-between flex-wrap">
+        <div className="px-2 sm:px-6 md:px-4 flex items-center justify-between flex-wrap">
           {/* Left section - Hamburger and Logo */}
           <div className="flex items-center flex-1 md:flex-none">
             <button
@@ -72,7 +74,7 @@ const HeaderNav = () => {
               <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center text-sm font-bold">
                 S
               </div>
-              <span className="ml-2">Sign Up / Sign In</span>
+              <span className="ml-2">{t("Sign Up / Sign In")}</span>
             </a>
             <a href="/wishlist">
               <CiHeart size={24} className="cursor-pointer hover:text-[#3087d1]" />
@@ -89,21 +91,25 @@ const HeaderNav = () => {
                 onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
               />
               {showLanguageDropdown && (
-                <div className="absolute right-0 mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md">
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
-                    English
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
-                    Français
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
-                  हिन्दी
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
-    Arabic
-    </button>
-                </div>
-              )}
+       <div
+       className={`absolute ${
+         document.documentElement.dir === "rtl" ? "left-0" : "right-0"
+       } mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50`}
+     >
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
+            English
+          </button>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
+            Français
+          </button>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
+            हिन्दी
+          </button>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
+            Arabic
+          </button>
+        </div>
+      )}
             </div>
           </div>
 
@@ -123,22 +129,26 @@ const HeaderNav = () => {
                 className="cursor-pointer hover:text-[#3087d1]"
                 onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
               />
-            {showLanguageDropdown && (
-  <div className="absolute right-0 mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50">
-    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
-      English
-    </button>
-    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
-      Français
-    </button>
-    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
-    हिन्दी
-    </button>
-    <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
-    Arabic
-    </button>
-  </div>
-)}
+       {showLanguageDropdown && (
+       <div
+       className={`absolute ${
+         document.documentElement.dir === "rtl" ? "left-0" : "right-0"
+       } mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50`}
+     >
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
+            English
+          </button>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
+            Français
+          </button>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
+            हिन्दी
+          </button>
+          <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
+            Arabic
+          </button>
+        </div>
+      )}
 
             </div>
           </div>
