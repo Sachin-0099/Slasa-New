@@ -69,17 +69,27 @@ const Home = () => {
         <ProductCard />
         <ProductList />
       </div>
+<div className="mt-10">
+<ProductSection title={t("Our Collection")} description={t("Discover our best-selling products, carefully selected to meet all your needs for home renovation and construction projects.")}  />
+</div>
+     
      
     
       <Grid sections={sectionsData2} />
+      <ImageComponent src="Images/Bag.jpg" alt="Elegant Display" />
+      
 
-      <ImageGrid title="Dive Into A World of Creativity With Our Artistry & Crafting Wonders" images={images2} />
+
+      <ImageGrid  images={images2} />
 
     
      
      
       <PromotionOffers promotionId={2} />
-      <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
+     <div className="mt-5">
+     <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
+     </div>
+      
       <CategoryGrid/>
       {/* <HomeCategories/> */}
       <HomeSection/>

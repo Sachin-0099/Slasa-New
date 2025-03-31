@@ -4,7 +4,7 @@ import { EmadLogo } from '../Data/PhotoData';
 const PrintSection = ({EditData}) => {
   return (
     <>
-    <div className='min-h-[68vh] w-screen bg-[#6aabe4] flex flex-col items-center justify-center py-10'>
+    <div className='min-h-[68vh] w-screen bg-[#6aabe4] flex flex-col items-center justify-center  mt-10'>
         <h1 className='relative text-transparent bg-gradient-to-r from-[#000000] via-[#3087D5] to-black bg-clip-text font-bold lg:text-6xl md:text-4xl text-3xl text-center font-semibold'>
         <span className={`hidden lg:inline-block absolute bottom-0 lg:w-[20vh] h-[4px] bg-gradient-to-r from-[#3087D1] via-[#3087D5] to-black mt-[10vh]`}></span>
             Print</h1>

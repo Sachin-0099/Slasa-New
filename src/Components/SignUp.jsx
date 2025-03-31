@@ -3,8 +3,10 @@ import axios from "axios";
 import { API_URL } from "../utils/Api";
 import { useNavigate } from "react-router-dom";
 import { Gift, Tag, RefreshCcw, ShoppingBag } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Signup = () => {
+  const { t, i18n } = useTranslation(); 
   const benefits = [
     { icon: Gift, text: "Earn Shukrans on every purchase" },
     { icon: Tag, text: "Get exclusive offers & Coupons" },
@@ -25,6 +27,7 @@ const Signup = () => {
 
   const [errors, setErrors] = useState({});
   const [userData, setUserData] = useState(null);
+ 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -112,7 +115,7 @@ const Signup = () => {
         {/* Signup Form */}
         <div className="w-1/2 p-4">
           <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">
-            Create an Account
+          {t("Create an Account")}
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -161,9 +164,9 @@ const Signup = () => {
                 className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
               />
               <label className="ml-2 text-sm text-gray-600">
-                I agree to the{" "}
+               {t("I agree to the")}{" "}
                 <a href="#" className="text-blue-500 hover:underline">
-                  Terms and Conditions
+                  {t("Terms and Conditions")}
                 </a>
               </label>
             </div>
@@ -173,7 +176,7 @@ const Signup = () => {
               type="submit"
               className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
             >
-              Sign Up
+             {t("Sign Up")}
             </button>
           </form>
         </div>
@@ -182,7 +185,7 @@ const Signup = () => {
       {/* Title Section */}
       <div className="w-full bg-gray-100 p-4 rounded-lg mb-4 text-center ">
         <h3 className="text-lg font-semibold text-gray-700">
-          Link your Shukran account to earn benefits when you shop
+        {t("Link your Shukran account to earn benefits when you shop")}
         </h3>
       </div>
 

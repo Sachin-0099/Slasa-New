@@ -46,7 +46,7 @@ const SideMenu = ({ isOpen, onClose }) => {
         &#10006;
       </div>
       <div style={styles.header}>
-        <h2> 👨🏻 Hello Users</h2>
+        <h2> {t("👨🏻 Hello Users")}</h2>
       </div>
 
       <MenuSection title={t("Trending")} className="text-xl">
@@ -92,7 +92,7 @@ const SideMenu = ({ isOpen, onClose }) => {
 
       <MenuSection title={t("Shop")}>
         <ExpandableMenu
-          title={t("Acrylic Accessories ")}
+          title={t("Acrylic Accessories")}
           isOpen={openSections.acrylic}
           toggle={() => toggleSection("acrylic")}
         >
@@ -103,94 +103,94 @@ const SideMenu = ({ isOpen, onClose }) => {
         </ExpandableMenu>
 
         <ExpandableMenu
-          title="UV Printing Wall Art "
+          title={t("UV Printing Wall Art")}
           isOpen={openSections.UV}
           toggle={() => toggleSection("UV")}
         >
-          <MenuItem text="Custom Frames" link="/frames" />
-          <MenuItem text="Acrylic Prints" link="/prints" />
-          <MenuItem text="Wall Decor" link="/wall-decor" />
-          <MenuItem text="Canvas Art" link="/canvas-art" />
-          <MenuItem text="Decorative Panels" link="/panels" />
+          <MenuItem text={t("Custom Frames")} link="/frames" />
+          <MenuItem text={t("Acrylic Prints")} link="/prints" />
+          <MenuItem text={t("Wall Decor")} link="/wall-decor" />
+          <MenuItem text={t("Canvas Art")} link="/canvas-art" />
+          <MenuItem text={t("Decorative Panels")} link="/panels" />
         </ExpandableMenu>
 
         <ExpandableMenu
-          title="Wood "
+          title={t("Wood")}
           isOpen={openSections.Wood}
           toggle={() => toggleSection("Wood")}
         >
-          <MenuItem text="Wood Easel Canvas" link="/wood-easel" />
-          <MenuItem text="Wood Sheet" link="/wood-sheet" />
-          <MenuItem text="Wood Shelves" link="/wood-shelves" />
-          <MenuItem text="Customize Wood" link="/customize-wood" />
-          <MenuItem text="Wood Frame" link="/wood-frame" />
-          <MenuItem text="Ramadan & Eid Wood" link="/ramadan" />
+          <MenuItem text={t("Wood Easel Canvas")} link="/wood-easel" />
+          <MenuItem text={t("Wood Sheet")} link="/wood-sheet" />
+          <MenuItem text={t("Wood Shelves")} link="/wood-shelves" />
+          <MenuItem text={t("Customize Wood")} link="/customize-wood" />
+          <MenuItem text={t("Wood Frame")} link="/wood-frame" />
+          <MenuItem text={t("Ramadan & Eid Wood")} link="/ramadan" />
         </ExpandableMenu>
         <ExpandableMenu
-          title="Neon "
+          title={t("Neon")}
           isOpen={openSections.Neon}
           toggle={() => toggleSection("Neon")}
         >
-          <MenuItem text="Festival Neon" link="/festival-neon" />
-          <MenuItem text="Celebration Neon" link="/celebration-neon" />
-          <MenuItem text="Office & Event" link="/office" />
-          <MenuItem text="Customize" link="/customize" />
+          <MenuItem text={t("Festival Neon")} link="/festival-neon" />
+          <MenuItem text={t("Celebration Neon")} link="/celebration-neon" />
+          <MenuItem text={t("Office & Event")} link="/office" />
+          <MenuItem text={t("Customize")} link="/customize" />
         </ExpandableMenu>
 
         <ExpandableMenu
-          title="Flowers & Plants "
+          title={t("Flowers & Plants")}
           isOpen={openSections.Flowers}
           toggle={() => toggleSection("Flowers")}
         >
-          <MenuItem text="Fresh Flowers" link="/fresh" />
-          <MenuItem text="Indoor Plants" link="/indoor" />
-          <MenuItem text="Limited Edition" link="/limited-edition" />
-          <MenuItem text="Outdoor Plants" link="/outdoor" />
+          <MenuItem text={t("Fresh Flowers")} link="/fresh" />
+          <MenuItem text={t("Indoor Plants")} link="/indoor" />
+          <MenuItem text={t("Limited Edition")} link="/limited-edition" />
+          <MenuItem text={t("Outdoor Plants")} link="/outdoor" />
         </ExpandableMenu>
       </MenuSection>
 
-      <MenuSection title="Services">
+      <MenuSection title={t("Services")}>
        
         <ExpandableMenu
-          title="Photography & Videography "
+          title={t("Photography & Videography")}
           isOpen={openSections.photography}
           toggle={() => toggleSection("photography")}
         >
-          <MenuItem text="Event Photography " link="/event-photography" />
-          <MenuItem text="Corporate Shoots " link="/corporate" />
-          <MenuItem text="Product Photography " link="/product" />
-          <MenuItem text="Promotional Videos" link="/promotional" />
-          <MenuItem text="Special Videography Services" link="/Special-photography" />
+          <MenuItem text={t("Event Photography")} link="/event-photography" />
+          <MenuItem text={t("Corporate Shoots")} link="/corporate" />
+          <MenuItem text={t("Product Photography")} link="/product" />
+          <MenuItem text={t("Promotional Videos")} link="/promotional" />
+          <MenuItem text={t("Special Videography Services")} link="/Special-photography" />
         </ExpandableMenu>
         <ExpandableMenu
-          title="Exhibition & Events "
+          title={t("Exhibition & Events")}
           isOpen={openSections.events}
           toggle={() => toggleSection("events")}
         >
-          <MenuItem text="Event Setup" link="/event-setup" />
+          <MenuItem text={t("Event Setup")} link="/event-setup" />
           <MenuItem
-            text="Photography & Videography Setup"
+            text={t("Photography & Videography Setup")}
             link="/photography-setup"
           />
         </ExpandableMenu>
       
         <ExpandableMenu
-          title="Other Services"
+          title={t("Other Services")}
           isOpen={openSections.others}
           toggle={() => toggleSection("others")}
         >
-          <MenuItem text="Vehicle Branding" link="/vehicle-branding" />
-          <MenuItem text="Safety Equipments" link="/safety" />
-          <MenuItem text="Lighting poles" link="/lighting" />
-          <MenuItem text="Banner" link="/banner" />
-          <MenuItem text="Solar Lights" link="/solar-lights" />
+          <MenuItem text={t("Vehicle Branding")} link="/vehicle-branding" />
+          <MenuItem text={t("Safety Equipments")} link="/safety" />
+          <MenuItem text={t("Lighting poles")} link="/lighting" />
+          <MenuItem text={t("Banner")} link="/banner" />
+          <MenuItem text={t("Solar Lights")} link="/solar-lights" />
 
-          <MenuItem text="Flag Stand" link="/flag-stand" />
-          <MenuItem text="Street signs" link="/Street-signs" />
-          <MenuItem text="Led & Neon Signage" link="/led" />
-          <MenuItem text="Exbition stand" link="/exhibition" />
-          <MenuItem text="Merchanding stands" link="/merchandising" />
-          <MenuItem text="Flex Face Signage" link="/flex" />
+          <MenuItem text={t("Flag Stand")} link="/flag-stand" />
+          <MenuItem text={t("Street signs")} link="/Street-signs" />
+          <MenuItem text={t("Led & Neon Signage")} link="/led" />
+          <MenuItem text={t("Exbition stand")} link="/exhibition" />
+          <MenuItem text={t("Merchanding stands")} link="/merchandising" />
+          <MenuItem text={t("Flex Face Signage")} link="/flex" />
         </ExpandableMenu>
       </MenuSection>
 
@@ -201,11 +201,11 @@ const SideMenu = ({ isOpen, onClose }) => {
         
      
 
-      <MenuSection title="Help and Settings">
-        <MenuItem text="Your Account" link="/account" />
-        <MenuItem text="Customer Section" link="/customer" />
-        <MenuItem text="Sign In" link="/signIn" />
-        <MenuItem text="Sign Up" link="/signUp" />
+      <MenuSection title={t("Help and Settings")}>
+        <MenuItem text={t("Your Account")} link="/account" />
+        <MenuItem text={t("Customer Section")} link="/customer" />
+        <MenuItem text={t("Sign In")} link="/signIn" />
+        <MenuItem text={t("Sign Up")} link="/signUp" />
       </MenuSection>
     </div>
   );

@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="flex">
             <input
               type="email"
-              placeholder="Please enter an email address"
+              placeholder={t("Please enter an email address")}
               className="w-full p-3 rounded-l-lg border border-gray-300 focus:outline-none"
             />
             <button className="!bg-[#3087d1] text-white px-6 py-3 rounded-r-lg">
@@ -181,7 +181,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-lg mb-5">Help</h4>
+          <h4 className="font-semibold text-lg mb-5">{t("Help")}</h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/payments" className="hover:text-gray-900">
@@ -200,7 +200,7 @@ const Footer = () => {
             </li>
             <li>
               <a href="/cancellation" className="hover:text-gray-900">
-                Cancellation and Returns
+                {t("Cancellation and Returns")}
               </a>
             </li>
           </ul>
@@ -208,7 +208,7 @@ const Footer = () => {
 
         {/* Social Media & Payment */}
         <div>
-          <h4 className="font-semibold text-lg mb-3">Follow Us</h4>
+          <h4 className="font-semibold text-lg mb-3">{t("Follow Us")}</h4>
           <div className="flex space-x-4">
             <a href="#" className="text-gray-600 hover:text-gray-900 text-xl">
               <FaFacebookF />
@@ -223,7 +223,7 @@ const Footer = () => {
               <FaYoutube />
             </a>
           </div>
-          <h4 className="font-semibold text-lg mt-6 mb-3">We Accept</h4>
+          <h4 className="font-semibold text-lg mt-6 mb-3">{t("We Accept")}</h4>
           <div className="flex space-x-3">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png"
@@ -253,10 +253,10 @@ const Footer = () => {
             className="w-32 "
           />
           <p className="text-gray-500 text-sm">
-            Terms & Conditions - Privacy Policy
+            {t("Terms & Conditions - Privacy Policy")}
           </p>
           <p className="text-gray-500 text-sm">
-            &copy; {new Date().getFullYear()} Slasa. All Rights Reserved.
+            &copy; {new Date().getFullYear()} {t("Slasa. All Rights Reserved.")}
           </p>
         </div>
       </div>

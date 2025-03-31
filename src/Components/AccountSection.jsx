@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 import {
   FaBox,
   FaHeart,
@@ -17,6 +18,7 @@ import {
 import { motion } from "framer-motion";
 
 const YourAccount = () => {
+   const { t, i18n } = useTranslation(); 
   const navigate = useNavigate(); // Hook to redirect users after logout
 
   // Function to handle logout
@@ -38,6 +40,18 @@ const YourAccount = () => {
       console.error("Logout failed:", error);
     }
   };
+  const accountItems = [
+    { icon: <FaBox size={36} />, title: t("Order History"), description: t("View and manage your past orders."), link: "/orders" },
+    { icon: <FaHeart size={36} />, title: t("Wishlist"), description: t("Access your saved items."), link: "/wishlist" },
+    { icon: <FaUserCog size={36} />, title: t("Account Settings"), description: t("Edit your personal details."), link: "/accountsettings" },
+    { icon: <FaLock size={36} />, title: t("Security Settings"), description: t("Manage your password and security."), link: "/security" },
+    { icon: <FaCreditCard size={36} />, title: t("Payment Methods"), description: t("Manage your saved cards and wallets."), link: "/payment-methods" },
+    { icon: <FaMapMarkerAlt size={36} />, title: t("Manage Addresses"), description: t("Add, edit, or delete addresses."), link: "/addresses" },
+    { icon: <FaUndo size={36} />, title: t("Returns & Refunds"), description: t("Track and request returns."), link: "/returns" },
+    { icon: <FaGift size={36} />, title: t("Gift Cards & Vouchers"), description: t("View and redeem your gift cards."), link: "/gift-cards" },
+    { icon: <FaBell size={36} />, title: t("Notifications & Preferences"), description: t("Manage your notification settings."), link: "/notifications" },
+    { icon: <FaHeadset size={36} />, title: t("Customer Support"), description: t("Get help and support from our team."), link: "/support" },
+  ];
 
   return (
     <div className="min-h-screen flex items-center justify-center px-6 py-12 overflow-x-hidden">
@@ -49,8 +63,8 @@ const YourAccount = () => {
       >
         {/* Header */}
         <div className="bg-[#3087D1] text-white py-10 text-center">
-          <h2 className="text-4xl font-extrabold tracking-wide">Your Account</h2>
-          <p className="mt-2 text-lg opacity-90">Manage your preferences and settings</p>
+          <h2 className="text-4xl font-extrabold tracking-wide">{t("Your Account")}</h2>
+          <p className="mt-2 text-lg opacity-90">{t("Manage your preferences and settings")}</p>
         </div>
 
         {/* Account Sections */}
@@ -62,8 +76,8 @@ const YourAccount = () => {
 
         {/* Logout Section */}
         <div className="bg-gray-100 py-16 px-10 text-center">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-3">Want to log out?</h3>
-          <p className="text-gray-600">Make sure to save your changes before logging out.</p>
+          <h3 className="text-2xl font-semibold text-gray-800 mb-3">{t("Want to log out?")}</h3>
+          <p className="text-gray-600">{t("Make sure to save your changes before logging out.")}</p>
           <motion.button
             onClick={handleLogout}
             className="mt-6 flex items-center gap-2 !bg-[#3087D1] text-white font-semibold py-3 px-8 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:shadow-xl"
@@ -71,7 +85,7 @@ const YourAccount = () => {
             whileTap={{ scale: 0.95 }}
           >
             <FaSignOutAlt size={18} />
-            Log Out
+          {t("Log Out")}
           </motion.button>
         </div>
       </motion.div>
@@ -80,21 +94,11 @@ const YourAccount = () => {
 };
 
 // Account Sections Data
-const accountItems = [
-  { icon: <FaBox size={36} />, title: "Order History", description: "View and manage your past orders.", link: "/orders" },
-  { icon: <FaHeart size={36} />, title: "Wishlist", description: "Access your saved items.", link: "/wishlist" },
-  { icon: <FaUserCog size={36} />, title: "Account Settings", description: "Edit your personal details.", link: "/accountsettings" },
-  { icon: <FaLock size={36} />, title: "Security Settings", description: "Manage your password and security.", link: "/security" },
-  { icon: <FaCreditCard size={36} />, title: "Payment Methods", description: "Manage your saved cards and wallets.", link: "/payment-methods" },
-  { icon: <FaMapMarkerAlt size={36} />, title: "Manage Addresses", description: "Add, edit, or delete addresses.", link: "/addresses" },
-  { icon: <FaUndo size={36} />, title: "Returns & Refunds", description: "Track and request returns.", link: "/returns" },
-  { icon: <FaGift size={36} />, title: "Gift Cards & Vouchers", description: "View and redeem your gift cards.", link: "/gift-cards" },
-  { icon: <FaBell size={36} />, title: "Notifications & Preferences", description: "Manage your notification settings.", link: "/notifications" },
-  { icon: <FaHeadset size={36} />, title: "Customer Support", description: "Get help and support from our team.", link: "/support" },
-];
+
 
 // Reusable Account Card Component
 const AccountCard = ({ icon, title, description, link }) => {
+  const { t, i18n } = useTranslation(); 
   return (
     <motion.div
       whileHover={{ scale: 1.05 }}
@@ -105,11 +109,12 @@ const AccountCard = ({ icon, title, description, link }) => {
       <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
       <p className="text-sm text-gray-600 mt-1">{description}</p>
       <Link
-        to={link}
-        className="mt-4 !text-[#3087D1] font-medium hover:underline"
-      >
-        Manage
-      </Link>
+  to={link}
+  className="mt-4 !text-[#3087D1] font-medium hover:underline"
+>
+  {t("Manage")}
+</Link>
+
     </motion.div>
   );
 };

@@ -122,6 +122,8 @@ import Solana from "./Components/Solana";
 
 
 
+
+
 function App() {
   const { i18n } = useTranslation();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -180,6 +182,9 @@ function App() {
                 </PageLayout>
               }
             />
+            {/* Routing for the product pages */}
+            <Route path="/" element={<ProductList />} />
+            <Route path="/product-details/:id" element={<ProductDetail />} />
             
            
                <Route

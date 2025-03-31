@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -8,6 +9,7 @@ const SignIn = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+    const { t, i18n } = useTranslation(); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -39,29 +41,29 @@ const SignIn = () => {
   return (
     <div className="flex min-h-screen items-center justify-center">
       <div className="bg-white p-10 rounded-3xl shadow-xl w-96">
-        <h2 className="text-3xl font-extrabold text-center text-[#3087d1] mb-8">Sign In</h2>
+        <h2 className="text-3xl font-extrabold text-center text-[#3087d1] mb-8">{t("Sign In")}</h2>
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
         <form onSubmit={handleLogin}>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-medium mb-2">Email</label>
+            <label className="block text-gray-700 text-sm font-medium mb-2">{t("Email")}</label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl"
-              placeholder="Enter your email"
+              placeholder={t("Enter your email")}
               required
             />
           </div>
 
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-medium mb-2">Password</label>
+            <label className="block text-gray-700 text-sm font-medium mb-2">{t("Password")}</label>
             <input
-              type="password"
+              type={t("password")}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl"
-              placeholder="Enter your password"
+              placeholder={t("Enter your password")}
               required
             />
           </div>
@@ -72,7 +74,7 @@ const SignIn = () => {
         </form>
 
         <p className="text-center text-sm text-gray-600 mt-6">
-          Don't have an account? <Link to="/signup" className="text-[#4c6ef5] hover:underline">Sign Up</Link>
+         {t("Don't have an account?")} <Link to="/signup" className="text-[#4c6ef5] hover:underline">{t("Sign Up")}</Link>
         </p>
       </div>
     </div>

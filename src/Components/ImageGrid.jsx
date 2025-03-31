@@ -3,7 +3,7 @@ import React from "react";
 const ImageGrid = ({ title, images }) => {
   return (
     <div className="w-full mx-auto p-2 max-w-7xl mt-15">
-      {title && <h2 className="text-2xl font-bold  mb-8 pl-3 text-[#3087d1]">{title}</h2>}
+      {title && <h1 className="text-2xl font-bold  mb-8 pl-3 text-[#3087d1]">{title}</h1>}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
         {images.map((img, index) => (
           <div key={index} className="p-2 text-center">
