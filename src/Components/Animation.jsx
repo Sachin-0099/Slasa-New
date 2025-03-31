@@ -4,9 +4,9 @@ const Animation = () => {
   return (
     <div className='mt-15 mb-3 flex justify-center '>
       <img 
-        src="Images/frame.gif" 
+        src="Images/Ridle2.gif" 
         alt="Animation" 
-        className='px-20 '
+        className='w-full h-auto '
       />
     </div>
   );

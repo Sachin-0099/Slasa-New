@@ -5,7 +5,7 @@ const HomeSection = () => {
   return (
     <div className='mx-auto mt-[-110px]'>
       <img src="Images/Shimmer.jpeg" alt="" className='mt-5' />
-      <img src="Images/Exclusive27.jpeg" alt="" className='w-full px-20 h-auto lg:h-[80vh] object-cover rounded-2xl mt-5'/>
+      <img src="Images/WD4.jpg" alt="" className='w-full  h-auto lg:h-[100vh] object-cover  mt-5'/>
       <img src="Images/Shimmer.jpeg" alt="" className='mt-5'  />
       <img src="Images/Acrylic.png" alt=""  className='w-full mt-5'/>
       <img src="Images/Shimmer.jpeg" alt="" className='mt-5' />

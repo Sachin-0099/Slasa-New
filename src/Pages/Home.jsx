@@ -17,6 +17,8 @@ import ProductGrid from "../Components/ProductGrid";
 import CategoryGrid from "../Components/CategoryGrid";
 import Animation from "../Components/Animation";
 import { useTranslation } from "react-i18next";
+import MiddleSectionImg from "../Components/ImageComponent";
+import ImageComponent from "../Components/ImageComponent";
 
 const Home = () => {
     const { t, i18n } = useTranslation(); 
@@ -50,6 +52,7 @@ const Home = () => {
         <ProductCard />
         <ProductList />
       </div>
+      <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
     
       <Grid sections={sectionsData2} />
 

@@ -13,7 +13,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
 
   if (specialLayout === "bulkDiscounts") {
     return (
-      <div className="bg-white p-2 shadow rounded-lg flex flex-col items-center justify-center w-full min-h-[250px]">
+      <div className="bg-white p-2 shadow rounded-lg flex flex-col items-center justify-center w-full min-h-[250px] ">
         <img
           src={items[0].image}
           alt={t(items[0].alt)}
@@ -124,7 +124,7 @@ const Grid = ({ sections }) => {
   }));
 
   return (
-    <div className="p-4 bg-[#61a4de] mt-10">
+    <div className="p-4 bg-[#61a4de] mt-15">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-8xl mx-auto">
         {loading ? (
           <p className="text-white text-center col-span-full text-sm sm:text-lg">

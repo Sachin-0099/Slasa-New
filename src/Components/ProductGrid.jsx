@@ -38,7 +38,7 @@ const ProductGrid = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full p-6 sm:p-8 md:p-10 lg:p-12 px-2 mt-10 mb-10">
+    <div className="flex flex-col justify-center items-center w-full p-6 sm:p-8 md:p-10 lg:p-12 px-2 mt-5 mb-10">
       {/* Heading */}
       <h2 className="text-4xl sm:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#3087d1] via-[#000000] to-[#3087d1] mb-6 text-center border-b-4 border-[#3087d1] pb-2 whitespace-nowrap mx-2">
     {t("Our Best Products")}
