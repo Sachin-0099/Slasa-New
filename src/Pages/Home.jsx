@@ -19,11 +19,27 @@ import Animation from "../Components/Animation";
 import { useTranslation } from "react-i18next";
 import MiddleSectionImg from "../Components/ImageComponent";
 import ImageComponent from "../Components/ImageComponent";
+import ImageGrid from "../Components/ImageGrid";
 
 const Home = () => {
     const { t, i18n } = useTranslation(); 
   const { sectionsData, sectionsData2 } = GridData;
   const { homepageVouchers } = useVouchers();
+  const images2 = [
+    { src: "Images/WD1.jpg", title: "WaterColor" },
+    { src: "Images/WD2.jpg", title: "AcrylicPaints" },
+    { src: "Images/WD3.jpg", title: "ColouredFinals" },
+    { src: "Images/WD4.jpg", title: "SketchPencil" },
+    { src: "Images/WD6.jpg", title: "Charcoal.jpeg" },
+    { src: "Images/WD4.jpg", title: "BrushPens.jpeg" },
+   
+    { src: "Images/WD3.jpg", title: "ColouredFinals" },
+    { src: "Images/WD4.jpg", title: "SketchPencil" },
+    { src: "Images/WD6.jpg", title: "Charcoal.jpeg" },
+    { src: "Images/WD4.jpg", title: "BrushPens.jpeg" },
+   
+
+  ];
 
   return (
     <>
@@ -39,6 +55,7 @@ const Home = () => {
         ]}
       />
       <Animation/>
+
     
      
       <ProductLayout /> 
@@ -52,9 +69,11 @@ const Home = () => {
         <ProductCard />
         <ProductList />
       </div>
-      <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
+     
     
       <Grid sections={sectionsData2} />
+      <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
+      <ImageGrid title="Dive Into A World of Creativity With Our Artistry & Crafting Wonders" images={images2} />
 
     
      
