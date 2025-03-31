@@ -4,7 +4,7 @@ const Animation = () => {
   return (
     <div className='mt-15 mb-3 flex justify-center '>
       <img 
-        src="Images/Ridle2.gif" 
+        src="Images/Gradient.gif" 
         alt="Animation" 
         className='w-full h-auto '
       />

@@ -72,17 +72,19 @@ const Home = () => {
      
     
       <Grid sections={sectionsData2} />
-      <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
+
       <ImageGrid title="Dive Into A World of Creativity With Our Artistry & Crafting Wonders" images={images2} />
 
     
      
      
       <PromotionOffers promotionId={2} />
+      <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
       <CategoryGrid/>
       {/* <HomeCategories/> */}
       <HomeSection/>
       <PromotionOffers promotionId={1} />
+
       {homepageVouchers.map((voucher, index) => (
         <Voucher
           key={index}

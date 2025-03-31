@@ -12,7 +12,8 @@ const ImageGrid = ({ title, images }) => {
               alt={img.title}
               className="w-full h-48 object-cover rounded-lg shadow-lg"
             />
-            <p className="mt-2 text-lg ">{img.title}</p>
+           <p className="mt-2 text-sm md:text-lg min-h-[40px]">{img.title}</p>
+
           </div>
         ))}
       </div>
