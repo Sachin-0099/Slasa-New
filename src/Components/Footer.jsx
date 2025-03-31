@@ -1,7 +1,9 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+   const { t, i18n } = useTranslation(); 
   return (
     <footer className="bg-gray-100 text-gray-700 px-2 ">
       {/* Subscription & App Download Section */}
@@ -9,10 +11,10 @@ const Footer = () => {
         {/* Subscription Section */}
         <div>
           <h3 className="font-semibold text-xl mb-2">
-            Subscribe to our awesome emails.
+           {t("Subscribe to our awesome emails.")}
           </h3>
           <p className="text-gray-500 mb-4">
-            Get our latest offers and news straight in your inbox.
+          {t('Get our latest offers and news straight in your inbox.')}
           </p>
           <div className="flex">
             <input
@@ -21,7 +23,7 @@ const Footer = () => {
               className="w-full p-3 rounded-l-lg border border-gray-300 focus:outline-none"
             />
             <button className="!bg-[#3087d1] text-white px-6 py-3 rounded-r-lg">
-              Subscribe
+            {t("Subscribe")}
             </button>
           </div>
         </div>
@@ -29,10 +31,10 @@ const Footer = () => {
        {/* Download Our Apps Section */}
 <div className="px-4 md:px-200 lg:px-50 ">
   <h3 className="font-semibold text-xl mb-2 text-center md:text-left">
-    Download our apps
+  {t("Download our apps")}
   </h3>
   <p className="text-gray-500 mb-4 text-center md:text-left">
-    Shop our products and offers on-the-go.
+  {t("Shop our products and offers on-the-go.")}
   </p>
   <div className="flex flex-wrap justify-center md:justify-start space-x-4 ">
     <img
@@ -50,26 +52,26 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-6 border-b border-gray-300">
         {/* Customer Service */}
         <div>
-          <h4 className="font-semibold text-lg mb-5">Customer Service</h4>
+          <h4 className="font-semibold text-lg mb-5">{t("Customer Service")}</h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/contactus" className="hover:text-gray-900">
-                Contact Us
+               {t("Contact Us")}
               </a>
             </li>
             <li>
               <a href="/track" className="hover:text-gray-900">
-                Track Order
+              {t("Track Order")}
               </a>
             </li>
             <li>
               <a href="/returns" className="hover:text-gray-900">
-                Returns & Refunds
+               {t('Returns & Refunds')}
               </a>
             </li>
             <li>
               <a href="/faq" className="hover:text-gray-900">
-                FAQs
+            {t("FAQs")}
               </a>
             </li>
           </ul>
@@ -77,31 +79,31 @@ const Footer = () => {
 
         {/* About Us */}
         <div>
-          <h4 className="font-semibold text-lg mb-5">About Us</h4>
+          <h4 className="font-semibold text-lg mb-5">{t("About Us")}</h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/OurStory" className="hover:text-gray-900">
-                Our Story
+              {t("Our Story")}
               </a>
             </li>
             <li>
               <a href="/about" className="hover:text-gray-900">
-                About
+               {t("About")}
               </a>
             </li>
             <li>
               <a href="/careers" className="hover:text-gray-900">
-                Careers
+             {t("Careers")}
               </a>
             </li>
             <li>
               <a href="/store-locator" className="hover:text-gray-900">
-                Store Locator
+               {t('Store Locator')}
               </a>
             </li>
             <li>
               <a href="press-media" className="hover:text-gray-900">
-                Press & Media
+               {t("Press & Media")}
               </a>
             </li>
           </ul>
@@ -109,71 +111,71 @@ const Footer = () => {
 
         {/* More Information */}
         <div>
-          <h4 className="font-semibold text-lg mb-3">More Information</h4>
+          <h4 className="font-semibold text-lg mb-3">{t("More Information")}</h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/privacy" className="hover:text-gray-900">
-                Privacy Policy
+               {t('Privacy Policy')}
               </a>
             </li>
             <li>
               <a href="/terms" className="hover:text-gray-900">
-                Terms & Conditions
+                {t("Terms & Conditions")}
               </a>
             </li>
             <li>
               <a href="/shipping" className="hover:text-gray-900">
-                Shipping Policy
+               {t("Shipping Policy")}
               </a>
             </li>
             <li>
               <a href="/sitemap" className="hover:text-gray-900">
-                Sitemap
+             {t("Sitemap")}
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-lg mb-5">Services</h4>
+          <h4 className="font-semibold text-lg mb-5">{t("Services")}</h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/printing" className="hover:text-gray-900">
-                Acrylic
+               {t("Acrylic")}
               </a>
             </li>
             <li>
               <a href="/photography" className="hover:text-gray-900">
-                Photgraphy and Videogrpahy
+               {t("Photgraphy and Videogrpahy")}
               </a>
             </li>
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold text-lg mb-5">Consumer Policy</h4>
+          <h4 className="font-semibold text-lg mb-5">{t("Consumer Policy")}</h4>
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/cancellation" className="hover:text-gray-900">
-                Cancellation & Returns
+               {t("Cancellation & Returns")}
               </a>
             </li>
             <li>
               <a href="/terms" className="hover:text-gray-900">
-                Terms & Conditions
+              {t("Terms & Conditions")}
               </a>
             </li>
             <li>
               <a href="/security" className="hover:text-gray-900">
-                Security
+              {t("Security")}
               </a>
             </li>
             <li>
               <a href="/privacy" className="hover:text-gray-900">
-                privacy
+               {t("privacy")}
               </a>
             </li>
             <li>
               <a href="/sitemap" className="hover:text-gray-900">
-                Sitemap
+              {t("Sitemap")}
               </a>
             </li>
           </ul>
@@ -183,17 +185,17 @@ const Footer = () => {
           <ul className="space-y-2 text-sm">
             <li>
               <a href="/payments" className="hover:text-gray-900">
-                Payments
+               {t("Payments")}
               </a>
             </li>
             <li>
               <a href="/shipping" className="hover:text-gray-900">
-                Shipping
+             {t("Shipping")}
               </a>
             </li>
             <li>
               <a href="/faq" className="hover:text-gray-900">
-                FAQ
+               {t("FAQ")}
               </a>
             </li>
             <li>

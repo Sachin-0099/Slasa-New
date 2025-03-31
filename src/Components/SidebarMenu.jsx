@@ -3,8 +3,10 @@ import React, { useEffect, useState, useCallback, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown, ChevronRight } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const SideMenu = ({ isOpen, onClose }) => {
+    const { t } = useTranslation();
   const menuRef = useRef(null);
 
   const [openSections, setOpenSections] = useState({});
@@ -47,57 +49,57 @@ const SideMenu = ({ isOpen, onClose }) => {
         <h2> 👨🏻 Hello Users</h2>
       </div>
 
-      <MenuSection title="Trending" className="text-xl">
+      <MenuSection title={t("Trending")} className="text-xl">
         <ExpandableMenu
-          title="Best Sellers ✨"
+          title={t("Best Sellers")}
           isOpen={openSections.sellers}
           toggle={() => toggleSection("sellers")}
         >
-          <MenuItem text="Top Rated by Customers" link="/top-rated" />
-          <MenuItem text="All-Time-Best-Seller" link="/all-time" />
-          <MenuItem text="Staff Pick" link="/staff-pick" />
-          <MenuItem text="Exclusive Online Offers" link="/exclusive" />
+          <MenuItem text={t("Top Rated by Customers")} link="/top-rated" />
+          <MenuItem text={t("All-Time-Best-Seller")} link="/all-time" />
+          <MenuItem text={t("Staff Pick")} link="/staff-pick" />
+          <MenuItem text={t("Exclusive Online Offers")} link="/exclusive" />
         </ExpandableMenu>
         <ExpandableMenu
-          title="Trending Products"
+          title={t("Trending Products")}
           isOpen={openSections.products}
           toggle={() => toggleSection("products")}
         >
-          <MenuItem text="Flash Deals" link="/flash" />
-          <MenuItem text="Bundle Offers" link="/bundle" />
-          <MenuItem text="Clearance Sale" link="/clearance" />
+          <MenuItem text={t("Flash Deals")} link="/flash" />
+          <MenuItem text={t("Bundle Offers")} link="/bundle" />
+          <MenuItem text={t("Clearance Sale" )} link="/clearance" />
         </ExpandableMenu>
         <ExpandableMenu
-          title="New Arrivals"
+          title={t("New Arrivals")}
           isOpen={openSections.arrivals}
           toggle={() => toggleSection("arrivals")}
         >
-          <MenuItem text="Handmade & Custom Creations" link="/handmade" />
-          <MenuItem text="Most Sold Items" link="/most-sold" />
-          <MenuItem text="Influencer Picks" link="/influencer" />
-          <MenuItem text="Back in Stock" link="/back-in-stock" />
+          <MenuItem text={t("Handmade & Custom Creations")} link="/handmade" />
+          <MenuItem text={t("Most Sold Items")} link="/most-sold" />
+          <MenuItem text={t("Influencer Picks")} link="/influencer" />
+          <MenuItem text={t("Back in Stock")} link="/back-in-stock" />
         </ExpandableMenu>
         <ExpandableMenu
-          title="Customer Reviews"
+          title={t("Customer Reviews")}
           isOpen={openSections.reviews}
           toggle={() => toggleSection("reviews")}
         >
-          <MenuItem text="Verified Customer Testimonials" link="/verified" />
-          <MenuItem text="Before & After Comparisons" link="/comparisons" />
+          <MenuItem text={t("Verified Customer Testimonials")} link="/verified" />
+          <MenuItem text={t("Before & After Comparisons")} link="/comparisons" />
 
         </ExpandableMenu>
       </MenuSection>
 
-      <MenuSection title="Shop">
+      <MenuSection title={t("Shop")}>
         <ExpandableMenu
-          title="Acrylic Accessories ✨"
+          title={t("Acrylic Accessories ")}
           isOpen={openSections.acrylic}
           toggle={() => toggleSection("acrylic")}
         >
-          <MenuItem text="Acrylic sheets" link="/sheets" />
+          <MenuItem text={t("Acrylic sheets")} link="/sheets" />
 
-          <MenuItem text="Acrylic Wood" link="/mdf-wood" />
-          <MenuItem text="Mdf Wood" link="/wood" />
+          <MenuItem text={t("Acrylic Wood")} link="/mdf-wood" />
+          <MenuItem text={t("Mdf Wood")} link="/wood" />
         </ExpandableMenu>
 
         <ExpandableMenu

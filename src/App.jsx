@@ -104,6 +104,12 @@ import Layout from "./Components/Layout";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { LanguageProvider } from "./Context/LanguageContext"; 
+import WalletContext from "./Context/WalletProvider";
+
+import Solana from "./Components/Solana";
+
+
+
 
 
 
@@ -146,6 +152,7 @@ function App() {
       />
    
        <div style={styles.pageContainer}>
+       <WalletContext>
         <LanguageProvider>
      <AuthProvider>
       <PackageProvider>
@@ -188,6 +195,14 @@ function App() {
               element={
                 <PageLayout>
                   <TodaysDeals />
+                </PageLayout>
+              }
+            />
+                   <Route
+              path="/solana"
+              element={
+                <PageLayout>
+                  <Solana/>
                 </PageLayout>
               }
             />
@@ -879,6 +894,7 @@ function App() {
 
             
           </Routes>
+         
       
       </GridProvider>
     </ProductProvider>
@@ -887,6 +903,7 @@ function App() {
     </PackageProvider>
     </AuthProvider>
     </LanguageProvider>
+    </WalletContext>
    
     </div>
     </>

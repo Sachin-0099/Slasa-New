@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 const fallbackCategories = [
 
@@ -10,6 +11,7 @@ const fallbackCategories = [
 ];
 
 const CategoryGrid = () => {
+    const { t, i18n } = useTranslation(); 
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -44,7 +46,7 @@ const CategoryGrid = () => {
             </div>
           </div>
           <p className="text-center mt-3 text-lg md:text-xl font-semibold text-white bg-gradient-to-b from-[#3087d1] via-[#000000] to-[#3087d1] px-4 py-2 rounded-md shadow-md transition duration-300 ease-in-out hover:bg-blue-500 mt-4">
-            {category.name}
+           {t( category.name)}
           </p>
         </div>
       ))}

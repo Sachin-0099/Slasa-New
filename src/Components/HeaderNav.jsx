@@ -6,8 +6,10 @@ import { MdOutlineMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import SideMenu from "./SidebarMenu";
 import { useTranslation } from "react-i18next"; // Import useTranslation
+// import { useAutoTranslate } from "../autoTranslate";
 
 const HeaderNav = () => {
+  // useAutoTranslate(); 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   const { t, i18n } = useTranslation(); 
@@ -24,11 +26,11 @@ const HeaderNav = () => {
   return (
     <>
       <header className="py-2 bg-white shadow-md w-full">
-        <div className="px-2 sm:px-6 md:px-4 flex items-center justify-between flex-wrap">
+        <div className="px-4 sm:px-6 md:px-4 flex items-center justify-between flex-wrap">
           {/* Left section - Hamburger and Logo */}
           <div className="flex items-center flex-1 md:flex-none">
             <button
-              className="flex items-center text-black hover:text-[#3087d1] mr-2 !bg-white"
+              className="flex items-center text-black hover:text-[#3087d1]  !bg-white"
               onClick={() => setIsMenuOpen(true)}
             >
               <MdOutlineMenu size={30} />
@@ -60,7 +62,7 @@ const HeaderNav = () => {
           {/* Right section - Desktop Navigation Items */}
           <div className="hidden lg:flex items-center space-x-4 xl:space-x-5">
             <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/acrylic">
-              {t("Acrylic")}
+         {t("Acrylic")}
             </a>
             <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/shop">
               {t("Shops")}

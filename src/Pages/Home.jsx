@@ -16,8 +16,10 @@ import Voucher from "../Components/Voucher";
 import ProductGrid from "../Components/ProductGrid";
 import CategoryGrid from "../Components/CategoryGrid";
 import Animation from "../Components/Animation";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+    const { t, i18n } = useTranslation(); 
   const { sectionsData, sectionsData2 } = GridData;
   const { homepageVouchers } = useVouchers();
 
@@ -40,7 +42,7 @@ const Home = () => {
       <ProductLayout /> 
       <AcrylicLayout />
       <ProductGrid/>
-      <ProductSection title="Featured Products" description="Discover our best-selling products, carefully selected to meet all your needs for home renovation and construction projects." className="mt-16" />
+      <ProductSection title={t("Featured Products")} description={t("Discover our best-selling products, carefully selected to meet all your needs for home renovation and construction projects.")} className="mt-16" />
      
 
 

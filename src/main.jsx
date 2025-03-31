@@ -1,4 +1,6 @@
 import "./i18n.js";
+
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
@@ -7,13 +9,16 @@ import { BrowserRouter } from "react-router-dom";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n"; // Import i18n configuration
 
+const root = createRoot(document.getElementById("root"));
 
-createRoot(document.getElementById("root")).render(
+root.render(
   <BrowserRouter>
     <StrictMode>
-    <I18nextProvider i18n={i18n}>
-      <App />
-      </I18nextProvider>,
+      <I18nextProvider i18n={i18n}>
+        <App />
+      </I18nextProvider>
     </StrictMode>
   </BrowserRouter>
 );
+
+// Delay to ensure React rendering is done
