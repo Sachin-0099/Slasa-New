@@ -26,7 +26,7 @@ const HeaderNav = () => {
   return (
     <>
       <header className="py-2 bg-white shadow-md w-full">
-        <div className="px-4 sm:px-6 md:px-4 flex items-center justify-between flex-wrap">
+        <div className="px-px sm:px-6 md:px-4 flex items-center justify-between flex-wrap">
           {/* Left section - Hamburger and Logo */}
           <div className="flex items-center flex-1 md:flex-none">
             <button
