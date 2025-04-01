@@ -111,9 +111,9 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="flex bg-white p-8 rounded-lg shadow-lg w-full max-w-4xl">
+          <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
         {/* Signup Form */}
-        <div className="w-1/2 p-4">
+        <div className="w-full md:w-1/2 p-4">
           <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">
           {t("Create an Account")}
           </h2>
@@ -181,7 +181,8 @@ const Signup = () => {
           </form>
         </div>
 
-        <div className="w-1/2 p-6  rounded-lg shadow-lg flex flex-col items-center border-1">
+        <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col items-center">
+
       {/* Title Section */}
       <div className="w-full bg-gray-100 p-4 rounded-lg mb-4 text-center ">
         <h3 className="text-lg font-semibold text-gray-700">

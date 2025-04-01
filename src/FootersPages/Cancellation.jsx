@@ -3,7 +3,7 @@ import Footer from "../Components/Footer";
 
 const Cancellation = () => {
   return (
-    <div className="container mx-auto p-6 text-black">
+    <div className="container  p-6 text-black">
       <h1 className="text-3xl font-bold text-[#3087d1] mb-4">Cancellation & Returns Policy</h1>
       
       <section className="mb-6 text-black">

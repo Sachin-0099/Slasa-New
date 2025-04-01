@@ -1,9 +1,9 @@
 import React from "react";
 import about2 from "/Images/about2.png";
-import { useTranslation } from "react-i18next";
+
 
 const About = () => {
-    const { t, i18n } = useTranslation(); 
+ 
   return (
     <div className="min-h-[50vh] w-full flex flex-col md:flex-row items-center justify-center mb-10    ">
       {/* Left Section - Image */}
@@ -20,7 +20,7 @@ const About = () => {
 
 
         <h1 className="text-2xl md:text-3xl lg:text-6xl font-semibold bg-gradient-to-bl from-black via-[#3087d1] to-black text-transparent bg-clip-text hover:underline hover:underline-offset-8 hover:decoration-[#3087D1] text-center md:text-left p-2">
-         {t("About Us")}
+        About Us
         </h1>
         <p className="text-gray-700 text-sm md:text-base lg:text-lg leading-4 md:leading-6 lg:leading-6 text-center md:text-left pt-4">
           My journey has taken me across the United Arab Emirates, Thailand,

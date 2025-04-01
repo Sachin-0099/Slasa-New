@@ -1,7 +1,7 @@
 import React from "react";
 import { Mail, Facebook, Twitter, MessageCircle, Phone } from "lucide-react";
 import Footer from "../Components/Footer";
-import { useTranslation } from "react-i18next";
+
 
 const contactMethods = [
   {
@@ -38,12 +38,12 @@ const contactMethods = [
 ];
 
 export default function ContactUs() {
-       const { t, i18n } = useTranslation(); 
+
   return (
     <>
     <div className="max-w-5xl mx-auto p-8 text-center mt-20 mb-20">
-      <h2 className="text-3xl font-semibold text-[#3087d1]">{t("Contact us")}</h2>
-      <p className="text-gray-600 mb-8">{t("We're here to help you. Get in touch with us in any of these ways:")}</p>
+      <h2 className="text-3xl font-semibold text-[#3087d1]">Contact us</h2>
+      <p className="text-gray-600 mb-8">We're here to help you. Get in touch with us in any of these ways:</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {contactMethods.map((method, index) => (
           <a key={index} href={method.link} target="_blank" rel="noopener noreferrer" className="flex flex-col items-center text-center hover:opacity-80 transition">
