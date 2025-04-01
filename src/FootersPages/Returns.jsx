@@ -50,9 +50,10 @@ const Returns = () => {
 
         {/* Return Steps */}
         <div className="mt-10">
-        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 text-black">
   Return Steps
 </h2>
+
 
 
 
@@ -75,7 +76,10 @@ const Returns = () => {
 
         {/* Return Methods Sections */}
         <div className="container mx-auto p-5 md:p-8">
-          <h2 className="text-xl md:text-2xl font-bold mb-6">1. Return to a store</h2>
+        <h2 className="text-xl md:text-2xl font-bold mb-6 text-black">
+  1. Return to a store
+</h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { title: "Fill out your return slip", text: "This will be emailed to you after your products are delivered." },
@@ -91,7 +95,10 @@ const Returns = () => {
             ))}
           </div>
 
-          <h2 className="text-xl md:text-2xl font-bold mt-10 mb-6">2. Request a return online</h2>
+          <h2 className="text-xl md:text-2xl font-bold mt-10 mb-6 text-black">
+  2. Request a return online
+</h2>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
               { title: "Request your return", text: "Go to Order History in My Account, select the products you want to return and place a return request." },
