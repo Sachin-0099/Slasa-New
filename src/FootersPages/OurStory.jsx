@@ -99,15 +99,15 @@ const OurStory = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-[#3087d1] text-center">Our Services</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
             <div className="bg-gray-100 p-6 rounded-xl shadow-md text-center">
-              <h3 className="text-xl font-semibold">E-commerce Solutions</h3>
+              <h3 className="text-xl font-semibold text-black">E-commerce Solutions</h3>
               <p className="text-gray-600 mt-2 text-lg sm:text-xl">Providing seamless online shopping experiences with cutting-edge technology.</p>
             </div>
             <div className="bg-gray-100 p-6 rounded-xl shadow-md text-center">
-              <h3 className="text-xl font-semibold">Custom Development</h3>
+              <h3 className="text-xl font-semibold text-black">Custom Development</h3>
               <p className="text-gray-600 mt-2 text-lg sm:text-xl">Tailored solutions to meet business-specific needs with efficiency and innovation.</p>
             </div>
             <div className="bg-gray-100 p-6 rounded-xl shadow-md text-center">
-              <h3 className="text-xl font-semibold">Marketing & Strategy</h3>
+              <h3 className="text-xl font-semibold text-black">Marketing & Strategy</h3>
               <p className="text-gray-600 mt-2 text-lg sm:text-xl">Boosting brand presence through strategic marketing and growth planning.</p>
             </div>
           </div>
@@ -115,7 +115,7 @@ const OurStory = () => {
 
         <div className="mt-12 bg-white p-8 rounded-2xl shadow-lg text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#3087d1]">Our Team</h2>
-          <p className="text-gray-600 mt-4 text-lg sm:text-xl">
+          <p className="text-black mt-4 text-lg sm:text-xl">
             Meet the passionate team behind Slasa, dedicated to innovation,
             growth, and customer satisfaction.
           </p>
@@ -127,7 +127,7 @@ const OurStory = () => {
                 className="rounded-full w-24 h-24 mx-auto"
               />
               <h3 className="text-lg font-semibold mt-4">John Doe</h3>
-              <p className="text-gray-500">CEO & Founder</p>
+              <p className="text-black">CEO & Founder</p>
             </div>
             
             <div className="bg-gray-100 p-6 rounded-xl shadow-md w-60 sm:w-72">
@@ -137,7 +137,7 @@ const OurStory = () => {
                 className="rounded-full w-24 h-24 mx-auto"
               />
               <h3 className="text-lg font-semibold mt-4">Jane Smith</h3>
-              <p className="text-gray-500">Head of Marketing</p>
+              <p className="text-black">Head of Marketing</p>
             </div>
             <div className="bg-gray-100 p-6 rounded-xl shadow-md w-60 sm:w-72">
               <img
@@ -146,7 +146,7 @@ const OurStory = () => {
                 className="rounded-full w-24 h-24 mx-auto"
               />
               <h3 className="text-lg font-semibold mt-4">Jane Smith</h3>
-              <p className="text-gray-500">Head of Marketing</p>
+              <p className="text-black">Head of Marketing</p>
             </div>
             <div className="bg-gray-100 p-6 rounded-xl shadow-md w-60 sm:w-72">
               <img
@@ -155,7 +155,7 @@ const OurStory = () => {
                 className="rounded-full w-24 h-24 mx-auto"
               />
               <h3 className="text-lg font-semibold mt-4">Jane Smith</h3>
-              <p className="text-gray-500">Head of Marketing</p>
+              <p className="text-black">Head of Marketing</p>
             </div>
           </div>
         </div>
