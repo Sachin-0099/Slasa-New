@@ -49,15 +49,16 @@ const PressMedia = () => {
 
   return (
     <div className="p-8 bg-gray-100">
-      <h2 className="text-3xl font-bold text-center mb-6">Press & Media</h2>
+      <h2 className="text-3xl font-bold text-center mb-6 text-black">Press & Media</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {pressData.map((item) => (
           <div key={item.id} className="bg-white rounded-lg shadow-lg overflow-hidden">
             <img src={item.image} alt={item.title} className="w-full h-48 object-cover" />
             <div className="p-4">
-              <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-600 mb-4">{item.heading}</p>
-              <button className="!bg-[#3087d1] text-white px-4 py-2 rounded hover:bg-blue-700">
+            <h3 className="text-black text-xl font-semibold mb-2">{item.title}</h3>
+
+              <p className="text-black mb-4">{item.heading}</p>
+              <button className="!bg-[#3087d1] text-black px-4 py-2 rounded hover:bg-blue-700">
                 {item.buttonText}
               </button>
             </div>
