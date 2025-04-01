@@ -7,7 +7,7 @@ const Sitemap = () => {
 
       <div className="space-y-8">
         <div className="w-full">
-          <h2 className="text-lg font-semibold mb-2">Home Decor</h2>
+          <h2 className="text-lg font-semibold mb-2 text-black">Home Decor</h2>
           <ul className="flex flex-wrap gap-2 ">
             <li><a href="/home-decor/stickers-wallpapers" className="text-sm text-blue-600 hover:underline">Stickers & Wallpapers |</a></li>
             <li><a href="/home-decor/wallpapers" className="text-sm text-blue-600 hover:underline">Wallpapers | |</a></li>
@@ -92,185 +92,12 @@ const Sitemap = () => {
           </ul>
         </div>
 
-        <div className="w-full">
-          <h2 className="text-lg font-semibold mb-2">Printing</h2>
-          <ul className="flex flex-wrap gap-2">
-          <li><a href="/printing/custom-wall-art-prints" className="text-sm text-blue-600 hover:underline">Custom Wall Art Prints |</a></li>
-          <li><a href="/printing/canvas-prints" className="text-sm text-blue-600 hover:underline">Canvas Prints |</a></li>
-          <li><a href="/printing/framed-prints" className="text-sm text-blue-600 hover:underline">Framed Prints |</a></li>
-          <li><a href="/printing/photo-prints" className="text-sm text-blue-600 hover:underline">Photo Prints |</a></li>
-          <li><a href="/printing/acrylic-prints" className="text-sm text-blue-600 hover:underline">Acrylic Prints |</a></li>
-          <li><a href="/printing/poster-prints" className="text-sm text-blue-600 hover:underline">Poster Prints |</a></li>
-          <li><a href="/printing/metal-prints" className="text-sm text-blue-600 hover:underline">Metal Prints |</a></li>
-          <li><a href="/printing/wood-prints" className="text-sm text-blue-600 hover:underline">Wood Prints |</a></li>
-          <li><a href="/printing/fabric-prints" className="text-sm text-blue-600 hover:underline">Fabric Prints |</a></li>
-          <li><a href="/printing/map-prints" className="text-sm text-blue-600 hover:underline">Map Prints |</a></li>
-          <li><a href="/printing/quote-prints" className="text-sm text-blue-600 hover:underline">Quote Print |s</a></li>
-          <li><a href="/printing/abstract-art-prints" className="text-sm text-blue-600 hover:underline">Abstract Art Prints |</a></li>
-          <li><a href="/printing/vintage-poster-prints" className="text-sm text-blue-600 hover:underline">Vintage Poster Prints |</a></li>
-          <li><a href="/printing/nature-prints" className="text-sm text-blue-600 hover:underline">Nature Prints |</a></li>
-          <li><a href="/printing/photography-prints" className="text-sm text-blue-600 hover:underline">Photography Prints |</a></li>
-          <li><a href="/printing/custom-portrait-prints" className="text-sm text-blue-600 hover:underline">Custom Portrait Prints |</a></li>
-          <li><a href="/printing/family-prints" className="text-sm text-blue-600 hover:underline">Family Prints |</a></li>
-          <li><a href="/printing/childrens-room-prints" className="text-sm text-blue-600 hover:underline">Children’s Room Prints |</a></li>
-          <li><a href="/printing/black-and-white-prints" className="text-sm text-blue-600 hover:underline">Black & White Prints |</a></li>
-          <li><a href="/printing/3d-wall-art-prints" className="text-sm text-blue-600 hover:underline">3D Wall Art Prints |</a></li>
-          <li><a href="/printing/personalized-name-prints" className="text-sm text-blue-600 hover:underline">Personalized Name Prints |</a></li>
-          <li><a href="/printing/inspirational-quote-prints" className="text-sm text-blue-600 hover:underline">Inspirational Quote Prints |</a></li>
-          <li><a href="/printing/canvas-photo-collages" className="text-sm text-blue-600 hover:underline">Canvas Photo Collages |</a></li>
-          <li><a href="/printing/fine-art-prints" className="text-sm text-blue-600 hover:underline">Fine Art Prints |</a></li>
-          <li><a href="/printing/geometric-prints" className="text-sm text-blue-600 hover:underline">Geometric Prints |</a></li>
-          <li><a href="/printing/botanical-prints" className="text-sm text-blue-600 hover:underline">Botanical Prints |</a></li>
-          <li><a href="/printing/animal-prints" className="text-sm text-blue-600 hover:underline">Animal Prints |</a></li>
-          <li><a href="/printing/boho-style-prints" className="text-sm text-blue-600 hover:underline">Boho Style Prints |</a></li>
-          <li><a href="/printing/watercolor-prints" className="text-sm text-blue-600 hover:underline">Watercolor Prints |</a></li>
-          <li><a href="/printing/pop-art-prints" className="text-sm text-blue-600 hover:underline">Pop Art Prints |</a></li>
-          </ul>
-        </div>
-
-        <div className="w-full">
-          <h2 className="text-lg font-semibold mb-2">Rennovation</h2>
-          <ul className="flex flex-wrap gap-2">
-            <li><a href="/renovation/kitchen" className="text-sm text-blue-600 hover:underline">Kitchen Renovation |</a></li>
-            <li><a href="/renovation/bathroom" className="text-sm text-blue-600 hover:underline">Bathroom Renovation |</a></li>
-            <li><a href="/renovation/living-room" className="text-sm text-blue-600 hover:underline">Living Room Renovation |</a></li>
-            <li><a href="/renovation/bedroom" className="text-sm text-blue-600 hover:underline">Bedroom Renovation |</a></li>
-            <li><a href="/renovation/basement" className="text-sm text-blue-600 hover:underline">Basement Renovation |</a></li>
-            <li><a href="/renovation/attic" className="text-sm text-blue-600 hover:underline">Attic Renovation |</a></li>
-            <li><a href="/renovation/home-office" className="text-sm text-blue-600 hover:underline">Home Office Renovation |</a></li>
-            <li><a href="/renovation/garage" className="text-sm text-blue-600 hover:underline">Garage Renovation |</a></li>
-            <li><a href="/renovation/home-extension" className="text-sm text-blue-600 hover:underline">Home Extension |</a></li>
-            <li><a href="/renovation/flooring-installation" className="text-sm text-blue-600 hover:underline">Flooring Installation |</a></li>
-            <li><a href="/renovation/tiling-services" className="text-sm text-blue-600 hover:underline">Tiling Services |</a></li>
-            <li><a href="/renovation/wallpaper-installation" className="text-sm text-blue-600 hover:underline">Wallpaper Installation |</a></li>
-            <li><a href="/renovation/interior-painting" className="text-sm text-blue-600 hover:underline">Interior Painting |</a></li>
-            <li><a href="/renovation/exterior-painting" className="text-sm text-blue-600 hover:underline">Exterior Painting |</a></li>
-            <li><a href="/renovation/wall-removal" className="text-sm text-blue-600 hover:underline">Wall Removal and Open Concept Designs |</a></li>
-            <li><a href="/renovation/window-replacement" className="text-sm text-blue-600 hover:underline">Window Replacement |</a></li>
-            <li><a href="/renovation/door-installation" className="text-sm text-blue-600 hover:underline">Door Installation and Replacement |</a></li>
-            <li><a href="/renovation/cabinet-renovation" className="text-sm text-blue-600 hover:underline">Cabinet Renovation and Customization |</a></li>
-            <li><a href="/renovation/countertop-installation" className="text-sm text-blue-600 hover:underline">Countertop Installation |</a></li>
-            <li><a href="/renovation/lighting-electrical" className="text-sm text-blue-600 hover:underline">Lighting and Electrical Renovation |</a></li>
-            <li><a href="/renovation/plumbing" className="text-sm text-blue-600 hover:underline">Plumbing Renovation |</a></li>
-            <li><a href="/renovation/hvac-systems" className="text-sm text-blue-600 hover:underline">HVAC Systems Installation |</a></li>
-            <li><a href="/renovation/insulation-weatherproofing" className="text-sm text-blue-600 hover:underline">Insulation and Weatherproofing |</a></li>
-            <li><a href="/renovation/roofing" className="text-sm text-blue-600 hover:underline">Roofing Renovation |</a></li>
-            <li><a href="/renovation/siding-installation" className="text-sm text-blue-600 hover:underline">Siding Installation and Repair |</a></li>
-            <li><a href="/renovation/deck-patio" className="text-sm text-blue-600 hover:underline">Deck and Patio Renovation |</a></li>
-            <li><a href="/renovation/landscaping-garden" className="text-sm text-blue-600 hover:underline">Landscaping and Garden Renovation |</a></li>
-            <li><a href="/renovation/swimming-pool" className="text-sm text-blue-600 hover:underline">Swimming Pool Renovation |</a></li>
-            <li><a href="/renovation/floor-plan-redesign" className="text-sm text-blue-600 hover:underline">Floor Plan Redesign |</a></li>
-            <li><a href="/renovation/home-theater" className="text-sm text-blue-600 hover:underline">Home Theater Installation |</a></li>
-            <li><a href="/renovation/fireplace" className="text-sm text-blue-600 hover:underline">Fireplace Installation and Renovation |</a></li>
-            <li><a href="/renovation/custom-shelving" className="text-sm text-blue-600 hover:underline">Custom Shelving and Storage Solutions |</a></li>
-            <li><a href="/renovation/smart-home" className="text-sm text-blue-600 hover:underline">Smart Home Technology Integration |</a></li>
-            <li><a href="/renovation/energy-efficient" className="text-sm text-blue-600 hover:underline">Energy-efficient Upgrades |</a></li>
-            <li><a href="/renovation/structural-reinforcement" className="text-sm text-blue-600 hover:underline">Structural Reinforcement |</a></li>
-            <li><a href="/renovation/building-permits" className="text-sm text-blue-600 hover:underline">Building Permits and Legal Compliance |</a></li>
-            <li><a href="/renovation/eco-friendly" className="text-sm text-blue-600 hover:underline">Eco-Friendly Renovation Solutions |</a></li>
-            <li><a href="/renovation/accessibility-modifications" className="text-sm text-blue-600 hover:underline">Accessibility Modifications (ADA Compliant) |</a></li>
-            <li><a href="/renovation/soundproofing" className="text-sm text-blue-600 hover:underline">Soundproofing |</a></li>
-            <li><a href="/renovation/home-exterior-facelift" className="text-sm text-blue-600 hover:underline">Home Exterior Facelift |</a></li>
-            <li><a href="/renovation/fencing-gate" className="text-sm text-blue-600 hover:underline">Fencing and Gate Installation |</a></li>
-            <li><a href="/renovation/drywall-installation" className="text-sm text-blue-600 hover:underline">Drywall Installation and Repair |</a></li>
-            <li><a href="/renovation/mold-remediation" className="text-sm text-blue-600 hover:underline">Mold Remediation and Prevention |</a></li>
-            <li><a href="/renovation/waterproofing" className="text-sm text-blue-600 hover:underline">Waterproofing and Damp-proofing |</a></li>
-            <li><a href="/renovation/custom-staircase" className="text-sm text-blue-600 hover:underline">Custom Staircase Design and Renovation |</a></li>
-            <li><a href="/renovation/smart-lighting" className="text-sm text-blue-600 hover:underline">Smart Lighting Systems |</a></li>
-            <li><a href="/renovation/skylight-installation" className="text-sm text-blue-600 hover:underline">Skylight Installation |</a></li>
-            <li><a href="/renovation/roof-deck" className="text-sm text-blue-600 hover:underline">Roof Deck Construction |</a></li>
-            <li><a href="/renovation/home-security" className="text-sm text-blue-600 hover:underline">Home Security System Installation |</a></li>
-            <li><a href="/renovation/outdoor-kitchen" className="text-sm text-blue-600 hover:underline">Outdoor Kitchen Renovation |</a></li>
-
-          </ul>
-        </div>
-        <div className="w-full">
-          <h2 className="text-lg font-semibold mb-2">Rennovation</h2>
-          <ul className='flex flex-wrap gap-2'>
-            <li><a href="/construction/residential" className="text-sm text-blue-600 hover:underline">Residential Construction |</a></li> |
-            <li><a href="/construction/commercial" className="text-sm text-blue-600 hover:underline">Commercial Construction |</a></li>
-            <li><a href="/construction/industrial" className="text-sm text-blue-600 hover:underline">Industrial Construction |</a></li>
-            <li><a href="/construction/renovations-remodeling" className="text-sm text-blue-600 hover:underline">Renovations & Remodeling |</a></li>
-            <li><a href="/construction/home-extensions" className="text-sm text-blue-600 hover:underline">Home Extensions |</a></li>
-            <li><a href="/construction/building-design-architecture" className="text-sm text-blue-600 hover:underline">Building Design and Architecture |</a></li>
-            <li><a href="/construction/site-preparation-excavation" className="text-sm text-blue-600 hover:underline">Site Preparation and Excavation |</a></li>
-            <li><a href="/construction/foundation" className="text-sm text-blue-600 hover:underline">Foundation Construction |</a></li>
-            <li><a href="/construction/framing" className="text-sm text-blue-600 hover:underline">Framing Services |</a></li>
-            <li><a href="/construction/roofing" className="text-sm text-blue-600 hover:underline">Roofing Services |</a></li>
-            <li><a href="/construction/roof-repair-maintenance" className="text-sm text-blue-600 hover:underline">Roof Repair and Maintenance |</a></li>
-            <li><a href="/construction/siding-installation-repair" className="text-sm text-blue-600 hover:underline">Siding Installation and Repair |</a></li>
-            <li><a href="/construction/plumbing" className="text-sm text-blue-600 hover:underline">Plumbing Services |</a></li>
-            <li><a href="/construction/electrical" className="text-sm text-blue-600 hover:underline">Electrical Services |</a></li>
-            <li><a href="/construction/hvac" className="text-sm text-blue-600 hover:underline">HVAC Installation and Repair |</a></li>
-            <li><a href="/construction/flooring" className="text-sm text-blue-600 hover:underline">Flooring Installation |</a></li>
-            <li><a href="/construction/tile-installation" className="text-sm text-blue-600 hover:underline">Tile Installation |</a></li>
-            <li><a href="/construction/drywall" className="text-sm text-blue-600 hover:underline">Drywall Installation |</a></li>
-            <li><a href="/construction/interior-painting" className="text-sm text-blue-600 hover:underline">Interior Painting |</a></li>
-            <li><a href="/construction/exterior-painting" className="text-sm text-blue-600 hover:underline">Exterior Painting |</a></li>
-            <li><a href="/construction/kitchen-remodeling" className="text-sm text-blue-600 hover:underline">Kitchen Remodeling |</a></li>
-            <li><a href="/construction/bathroom-remodeling" className="text-sm text-blue-600 hover:underline">Bathroom Remodeling |</a></li>
-            <li><a href="/construction/basement-finishing" className="text-sm text-blue-600 hover:underline">Basement Finishing |</a></li>
-            <li><a href="/construction/deck-construction-repair" className="text-sm text-blue-600 hover:underline">Deck Construction and Repair |</a></li>
-            <li><a href="/construction/patio-outdoor-living" className="text-sm text-blue-600 hover:underline">Patio and Outdoor Living Space Construction |</a></li>
-            <li><a href="/construction/landscape-design-installation" className="text-sm text-blue-600 hover:underline">Landscape Design and Installation |</a></li>
-            <li><a href="/construction/swimming-pool" className="text-sm text-blue-600 hover:underline">Swimming Pool Construction |</a></li>
-            <li><a href="/construction/fence-installation-repair" className="text-sm text-blue-600 hover:underline">Fence Installation and Repair |</a></li>
-            <li><a href="/construction/driveway" className="text-sm text-blue-600 hover:underline">Driveway Construction |</a></li>
-            <li><a href="/construction/concrete" className="text-sm text-blue-600 hover:underline">Concrete Services (Pouring, Repair, and Finishing) |</a></li>
-            <li><a href="/construction/masonry" className="text-sm text-blue-600 hover:underline">Masonry Services |</a></li>
-            <li><a href="/construction/carpentry" className="text-sm text-blue-600 hover:underline">Carpentry Services |</a></li>
-            <li><a href="/construction/custom-cabinet-making" className="text-sm text-blue-600 hover:underline">Custom Cabinet Making |</a></li>
-            <li><a href="/construction/window-door-installation" className="text-sm text-blue-600 hover:underline">Window and Door Installation |</a></li>
-            <li><a href="/construction/home-insulation" className="text-sm text-blue-600 hover:underline">Home Insulation Services |</a></li>
-            <li><a href="/construction/energy-efficient" className="text-sm text-blue-600 hover:underline">Energy-Efficient Construction Services |</a></li>
-            <li><a href="/construction/green-building" className="text-sm text-blue-600 hover:underline">Green Building Construction (Eco-Friendly Building) |</a></li>
-            <li><a href="/construction/smart-home" className="text-sm text-blue-600 hover:underline">Smart Home Installation |</a></li>
-            <li><a href="/construction/concrete-driveways-walkways" className="text-sm text-blue-600 hover:underline">Concrete Driveways and Walkways |</a></li>
-            <li><a href="/construction/paving" className="text-sm text-blue-600 hover:underline">Paving Services (Asphalt and Concrete) |</a></li>
-            <li><a href="/construction/retaining-walls" className="text-sm text-blue-600 hover:underline">Retaining Walls Construction |</a></li>
-            <li><a href="/construction/garage" className="text-sm text-blue-600 hover:underline">Garage Construction and Renovation |</a></li>
-            <li><a href="/construction/commercial-tenant-improvements" className="text-sm text-blue-600 hover:underline">Commercial Tenant Improvements |</a></li>
-            <li><a href="/construction/office-space-buildouts" className="text-sm text-blue-600 hover:underline">Office Space Buildouts |</a></li>
-            <li><a href="/construction/warehouse" className="text-sm text-blue-600 hover:underline">Warehouse Construction |</a></li>
-            <li><a href="/construction/steel-frame" className="text-sm text-blue-600 hover:underline">Steel Frame Construction |</a></li>
-            <li><a href="/construction/timber-frame" className="text-sm text-blue-600 hover:underline">Timber Frame Construction |</a></li>
-            <li><a href="/construction/project-management" className="text-sm text-blue-600 hover:underline">Construction Project Management |</a></li>
-            <li><a href="/construction/site-cleanup" className="text-sm text-blue-600 hover:underline">Construction Site Cleanup |</a></li>
-            <li><a href="/construction/land-surveying" className="text-sm text-blue-600 hover:underline">Land Surveying Services |</a></li>
-            <li><a href="/construction/demolition" className="text-sm text-blue-600 hover:underline">Demolition Services |</a></li>
-            <li><a href="/construction/emergency-repairs" className="text-sm text-blue-600 hover:underline">Emergency Construction Repairs |</a></li>
-            <li><a href="/construction/landscaping-hardscaping" className="text-sm text-blue-600 hover:underline">Landscaping and Hardscaping |</a></li>
-            <li><a href="/construction/energy-audits-retrofitting" className="text-sm text-blue-600 hover:underline">Energy Audits and Retrofitting |</a></li>
-            <li><a href="/construction/fireproofing" className="text-sm text-blue-600 hover:underline">Fireproofing and Fire Safety Services |</a></li>
-            <li><a href="/construction/waterproofing" className="text-sm text-blue-600 hover:underline">Waterproofing Services |</a></li>
-            <li><a href="/construction/structural-engineering" className="text-sm text-blue-600 hover:underline">Structural Engineering Services |</a></li>
-            <li><a href="/construction/consulting" className="text-sm text-blue-600 hover:underline">Construction Consulting |</a></li>
-            <li><a href="/construction/building-permits-inspections" className="text-sm text-blue-600 hover:underline">Building Permits and Inspections |</a></li>
-            <li><a href="/construction/green-roof" className="text-sm text-blue-600 hover:underline">Green Roof Construction |</a></li>
-            <li><a href="/construction/custom-home-building" className="text-sm text-blue-600 hover:underline">Custom Home Building |</a></li>
-            <li><a href="/construction/modular-prefabricated" className="text-sm text-blue-600 hover:underline">Modular and Prefabricated Construction |</a></li>
-            <li><a href="/construction/disaster-recovery" className="text-sm text-blue-600 hover:underline">Disaster Recovery and Restoration Services |</a></li>
-            <li><a href="/construction/noise-insulation" className="text-sm text-blue-600 hover:underline">Noise Insulation Services |</a></li>
-            <li><a href="/construction/foundation-repair" className="text-sm text-blue-600 hover:underline">Foundation Repair Services |</a></li>
-            <li><a href="/construction/retaining-wall-installation" className="text-sm text-blue-600 hover:underline">Retaining Wall Installation |</a></li>
-            <li><a href="/construction/accessibility-modifications" className="text-sm text-blue-600 hover:underline">Accessibility Modifications (ADA Compliant) |</a></li>
-            <li><a href="/construction/poured-concrete-walls" className="text-sm text-blue-600 hover:underline">Poured Concrete Walls |</a></li>
-            <li><a href="/construction/stormwater-management" className="text-sm text-blue-600 hover:underline">Stormwater Management Systems |</a></li>
-            <li><a href="/construction/storm-damage-repairs" className="text-sm text-blue-600 hover:underline">Storm Damage Repairs |</a></li>
-            <li><a href="/construction/septic-system" className="text-sm text-blue-600 hover:underline">Septic System Installation |</a></li>
-            <li><a href="/construction/building-refurbishment" className="text-sm text-blue-600 hover:underline">Building Refurbishment |</a></li>
-            <li><a href="/construction/historic-renovation" className="text-sm text-blue-600 hover:underline">Historic Building Renovation |</a></li>
-            <li><a href="/construction/commercial-parking-lot" className="text-sm text-blue-600 hover:underline">Commercial Parking Lot Construction |</a></li>
-            <li><a href="/construction/soundproofing" className="text-sm text-blue-600 hover:underline">Soundproofing Services |</a></li>
-
-          </ul>
-
+       
 
    
-        </div>
 
         <div className="w-full">
-          <h2 className="text-lg font-semibold mb-2">Acrylic</h2>
+          <h2 className="text-lg font-semibold mb-2 text-black">Acrylic</h2>
           <ul className="flex flex-wrap gap-2">
           <li><a href="/acrylic/acrylic-sheets" className="text-sm text-blue-600 hover:underline">Acrylic Sheets |</a></li>
           <li><a href="/acrylic/acrylic-panels" className="text-sm text-blue-600 hover:underline">Acrylic Panels |</a></li>
@@ -325,7 +152,7 @@ const Sitemap = () => {
           </ul>
         </div>
         <div className="w-full">
-          <h2 className="text-lg font-semibold mb-2">Photography & Videography</h2>
+          <h2 className="text-lg font-semibold mb-2 text-black">Photography & Videography</h2>
           <ul className="flex flex-wrap gap-2">
           <li><a href="/photography/wedding-photography" className="text-sm text-blue-600 hover:underline">Wedding Photography |</a></li>
           <li><a href="/photography/wedding-videography" className="text-sm text-blue-600 hover:underline">Wedding Videography |</a></li>

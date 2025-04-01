@@ -3,10 +3,10 @@ import Footer from "../Components/Footer";
 
 const Cancellation = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 text-black">
       <h1 className="text-3xl font-bold text-[#3087d1] mb-4">Cancellation & Returns Policy</h1>
       
-      <section className="mb-6">
+      <section className="mb-6 text-black">
         <h2 className="text-2xl font-semibold mb-2">1. Order Cancellation</h2>
         <p className="mb-2">We process orders quickly, but we allow cancellations under the following conditions:</p>
         
@@ -24,7 +24,7 @@ const Cancellation = () => {
         </ul>
       </section>
       
-      <section className="mb-6">
+      <section className="mb-6 text-black">
         <h2 className="text-2xl font-semibold mb-2">2. Returns & Refunds</h2>
         <p className="mb-2">We accept returns under the following conditions:</p>
         
@@ -49,7 +49,7 @@ const Cancellation = () => {
         </ul>
       </section>
       
-      <section className="mb-6">
+      <section className="mb-6 text-black">
         <h2 className="text-2xl font-semibold mb-2">3. Defective or Wrong Items</h2>
         <ul className="list-disc pl-5">
           <li>Report issues within <strong>48 hours</strong> of delivery with photos.</li>
@@ -58,7 +58,7 @@ const Cancellation = () => {
       </section>
       
       <section>
-        <h2 className="text-2xl font-semibold mb-2">4. Contact Us</h2>
+        <h2 className="text-2xl font-semibold mb-2 text-black">4. Contact Us</h2>
         <p>For any inquiries, reach out to us:</p>
         <ul className="list-disc pl-5">
           <li><strong>Email:</strong> support@slasa.com</li>
