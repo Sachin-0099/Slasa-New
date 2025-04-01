@@ -111,9 +111,9 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-          <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl">
+          <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl border-1">
         {/* Signup Form */}
-        <div className="w-full md:w-1/2 p-4">
+        <div className="w-full md:w-1/2 p-4 border-1">
           <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">
           {t("Create an Account")}
           </h2>
@@ -161,7 +161,7 @@ const Signup = () => {
                 name="agree"
                 checked={formData.agree}
                 onChange={handleChange}
-                className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                className="w-4 h-4 text-[#3087d1] border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
               />
               <label className="ml-2 text-sm text-gray-600">
                {t("I agree to the")}{" "}
@@ -174,14 +174,14 @@ const Signup = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
+              className="w-full !bg-[#3087d1] text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
             >
              {t("Sign Up")}
             </button>
           </form>
         </div>
 
-        <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col items-center">
+     <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col items-center">
 
       {/* Title Section */}
       <div className="w-full bg-gray-100 p-4 rounded-lg mb-4 text-center ">
