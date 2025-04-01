@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "@mui/material";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

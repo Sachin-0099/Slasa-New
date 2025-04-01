@@ -20,25 +20,23 @@ import { useTranslation } from "react-i18next";
 import MiddleSectionImg from "../Components/ImageComponent";
 import ImageComponent from "../Components/ImageComponent";
 import ImageGrid from "../Components/ImageGrid";
+import Sale from "../Components/Sale";
 
 const Home = () => {
     const { t, i18n } = useTranslation(); 
   const { sectionsData, sectionsData2 } = GridData;
   const { homepageVouchers } = useVouchers();
   const images2 = [
-    { src: "Images/WD1.jpg", title: "WaterColor" },
-    { src: "Images/WD2.jpg", title: "AcrylicPaints" },
-    { src: "Images/WD3.jpg", title: "ColouredFinals" },
-    { src: "Images/WD4.jpg", title: "SketchPencil" },
-    { src: "Images/WD6.jpg", title: "Charcoal.jpeg" },
-    { src: "Images/WD4.jpg", title: "BrushPens.jpeg" },
-   
-    { src: "Images/WD3.jpg", title: "ColouredFinals" },
-    { src: "Images/WD4.jpg", title: "SketchPencil" },
-    { src: "Images/WD6.jpg", title: "Charcoal.jpeg" },
-    { src: "Images/WD4.jpg", title: "BrushPens.jpeg" },
-   
-
+    { src: "Images/WD1.jpg", title: t("WaterColor") },
+    { src: "Images/WD2.jpg", title: t("AcrylicPaints") },
+    { src: "Images/WD3.jpg", title: t("ColouredFinals") },
+    { src: "Images/WD4.jpg", title: t("SketchPencil") },
+    { src: "Images/WD6.jpg", title: t("Charcoal.jpeg") },
+    { src: "Images/WD4.jpg", title: t("BrushPens.jpeg") },
+    { src: "Images/WD3.jpg", title: t("ColouredFinals") },
+    { src: "Images/WD4.jpg", title: t("SketchPencil") },
+    { src: "Images/WD6.jpg", title: t("Charcoal.jpeg") },
+    { src: "Images/WD4.jpg", title: t("BrushPens.jpeg") },
   ];
 
   return (
@@ -46,7 +44,7 @@ const Home = () => {
       <HeroSection
         slides={[
           "Images/Sell.jpeg",
-      
+       
          
          
           "Images/HeroAcrylic.jpg",
@@ -76,7 +74,7 @@ const Home = () => {
      
     
       <Grid sections={sectionsData2} />
-      <ImageComponent src="Images/Bag.jpg" alt="Elegant Display" />
+    
       
 
 
@@ -87,7 +85,7 @@ const Home = () => {
      
       <PromotionOffers promotionId={2} />
      <div className="mt-5">
-     <ImageComponent src="Images/elegance.gif" alt="Elegant Display" />
+     <ImageComponent src="Images/Elegance1.gif" alt="Elegant Display" />
      </div>
       
       <CategoryGrid/>
@@ -108,6 +106,8 @@ const Home = () => {
           buttonLink={voucher.buttonLink}
         />
       ))}
+        <ImageComponent src="Images/Bag.jpg" alt="Elegant Display" />
+      <Sale/>
       <Footer />
     </>
   );

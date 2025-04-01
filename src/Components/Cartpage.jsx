@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const CartPage = () => {
+     const { t, i18n } = useTranslation(); 
   
   const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
@@ -45,15 +47,15 @@ const CartPage = () => {
     <div className="min-h-screen bg-gradient-to-r from-gray-100 to-gray-200 py-10">
       <div className="container mx-auto px-6 flex flex-col md:flex-row gap-6">
         <div className="md:w-2/3 w-full">
-          <h1 className="text-3xl font-bold mb-6 text-[#3087d1]">Your Shopping Cart</h1>
+          <h1 className="text-3xl font-bold mb-6 text-[#3087d1]">{t("Your Shopping Cart")}</h1>
           {cartItems.length === 0 ? (
             <div className="text-center py-12 bg-white rounded-lg shadow-md">
-              <p className="text-gray-600 mb-4">Your cart is currently empty.</p>
+              <p className="text-gray-600 mb-4">{t("Your cart is currently empty.")}</p>
               <button
                 onClick={() => navigate("/")}
                 className="!bg-[#3087d1] text-white font-semibold py-3 px-6 rounded-full transition-colors"
               >
-                Continue Shopping
+                {t("Continue Shopping")}
               </button>
             </div>
           ) : (
@@ -92,7 +94,7 @@ const CartPage = () => {
                   onClick={() => removeFromCart(item.id)}
                   className="px-4 py-2 !bg-[#3087d1] text-white rounded-full hover:bg-red-700 transition-colors"
                 >
-                  Remove
+                {t("Remove")}
                 </button>
               </div>
             ))
@@ -100,24 +102,24 @@ const CartPage = () => {
         </div>
 
         <div className="md:w-1/2 w-full mt-20 p-10 bg-white rounded-lg shadow-md h-[350px]">
-          <h2 className="text-xl font-bold mb-5 text-[#3087d1]">Order Summary</h2>
+          <h2 className="text-xl font-bold mb-5 text-[#3087d1]">{t("Order Summary")}</h2>
           <div className="mb-3">
             <p className="flex justify-between text-gray-700">
-              <span>Total MRP</span> <span>AED{totalMRP.toFixed(2)}</span>
+              <span>{t("Total MRP")}</span> <span>{t("")}{totalMRP.toFixed(2)}</span>
             </p>
             <p className="flex justify-between text-green-600">
-              <span>Offer Discount</span> <span>- AED{discount.toFixed(2)}</span>
+              <span>{t("Offer Discount")}</span> <span>{t("- AED")}{discount.toFixed(2)}</span>
             </p>
             <p className="flex justify-between text-gray-700">
-              <span>Shipping Fee</span> <span>AED{shippingFee.toFixed(2)}</span>
+              <span>{t("Shipping Fee")}</span> <span>{t("AED")}{shippingFee.toFixed(2)}</span>
             </p>
             <p className="flex justify-between text-gray-700">
-              <span>Platform Fee</span> <span>AED{platformFee.toFixed(2)}</span>
+              <span>{t("Platform Fee")}</span> <span>{t("AED")}{platformFee.toFixed(2)}</span>
             </p>
           </div>
           <hr className="my-4 border-gray-300" />
           <p className="flex justify-between text-lg font-bold text-gray-800">
-            <span>Total</span> <span>AED{total.toFixed(2)}</span>
+            <span>{t("Total")}</span> <span>{t("AED")}{total.toFixed(2)}</span>
           </p>
           <button
   className="w-full mt-6 !bg-[#3087d1] text-white py-3 rounded-full font-semibold transition-colors"
@@ -129,7 +131,7 @@ const CartPage = () => {
     }
   }}
 >
-  Proceed to Checkout
+ {t("Proceed to Checkout")}
 </button>
         </div>
       </div>

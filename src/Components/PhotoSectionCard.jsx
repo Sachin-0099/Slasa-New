@@ -1,15 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const PhotoSectionCard = ({ PhotoData, title, width, Description }) => {
+     const { t, i18n } = useTranslation(); 
   return (
     <div className='h-full w-screen lg:mb-10 md:mb-5 mb-2 flex flex-col items-center'>
       <h1 className='relative text-transparent bg-gradient-to-r from-[#3087D1] via-[#3087D5] to-black bg-clip-text font-bold lg:text-6xl md:text-4xl text-3xl text-center font-semibold hover:underline hover:underline-offset-8 hover:decoration-[#3087D1]'>
-        {title}
+      {t(title)}
       </h1>
       
       {Description.map((desc, index) => (
         <p key={index} className='lg:px-10 lg:mx-50 md:mx-30 lg:py-5 py-2 mx-5 text-gray-500 md:text-xl text-sm lg:text-xl text-center'>
-          {desc.description}
+        {t(desc.description)}
         </p>
       ))}
       

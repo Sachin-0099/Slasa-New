@@ -83,9 +83,9 @@ const HeaderTop = () => {
           <span>{t("Deliver to Area ⌄")}</span>
           {hoveredItem === "area" && (
             <div className="absolute left-1/2 transform -translate-x-1/2 top-full mt-1 bg-gray-900 text-white text-xs rounded-md shadow-lg p-2 w-36 text-center z-50">
-              <p className="px-4 py-0.5 hover:bg-gray-700 transition">Sharjah</p>
-              <p className="px-4 py-0.5 hover:bg-gray-700 transition">Abu Dhabi</p>
-              <p className="px-4 py-0.5 hover:bg-gray-700 transition">Hatta</p>
+              <p className="px-4 py-0.5 hover:bg-gray-700 transition">{t("Sharjah")}</p>
+              <p className="px-4 py-0.5 hover:bg-gray-700 transition">{t("Abu Dhabi")}</p>
+              <p className="px-4 py-0.5 hover:bg-gray-700 transition">{t("Hatta")}</p>
             </div>
           )}
         </div>
@@ -94,13 +94,13 @@ const HeaderTop = () => {
       {/* Right Section (Hide on smaller screens) */}
       <div className="hidden sm:flex items-center gap-2 md:gap-3 flex-nowrap">
         <div className="cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition">
-          Store Locator
+         {t("Store Locator")}
         </div>
         <div className="cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition">
-          Help
+          {t("Help")}
         </div>
         <a href="/sell-with-us" className="hidden !text-white lg:block cursor-pointer px-2 py-1 rounded-md hover:bg-gray-800 transition">
-              Sell with Us
+              {t("Sell with Us")}
         </a>
 
       </div>

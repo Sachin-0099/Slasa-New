@@ -225,6 +225,85 @@ const resources = {
   "Sign Up": "إنشاء حساب",
   "Terms and Conditions": "الشروط والأحكام",
   "Create an Account": "إنشاء حساب",
+  "WaterColor": "ألوان مائية",
+  "AcrylicPaints": "ألوان أكريليك",
+  "ColouredFinals": "الألوان النهائية",
+  "SketchPencil": "قلم رصاص للتخطيط",
+  "Charcoal.jpeg": "فحم",
+  "BrushPens.jpeg": "أقلام الفرشاة",
+  "We Accept":"نحن نقبل",
+  "An empty shopping basket is a lonely shopping basket.":"سلة التسوق الفارغة هي سلة تسوق وحيدة.",
+  "Go on, add something!":"إستمر، أضف شيئا!",
+  "Start shopping":"ابدأ بالتسوق",
+  "Your Wishlist":"قائمة رغباتك",  
+"Your wishlist is empty":"قائمة رغباتك فارغة",  
+"Price:":"السعر:",  
+"Remove":"إزالة"  ,
+  "Free Shipping": "شحن مجاني",
+  "Enjoy free shipping on all orders above $50!": "تمتع بشحن مجاني على جميع الطلبات التي تزيد عن 50 دولارًا!",
+  "Click and Collect": "اضغط واستلم",
+  "Order online and collect from your nearest store!": "اطلب عبر الإنترنت واستلم من أقرب متجر لك!",
+  "Warranty": "الضمان",
+  "Get up to 2 years of warranty on selected products.": "احصل على ضمان يصل إلى عامين على المنتجات المختارة.",
+  "B2B Services ⌄": "خدمات الأعمال ⌄",
+  "Custom Designs": "تصاميم مخصصة",
+  "Consulting Services": "خدمات استشارية",
+  "Deliver to Area ⌄": "التوصيل إلى المنطقة ⌄",
+  "Sharjah": "الشارقة",
+  "Abu Dhabi": "أبوظبي",
+  "Hatta": "حتا",
+  "Store Locator": "محدد مواقع المتاجر",
+  "Help": "المساعدة",
+  "Sell with Us": "بع معنا",
+  "Your Shopping Cart": "عربة التسوق الخاصة بك",
+  "Your cart is currently empty.": "عربة التسوق الخاصة بك فارغة حاليًا.",
+  "Continue Shopping": "متابعة التسوق",
+  "Remove": "إزالة",
+  "Order Summary": "ملخص الطلب",
+  "Total MRP": "إجمالي السعر الأصلي",
+  "Offer Discount": "خصم العرض",
+  "Shipping Fee": "رسوم الشحن",
+  "Platform Fee": "رسوم المنصة",
+  "Total": "الإجمالي",
+  "Proceed to Checkout": "المتابعة إلى الدفع",
+  "Personal Information": "المعلومات الشخصية",
+  "Full Name": "الاسم الكامل",
+  "Email": "البريد الإلكتروني",
+  "Phone Number": "رقم الهاتف",
+  "Profile Picture": "صورة الملف الشخصي",
+  "Update Profile": "تحديث الملف الشخصي",
+  "Change Password": "تغيير كلمة المرور",
+  "New Password": "كلمة المرور الجديدة",
+  "Confirm New Password": "تأكيد كلمة المرور الجديدة",
+  "Shipping and Billing Information": "معلومات الشحن والفوترة",
+  "Addresses": "العناوين",
+  "No addresses available": "لا توجد عناوين متاحة",
+  "Add New Address": "إضافة عنوان جديد",
+  "Add Address": "إضافة عنوان",
+  "Payment Methods": "طرق الدفع",
+  "No payment methods available": "لا توجد طرق دفع متاحة",
+  "Add New Payment Method": "إضافة طريقة دفع جديدة",
+  "Add Payment Method": "إضافة طريقة دفع",
+  "Wishlist": "قائمة الأمنيات",
+  "No items in wishlist": "لا توجد عناصر في قائمة الأمنيات",
+  "Add to Wishlist": "إضافة إلى قائمة الأمنيات",
+  "Notification Preferences": "تفضيلات الإشعارات",
+  "Email Notifications": "إشعارات البريد الإلكتروني",
+  "SMS Notifications": "إشعارات الرسائل القصيرة",
+
+  
+
+
+
+  
+  
+
+  
+  
+  
+  
+  
+
         
         
       

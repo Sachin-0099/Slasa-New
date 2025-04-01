@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, TextField, Card, Typography, Switch, FormControlLabel, Grid } from '@mui/material';
 import styled from 'styled-components';
 import axios from 'axios';
+import { t } from 'i18next';
 
 // Styled Components
 const Section = styled(Card)`
@@ -145,10 +146,10 @@ const AccountSettings = () => {
 
       {/* Profile Section */}
       <Section>
-        <Typography variant="h5" gutterBottom>Personal Information</Typography>
+        <Typography variant="h5" gutterBottom>{t("Personal Information")}</Typography>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <InputLabel>Full Name</InputLabel>
+            <InputLabel>{t("Full Name")}</InputLabel>
             <TextField
               fullWidth
               variant="outlined"
@@ -169,7 +170,7 @@ const AccountSettings = () => {
         </Grid>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
-            <InputLabel>Phone Number</InputLabel>
+            <InputLabel>{t("Phone Number")}</InputLabel>
             <TextField
               fullWidth
               variant="outlined"
@@ -178,7 +179,7 @@ const AccountSettings = () => {
             />
           </Grid>
           <Grid item xs={12} sm={6}>
-            <InputLabel>Profile Picture</InputLabel>
+            <InputLabel>{t("Profile Picture")}</InputLabel>
             <input
               type="file"
               onChange={(e) => setUser({ ...user, profilePicture: URL.createObjectURL(e.target.files[0]) })}
@@ -186,12 +187,14 @@ const AccountSettings = () => {
             <ProfilePic src={user.profilePicture} alt="Profile" />
           </Grid>
         </Grid>
-        <Button variant="contained" color="primary" onClick={handleProfileUpdate}>Update Profile</Button>
+        <Button variant="contained" color="primary" onClick={handleProfileUpdate}>{t(
+        "Update Profile"
+        )}</Button>
       </Section>
 
       {/* Password Change Section */}
       <Section>
-        <Typography variant="h5" gutterBottom>Change Password</Typography>
+        <Typography variant="h5" gutterBottom>{t("Change Password")}</Typography>
         <TextField
           fullWidth
           variant="outlined"
@@ -208,21 +211,21 @@ const AccountSettings = () => {
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
         />
-        <Button variant="contained" color="secondary" onClick={handlePasswordChange}>Change Password</Button>
+        <Button variant="contained" color="secondary" onClick={handlePasswordChange}>{t("Change Password")}</Button>
       </Section>
 
       {/* Shipping and Billing Section */}
       <Section>
-        <Typography variant="h5" gutterBottom>Shipping and Billing Information</Typography>
+        <Typography variant="h5" gutterBottom>{t("Shipping and Billing Information")}</Typography>
 
         {/* Addresses */}
-        <Typography variant="h6">Addresses</Typography>
+        <Typography variant="h6">{t("Addresses")}</Typography>
         {Array.isArray(user.address) && user.address.length > 0 ? (
           user.address.map((address, index) => (
             <Typography key={index}>{address}</Typography>
           ))
         ) : (
-          <Typography>No addresses available</Typography>
+          <Typography>{t("No addresses available")}</Typography>
         )}
         <TextField
           variant="outlined"
@@ -231,16 +234,16 @@ const AccountSettings = () => {
           value={addressInput}
           onChange={(e) => setAddressInput(e.target.value)}
         />
-        <Button variant="contained" onClick={() => handleAddItem('address', addressInput)}>Add Address</Button>
+        <Button variant="contained" onClick={() => handleAddItem('address', addressInput)}>{t("Add Address")}</Button>
 
         {/* Payment Methods */}
-        <Typography variant="h6">Payment Methods</Typography>
+        <Typography variant="h6">{t("Payment Methods")}</Typography>
         {Array.isArray(user.paymentMethods) && user.paymentMethods.length > 0 ? (
           user.paymentMethods.map((method, index) => (
             <Typography key={index}>{method}</Typography>
           ))
         ) : (
-          <Typography>No payment methods available</Typography>
+          <Typography>{t("No payment methods available")}</Typography>
         )}
         <TextField
           variant="outlined"
@@ -249,18 +252,18 @@ const AccountSettings = () => {
           value={paymentInput}
           onChange={(e) => setPaymentInput(e.target.value)}
         />
-        <Button variant="contained" onClick={() => handleAddItem('payment', paymentInput)}>Add Payment Method</Button>
+        <Button variant="contained" onClick={() => handleAddItem('payment', paymentInput)}>{t("Add Payment Method")}</Button>
       </Section>
 
       {/* Wishlist Section */}
       <Section>
-        <Typography variant="h5" gutterBottom>Wishlist</Typography>
+        <Typography variant="h5" gutterBottom>{t("Wishlist")}</Typography>
         {Array.isArray(user.wishlist) && user.wishlist.length > 0 ? (
           user.wishlist.map((item, index) => (
             <Typography key={index}>{item}</Typography>
           ))
         ) : (
-          <Typography>No items in wishlist</Typography>
+          <Typography>{t("No items in wishlist")}</Typography>
         )}
         <TextField
           variant="outlined"
@@ -269,12 +272,12 @@ const AccountSettings = () => {
           value={wishlistInput}
           onChange={(e) => setWishlistInput(e.target.value)}
         />
-        <Button variant="contained" onClick={() => handleAddItem('wishlist', wishlistInput)}>Add to Wishlist</Button>
+        <Button variant="contained" onClick={() => handleAddItem('wishlist', wishlistInput)}>{t("Add to Wishlist")}</Button>
       </Section>
 
       {/* Notification Preferences */}
       <Section>
-        <Typography variant="h5" gutterBottom>Notification Preferences</Typography>
+        <Typography variant="h5" gutterBottom>{t("Notification Preferences")}</Typography>
         <FormControlLabel
           control={
             <Switch
