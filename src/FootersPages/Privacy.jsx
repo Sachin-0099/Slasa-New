@@ -20,9 +20,9 @@ const Privacy = () => {
       </section>
 
       <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>2. Information We Collect</h2>
-        <h3 className='text-xl sm:text-2xl font-semibold mt-4'>2.1 Personal Information</h3>
-        <ul className='list-disc pl-6'>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>2. Information We Collect</h2>
+        <h3 className='text-xl sm:text-2xl font-semibold mt-4 text-black'>2.1 Personal Information</h3>
+        <ul className='list-disc pl-6 text-black'>
           <li>Name</li>
           <li>Email address</li>
           <li>Phone number</li>
@@ -30,24 +30,24 @@ const Privacy = () => {
           <li>Payment details (processed securely via third-party payment gateways)</li>
         </ul>
 
-        <h3 className='text-xl sm:text-2xl font-semibold mt-4'>2.2 Non-Personal Information</h3>
-        <ul className='list-disc pl-6'>
+        <h3 className='text-xl sm:text-2xl font-semibold mt-4 text-black'>2.2 Non-Personal Information</h3>
+        <ul className='list-disc pl-6 text-black'>
           <li>Browser type</li>
           <li>Device information</li>
           <li>IP address</li>
           <li>Usage data (e.g., pages visited, time spent on the website)</li>
         </ul>
 
-        <h3 className='text-xl sm:text-2xl font-semibold mt-4'>2.3 Cookies and Tracking Technologies</h3>
-        <p>
+        <h3 className='text-xl sm:text-2xl font-semibold mt-4 text-black'>2.3 Cookies and Tracking Technologies</h3>
+        <p className='text-black'>
           We use cookies, web beacons, and similar technologies to enhance user experience, analyze traffic, and personalize
           content. You can manage cookie settings in your browser.
         </p>
       </section>
 
       <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>3. How We Use Your Information</h2>
-        <ul className='list-disc pl-6'>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>3. How We Use Your Information</h2>
+        <ul className='list-disc pl-6 text-black'>
           <li>Processing and managing orders</li>
           <li>Providing customer support</li>
           <li>Improving website functionality and user experience</li>
@@ -57,18 +57,18 @@ const Privacy = () => {
         </ul>
       </section>
 
-      <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>4. How We Share Your Information</h2>
-        <ul className='list-disc pl-6'>
+      <section className='mb-6 text-black'>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>4. How We Share Your Information</h2>
+        <ul className='list-disc pl-6 text-black'>
           <li>Service Providers – Third-party vendors (e.g., payment processors, delivery services) to fulfill orders.</li>
           <li>Legal Authorities – If required by law, or to protect our rights and security.</li>
           <li>Business Transfers – If Slasa undergoes a merger, acquisition, or asset sale.</li>
         </ul>
       </section>
 
-      <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>5. Data Security</h2>
-        <ul className='list-disc pl-6'>
+      <section className='mb-6 text-black'>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>5. Data Security</h2>
+        <ul className='list-disc pl-6 text-black'>
           <li>🔒 Encryption of sensitive data</li>
           <li>🔒 Secure payment processing via trusted third-party providers</li>
           <li>🔒 Limited access to personal data within our team</li>
@@ -78,9 +78,9 @@ const Privacy = () => {
         </p>
       </section>
 
-      <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>6. Your Rights</h2>
-        <ul className='list-disc pl-6'>
+      <section className='mb-6 text-black'>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>6. Your Rights</h2>
+        <ul className='list-disc pl-6 text-black'>
           <li>✔ Access & Review – Request a copy of your personal data.</li>
           <li>✔ Correction – Update inaccurate or incomplete information.</li>
           <li>✔ Deletion – Request deletion of your personal data (subject to legal obligations).</li>
@@ -89,13 +89,13 @@ const Privacy = () => {
         <p>To exercise your rights, contact us at <strong><a href="/">support@slasa.com</a></strong>.</p>
       </section>
 
-      <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>7. Third-Party Links</h2>
+      <section className='mb-6 text-black'>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>7. Third-Party Links</h2>
         <p>Slasa may contain links to third-party websites. We are not responsible for their content, privacy policies, or practices.</p>
       </section>
 
       <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>8. Changes to This Privacy Policy</h2>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>8. Changes to This Privacy Policy</h2>
         <p>
           We may update this policy periodically. Changes will be posted on this page, and your continued use of Slasa means you
           accept the revised terms.
@@ -103,10 +103,10 @@ const Privacy = () => {
         <p><strong>Last updated:</strong> [Date]</p>
       </section>
 
-      <section className='mb-6'>
-        <h2 className='text-2xl sm:text-3xl font-semibold mb-2'>9. Contact Us</h2>
+      <section className='mb-6 text-black'>
+        <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>9. Contact Us</h2>
         <p>If you have any questions about this Privacy Policy, reach out to us at:</p>
-        <ul className='list-disc pl-6'>
+        <ul className='list-disc pl-6 text-black'>
           <li>📧 <strong>Email:</strong> support@slasa.com</li>
           <li>🌐 <strong>Website:</strong> <a href="https://slasa-e-commerce.vercel.app/">https://slasa-e-commerce.vercel.app/</a></li>
         </ul>
