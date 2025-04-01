@@ -108,7 +108,7 @@ const Returns = () => {
             ].map((item, index) => (
               <div key={index} className="p-4 border rounded-lg shadow-md">
                 <h3 className="font-bold text-lg">{item.title}</h3>
-                <p className="text-gray-600">{item.text}</p>
+                <p className="text-black">{item.text}</p>
               </div>
             ))}
           </div>
