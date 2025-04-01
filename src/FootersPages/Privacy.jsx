@@ -4,7 +4,7 @@ import Footer from '../Components/Footer';
 const Privacy = () => {
   return (
     <div className='container mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-      <h1 className='text-3xl sm:text-4xl font-bold mb-4 text-[#3087d1]'>Privacy Policy</h1>
+      <h1 className='text-3xl sm:text-4xl font-bold mb-4 text-[#3087d1] text-center sm:text-left'>Privacy Policy</h1>
 
       <section className='mb-6'>
         <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>1. Introduction</h2>
@@ -110,6 +110,7 @@ const Privacy = () => {
           <li>🌐 <strong>Website:</strong> <a href="https://slasa-e-commerce.vercel.app/">https://slasa-e-commerce.vercel.app/</a></li>
         </ul>
       </section>
+      
       <Footer />
     </div>
   );
