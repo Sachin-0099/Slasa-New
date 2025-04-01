@@ -8,14 +8,15 @@ const Privacy = () => {
 
       <section className='mb-6'>
         <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>1. Introduction</h2>
-        <p>
-          Welcome to Slasa! Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and
-          safeguard your personal information when you visit our website or use our services.
-        </p>
-        <p>
-          By accessing or using Slasa, you agree to the terms outlined in this Privacy Policy. If you do not agree, please refrain
-          from using our services.
-        </p>
+        <p className='text-black mb-4'>
+  Welcome to Slasa! Your privacy is important to us. This Privacy Policy explains how we collect, use, disclose, and
+  safeguard your personal information when you visit our website or use our services.
+</p>
+<p className='text-black'>
+  By accessing or using Slasa, you agree to the terms outlined in this Privacy Policy. If you do not agree, please refrain
+  from using our services.
+</p>
+
       </section>
 
       <section className='mb-6'>
