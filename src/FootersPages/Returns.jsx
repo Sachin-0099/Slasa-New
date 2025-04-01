@@ -19,15 +19,17 @@ const Returns = () => {
   return (
     <>
       <div className="p-5 md:p-10">
-        <h1 className="text-2xl md:text-3xl font-bold">Returns</h1>
+      <h1 className="text-2xl md:text-3xl font-bold text-black">Returns</h1>
+
         <p className="text-gray-500 mb-6">Here's how the returns process works.</p>
 
         {/* Main Section */}
         <div className="flex flex-col md:flex-row px-5 md:px-10 mt-6 md:mt-10 gap-6">
           <div className="md:w-1/2">
-            <h2 className="text-xl md:text-2xl font-semibold">
-              Returns should be easy. We couldn’t agree more.
-            </h2>
+          <h2 className="text-xl md:text-2xl font-semibold text-black">
+  Returns should be easy. We couldn’t agree more.
+</h2>
+
             <p className="text-base md:text-lg text-gray-500 pt-4">
               Let's show you how to return your products in three easy ways.
             </p>
@@ -48,7 +50,12 @@ const Returns = () => {
 
         {/* Return Steps */}
         <div className="mt-10">
-          <h2 className="text-xl md:text-2xl font-semibold mb-4">Return Steps</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl font-semibold mb-4">
+  Return Steps
+</h2>
+
+
+
           {returnSteps.map((step, index) => (
             <div
               key={index}
@@ -77,7 +84,8 @@ const Returns = () => {
               { title: "Receive your refund", text: "If you’ve paid by cash, you can ask for a cash refund or a Credit Note." }
             ].map((item, index) => (
               <div key={index} className="p-4 border rounded-lg shadow-md">
-                <h3 className="font-bold text-lg">{item.title}</h3>
+            <h3 className="font-bold text-lg text-black">{item.title}</h3>
+
                 <p className="text-black">{item.text}</p>
               </div>
             ))}
