@@ -96,11 +96,11 @@ const Privacy = () => {
 
       <section className='mb-6'>
         <h2 className='text-2xl sm:text-3xl font-semibold mb-2 text-black'>8. Changes to This Privacy Policy</h2>
-        <p>
+        <p className='text-black'>
           We may update this policy periodically. Changes will be posted on this page, and your continued use of Slasa means you
           accept the revised terms.
         </p>
-        <p><strong>Last updated:</strong> [Date]</p>
+        <p className='text-black'><strong>Last updated:</strong> [Date]</p>
       </section>
 
       <section className='mb-6 text-black'>

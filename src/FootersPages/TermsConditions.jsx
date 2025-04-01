@@ -3,11 +3,11 @@ import Footer from '../Components/Footer';
 
 const TermsConditions = () => {
   return (
-    <div className="container mx-auto p-6">
+    <div className="container mx-auto p-6 text-black">
       <h1 className="text-3xl font-bold mb-4 text-center text-[#3087d1]">Terms & Conditions</h1>
 
       {/* Introduction */}
-      <section className="mb-6">
+      <section className="mb-6 text-black">
         <h2 className="text-xl font-semibold mb-2">Introduction</h2>
         <p>
           Welcome to Slasa! These Terms and Conditions outline the rules and regulations for the use of our website and services. 
@@ -17,7 +17,7 @@ const TermsConditions = () => {
       </section>
 
       {/* Definitions */}
-      <section className="mb-6">
+      <section className="mb-6 text-black">
         <h2 className="text-xl font-semibold mb-2">Definitions</h2>
         <ul className="list-disc ml-5">
           <li><strong>"Company," "We," "Our," or "Us"</strong> refers to Slasa.</li>
