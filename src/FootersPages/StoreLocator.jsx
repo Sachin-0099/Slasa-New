@@ -54,7 +54,8 @@ const StoreLocator = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-[#3087d1] text-2xl font-bold mb-4 text-black">Store Locator</h1>
+<h1 className="text-[#3087d1] sm:text-black text-2xl font-bold mb-4">Store Locator</h1>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Store List Section */}
         <div className="w-full md:w-auto">
