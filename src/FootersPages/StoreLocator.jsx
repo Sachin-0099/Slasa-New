@@ -47,14 +47,21 @@ const center = {
 const StoreLocator = () => {
   const [selectedStore, setSelectedStore] = useState(null);
 
+  const handleStoreSelect = (storeId) => {
+    const store = storeLocations.find((store) => store.id === storeId);
+    setSelectedStore(store);
+  };
+
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-[#3087d1] text-2xl font-bold mb-4">Store Locator</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
+        {/* Store List Section */}
+        <div className="w-full md:w-auto">
           <select
             className="w-full p-2 border border-gray-300 rounded-md mb-4"
-            onChange={(e) => setSelectedStore(e.target.value)}
+            onChange={(e) => handleStoreSelect(Number(e.target.value))}
+            defaultValue=""
           >
             <option value="">Select a Store</option>
             {storeLocations.map((store) => (
@@ -68,7 +75,7 @@ const StoreLocator = () => {
               <li
                 key={store.id}
                 className="p-3 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
-                onClick={() => setSelectedStore(store.id)}
+                onClick={() => handleStoreSelect(store.id)}
               >
                 <strong>{store.name}</strong>
                 <p className="text-gray-700 text-sm">{store.address}</p>
@@ -76,16 +83,31 @@ const StoreLocator = () => {
             ))}
           </ul>
         </div>
-        <div>
+
+        {/* Map Section */}
+        <div className="w-full md:w-auto">
           <LoadScript googleMapsApiKey="YOUR_GOOGLE_MAPS_API_KEY">
             <GoogleMap mapContainerStyle={mapContainerStyle} center={center} zoom={8}>
-              {storeLocations.map((store) => (
-                <Marker key={store.id} position={store.position} />
-              ))}
+              {selectedStore ? (
+                <Marker key={selectedStore.id} position={selectedStore.position} />
+              ) : (
+                storeLocations.map((store) => (
+                  <Marker key={store.id} position={store.position} />
+                ))
+              )}
             </GoogleMap>
           </LoadScript>
         </div>
       </div>
+
+      {/* Selected Store Details */}
+      {selectedStore && (
+        <div className="mt-6">
+          <h2 className="text-xl font-bold">Store Details</h2>
+          <p className="text-lg">{selectedStore.name}</p>
+          <p>{selectedStore.address}</p>
+        </div>
+      )}
     </div>
   );
 };
