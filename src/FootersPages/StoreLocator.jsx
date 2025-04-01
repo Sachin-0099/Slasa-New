@@ -63,7 +63,7 @@ const StoreLocator = () => {
             onChange={(e) => handleStoreSelect(Number(e.target.value))}
             defaultValue=""
           >
-            <option value="">Select a Store</option>
+            <option value="" className="text-black">Select a Store</option>
             {storeLocations.map((store) => (
               <option key={store.id} value={store.id}>
                 {store.name}
@@ -77,7 +77,7 @@ const StoreLocator = () => {
                 className="p-3 border border-gray-300 rounded-md cursor-pointer hover:bg-gray-100"
                 onClick={() => handleStoreSelect(store.id)}
               >
-                <strong>{store.name}</strong>
+                <strong className="text-black">{store.name}</strong>
                 <p className="text-gray-700 text-sm">{store.address}</p>
               </li>
             ))}
