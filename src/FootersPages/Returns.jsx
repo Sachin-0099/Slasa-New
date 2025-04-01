@@ -52,15 +52,15 @@ const Returns = () => {
           {returnSteps.map((step, index) => (
             <div
               key={index}
-              className="mb-4 bg-gray-100 p-4 rounded-md cursor-pointer shadow-sm"
+              className="mb-4 bg-[#3087d1] p-4 rounded-md cursor-pointer shadow-sm"
               onClick={() => toggleSection(index)}
             >
               <div className="flex justify-between items-center">
-                <p className="font-medium">{step.title}</p>
+                <p className="font-medium text-white">{step.title}</p>
                 {openSection === index ? <FaChevronUp /> : <FaChevronDown />}
               </div>
               {openSection === index && (
-                <p className="mt-2 text-gray-600">{step.content}</p>
+                <p className="mt-2 !text-white">{step.content}</p>
               )}
             </div>
           ))}
@@ -78,7 +78,7 @@ const Returns = () => {
             ].map((item, index) => (
               <div key={index} className="p-4 border rounded-lg shadow-md">
                 <h3 className="font-bold text-lg">{item.title}</h3>
-                <p className="text-gray-600">{item.text}</p>
+                <p className="text-black">{item.text}</p>
               </div>
             ))}
           </div>
@@ -105,3 +105,4 @@ const Returns = () => {
 };
 
 export default Returns;
+ 
