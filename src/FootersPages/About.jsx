@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
-
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -24,13 +23,13 @@ const About = () => {
     <>
       {/* Video Section */}
       <div className="relative w-full h-[600px]">
-      <video
-  src="https://youtu.be/qA3u1J3iFkU?si=WGjZ_sa1gOSBRE-6"
-  className="w-full h-full object-cover"
-  autoPlay
-  loop
-  muted
-></video>
+      <iframe
+    src="https://www.youtube.com/embed/qA3u1J3iFkU?autoplay=1&loop=1&mute=1"
+    className="w-full h-full object-cover"
+    frameBorder="0"
+    allow="autoplay; fullscreen"
+    allowFullScreen
+  ></iframe>
 
         {/* Logo in Top Left with Hover Effect */}
         <motion.div className="absolute top-10 left-4" whileHover={{ scale: 1.1 }}>
@@ -90,20 +89,19 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
-      <div className=" flex flex-col md:flex-row items-center justify-center p-10 gap-10">
-        {/* Carousel Section */}
+
+      {/* Culture Section */}
+      <div className="flex flex-col md:flex-row items-center justify-center p-10 gap-10">
+        {/* Image Section */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="md:w-1/2 flex justify-center"
         >
-         
-            <div>
-              <img src="/Images/Team.jpg" alt="Slide 1" className="rounded-lg shadow-lg w-110" />
-            </div>
-            
-      
+          <div>
+            <img src="/Images/Team.jpg" alt="Team" className="rounded-lg shadow-lg w-full md:w-[80%]" />
+          </div>
         </motion.div>
 
         {/* Text Content */}
@@ -113,9 +111,9 @@ const About = () => {
           transition={{ duration: 1 }}
           className="md:w-1/2 text-center md:text-left"
         >
-          <h1 className="text-[#3087d1] text-3xl font-bold mb-4 ">The Slasa Culture</h1>
+          <h1 className="text-[#3087d1] text-3xl font-bold mb-4">The Slasa Culture</h1>
           <p className="text-[#000] mb-6 leading-relaxed">
-          Slasa embraces a culture of innovation, excellence, and customer-centricity. At its core, Slasa values creativity and adaptability, ensuring that products and services evolve with market demands. The company fosters a collaborative environment where ideas are welcomed, and teamwork drives success. Integrity and transparency form the foundation of all operations, ensuring trust and reliability among customers and partners. With a commitment to quality and user satisfaction, Slasa continuously strives to set new industry standards. The culture promotes growth, learning, and inclusivity, empowering individuals to contribute meaningfully while maintaining a dynamic and forward-thinking approach.
+            Slasa embraces a culture of innovation, excellence, and customer-centricity. At its core, Slasa values creativity and adaptability, ensuring that products and services evolve with market demands. The company fosters a collaborative environment where ideas are welcomed, and teamwork drives success. Integrity and transparency form the foundation of all operations, ensuring trust and reliability among customers and partners. With a commitment to quality and user satisfaction, Slasa continuously strives to set new industry standards. The culture promotes growth, learning, and inclusivity, empowering individuals to contribute meaningfully while maintaining a dynamic and forward-thinking approach.
           </p>
 
           {/* Animated Button */}
@@ -126,10 +124,10 @@ const About = () => {
           </motion.div>
         </motion.div>
       </div>
-      <Footer/>
+
+      <Footer />
     </>
   );
 };
-
 
 export default About;
