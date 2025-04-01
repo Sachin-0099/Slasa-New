@@ -23,13 +23,13 @@ const About = () => {
     <>
       {/* Video Section */}
       <div className="relative w-full h-[600px]">
-      <iframe
-    src="https://www.youtube.com/embed/qA3u1J3iFkU?autoplay=1&loop=1&mute=1"
-    className="w-full h-full object-cover"
-    frameBorder="0"
-    allow="autoplay; fullscreen"
-    allowFullScreen
-  ></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/qA3u1J3iFkU?autoplay=1&loop=1&mute=1"
+          className="w-full h-full object-cover"
+          frameBorder="0"
+          allow="autoplay; fullscreen"
+          allowFullScreen
+        ></iframe>
 
         {/* Logo in Top Left with Hover Effect */}
         <motion.div className="absolute top-10 left-4" whileHover={{ scale: 1.1 }}>
@@ -50,24 +50,38 @@ const About = () => {
       {/* Information Section with Carousel */}
       <div className="bg-[#3087d1] flex flex-col md:flex-row items-center justify-center p-10 gap-10">
         {/* Carousel Section */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          className="md:w-1/2 flex justify-center"
-        >
-          <Slider {...settings} className="w-3/4 md:w-2/3">
-            <div>
-              <img src="/Images/Untitled design.svg" alt="Slide 1" className="rounded-lg shadow-lg w-full" />
-            </div>
-            <div>
-              <img src="/Images/Exclusvie.jpeg" alt="Slide 2" className="rounded-lg shadow-lg w-full" />
-            </div>
-            <div>
-              <img src="/Images/Exclusive27.jpeg" alt="Slide 3" className="rounded-lg shadow-lg w-full" />
-            </div>
-          </Slider>
-        </motion.div>
+       {/* Carousel Section */}
+<motion.div
+  initial={{ opacity: 0, x: -50 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 1 }}
+  className="md:w-1/2 flex justify-center w-full"
+>
+  <Slider {...settings} className="w-full md:w-2/3">
+    <div>
+      <img
+        src="/Images/Untitled design.svg"
+        alt="Slide 1"
+        className="rounded-lg shadow-lg w-full h-full"
+      />
+    </div>
+    <div>
+      <img
+        src="/Images/WD1.jpg"
+        alt="Slide 2"
+        className="rounded-lg shadow-lg w-full"
+      />
+    </div>
+    <div>
+      <img
+        src="/Images/Exclusive27.jpeg"
+        alt="Slide 3"
+        className="rounded-lg shadow-lg w-full"
+      />
+    </div>
+  </Slider>
+</motion.div>
+
 
         {/* Text Content */}
         <motion.div
@@ -90,7 +104,7 @@ const About = () => {
         </motion.div>
       </div>
 
-      {/* Culture Section */}
+      {/* The Slasa Culture Section */}
       <div className="flex flex-col md:flex-row items-center justify-center p-10 gap-10">
         {/* Image Section */}
         <motion.div
@@ -99,9 +113,7 @@ const About = () => {
           transition={{ duration: 1 }}
           className="md:w-1/2 flex justify-center"
         >
-          <div>
-            <img src="/Images/Team.jpg" alt="Team" className="rounded-lg shadow-lg w-full md:w-[80%]" />
-          </div>
+          <img src="/Images/Team.jpg" alt="Team" className="rounded-lg shadow-lg w-full md:w-3/4" />
         </motion.div>
 
         {/* Text Content */}
@@ -125,6 +137,7 @@ const About = () => {
         </motion.div>
       </div>
 
+      {/* Footer */}
       <Footer />
     </>
   );
