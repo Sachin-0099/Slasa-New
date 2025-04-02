@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 function AcrylicLayout() {
   const navigate = useNavigate();
@@ -33,29 +34,49 @@ function AcrylicLayout() {
             onClick={() => navigate("/product-details/acrylic-bath-accessories")}
           >
             {/* <div className="absolute top-0 left-0 w-[4px] md:w-[6px] lg:w-[8px] h-full bg-[#3087d1]"></div> */}
-            <img
-              src="/Images/image 1.jpg"
-              alt="Bath Accessories"
-              className="w-full h-auto aspect-square md:aspect-[4/3] object-cover"
-            />
+            <motion.div
+  className="relative w-full md:flex-1 overflow-hidden cursor-pointer border-4 border-[#3087d1] rounded-lg shadow-lg"
+  whileHover={{ scale: 1.05 }} // Slight zoom on hover
+  whileTap={{ scale: 0.95 }} // Small shrink effect on click
+  transition={{ duration: 0.3 }}
+  onClick={() => navigate("/product-details/acrylic-bath-accessories")}
+>
+  <motion.img
+    src="/Images/image 1.jpg"
+    alt="Bath Accessories"
+    className="w-full h-auto aspect-square md:aspect-[4/3] object-cover"
+    initial={{ opacity: 0, scale: 0.9 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.8 }}
+  />
+</motion.div>
+
           </div>
         </div>
 
         {/* Second Row */}
         <div className="flex flex-col lg:flex-row w-full gap-2 mt-2">
           <div className="w-full lg:flex-1 flex gap-2">
-            <img
-              src="/Images/WD2.jpg"
-              alt="Decor 1"
-              className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover border-r-2 border-[#3087d1] cursor-pointer"
-              onClick={() => navigate("/product-details/decor-1")}
-            />
-            <img
-              src="/Images/WD3.jpg"
-              alt="Decor 2"
-              className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover cursor-pointer"
-              onClick={() => navigate("/product-details/decor-2")}
-            />
+                    <motion.img
+  src="/Images/WD2.jpg"
+  alt="Decor 1"
+  className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover border-r-2 border-[#3087d1] cursor-pointer"
+  onClick={() => navigate("/product-details/decor-1")}
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  whileHover={{ scale: 1.1 }}
+  transition={{ duration: 0.5 }}
+/>
+<motion.img
+  src="/Images/WD3.jpg"
+  alt="Decor 1"
+  className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover border-r-2 border-[#3087d1] cursor-pointer"
+  onClick={() => navigate("/product-details/decor-1")}
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  whileHover={{ scale: 1.1 }}
+  transition={{ duration: 0.5 }}
+/>
           </div>
           
           <div className="w-full lg:flex-1 bg-gradient-to-t from-black via-[#3087d1] to-black p-3 md:p-4 flex flex-col items-center justify-center text-center">
@@ -68,18 +89,27 @@ function AcrylicLayout() {
           </div>
 
           <div className="w-full lg:flex-1 flex gap-2">
-            <img
-              src="/Images/WD4.jpg"
-              alt="Decor 3"
-              className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover border-r-2 border-[#3087d1] cursor-pointer"
-              onClick={() => navigate("/product-details/decor-3")}
-            />
-            <img
-              src="/Images/WD2.jpg"
-              alt="Decor 4"
-              className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover cursor-pointer"
-              onClick={() => navigate("/product-details/decor-4")}
-            />
+          <motion.img
+  src="/Images/WD4.jpg"
+  alt="Decor 1"
+  className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover border-r-2 border-[#3087d1] cursor-pointer"
+  onClick={() => navigate("/product-details/decor-1")}
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  whileHover={{ scale: 1.1 }}
+  transition={{ duration: 0.5 }}
+/>
+<motion.img
+  src="/Images/WD2.jpg"
+  alt="Decor 1"
+  className="w-1/2 h-auto aspect-square md:aspect-[3/2] object-cover border-r-2 border-[#3087d1] cursor-pointer"
+  onClick={() => navigate("/product-details/decor-1")}
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  whileHover={{ scale: 1.1 }}
+  transition={{ duration: 0.5 }}
+/>
+    
           </div>
         </div>
       </div>

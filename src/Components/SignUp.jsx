@@ -90,8 +90,16 @@ const Signup = () => {
       if (response.data.status) {
         setUserData(response.data.data);
         console.log("Signup successful:", response.data);
-        alert("Signup successful!");
-        navigate("/");
+        alert("Signup successful! Please verify your email.");
+        console.log("✅ Navigating with:", userDataObject.username, userDataObject.email);
+
+        
+        // Navigate to OTP verification page, passing email
+        navigate("/verify", { state: { username: userDataObject.username, email: userDataObject.email } });
+
+
+      
+        // Reset form
         setFormData({
           email: "",
           firstname: "",
@@ -101,8 +109,10 @@ const Signup = () => {
           confirmPassword: "",
           agree: false,
         });
+      
         setErrors({});
       }
+      
     } catch (error) {
       console.error("Signup error:", error.response?.data || error.message);
       alert(error.response?.data?.message || "Signup failed!");

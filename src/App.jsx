@@ -107,6 +107,8 @@ import { LanguageProvider } from "./Context/LanguageContext";
 import WalletContext from "./Context/WalletProvider";
 
 import Solana from "./Components/Solana";
+import VerifyOtp from "./Components/VerifyOtp";
+import AuthPage from "./Components/AuthPage";
 
 
 
@@ -179,6 +181,22 @@ function App() {
               element={
                 <PageLayout>
                 <Layout/>
+                </PageLayout>
+              }
+            />
+             <Route
+              path="/auth"
+              element={
+                <PageLayout>
+                <AuthPage/>
+                </PageLayout>
+              }
+            />
+            <Route
+              path="/verify"
+              element={
+                <PageLayout>
+             <VerifyOtp/>
                 </PageLayout>
               }
             />
