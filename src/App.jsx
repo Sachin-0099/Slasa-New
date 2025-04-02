@@ -109,6 +109,7 @@ import WalletContext from "./Context/WalletProvider";
 import Solana from "./Components/Solana";
 import VerifyOtp from "./Components/VerifyOtp";
 import AuthPage from "./Components/AuthPage";
+import Confirmation from "./Components/Confirmation";
 
 
 
@@ -181,6 +182,14 @@ function App() {
               element={
                 <PageLayout>
                 <Layout/>
+                </PageLayout>
+              }
+            />
+              <Route
+              path="/confirmation"
+              element={
+                <PageLayout>
+               <Confirmation/>
                 </PageLayout>
               }
             />

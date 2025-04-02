@@ -1,50 +1,67 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import axios from "axios";
 
 const CartPage = () => {
-     const { t, i18n } = useTranslation(); 
-  
-  const [cartItems, setCartItems] = useState([]);
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
+  const [cartItems, setCartItems] = useState([]);
+  const [cartSummary, setCartSummary] = useState({
+    totalMRP: 0,
+    discount: 0,
+    shippingFee: 0,
+    platformFee: 0,
+    total: 0,
+  });
+
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartItems(storedCart);
+    fetchCartData();
+    fetchCartSummary();
   }, []);
 
-  const removeFromCart = (id) => {
-    const updatedCart = cartItems.filter((item) => item.id !== id);
-    setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  const fetchCartData = async () => {
+    try {
+      const response = await axios.get("http://api.slasaetrade.com/api/cart/get-cart");
+      setCartItems(response.data);
+    } catch (error) {
+      console.error("Error fetching cart data:", error);
+    }
   };
 
-  const updateQuantity = (id, newQuantity) => {
-    const updatedCart = cartItems.map((item) =>
-      item.id === id ? { ...item, quantity: newQuantity } : item
-    );
-    setCartItems(updatedCart);
-    localStorage.setItem("cart", JSON.stringify(updatedCart));
+  const fetchCartSummary = async () => {
+    try {
+      const response = await axios.get("http://api.slasaetrade.com/api/cart/cart-summary");
+      setCartSummary(response.data);
+    } catch (error) {
+      console.error("Error fetching cart summary:", error);
+    }
   };
 
-  const calculateTotal = () => {
-    const totalMRP = cartItems.reduce(
-      (sum, item) => sum + item.price * item.quantity,
-      0
-    );
-    const discount = totalMRP * 0.2;
-    const shippingFee = totalMRP > 500 ? 0 : totalMRP === 0 ? 0 : 50;
-
-    const platformFee = 5;
-    const total = totalMRP - discount + shippingFee + platformFee;
-    return { totalMRP, discount, shippingFee, platformFee, total };
+  const removeFromCart = async (id) => {
+    try {
+      await axios.get(`http://api.slasaetrade.com/api/cart/remove-item/${id}`);
+      fetchCartData();
+      fetchCartSummary();
+    } catch (error) {
+      console.error("Error removing item:", error);
+    }
   };
 
-  const { totalMRP, discount, shippingFee, platformFee, total } =
-    calculateTotal();
+  const updateQuantity = async (id, newQuantity) => {
+    if (newQuantity <= 0) return removeFromCart(id);
+    try {
+      await axios.get(`http://api.slasaetrade.com/api/cart/adjust-item`, { params: { productId: id, quantity: newQuantity } });
+      fetchCartData();
+      fetchCartSummary();
+    } catch (error) {
+      console.error("Error updating quantity:", error);
+    }
+  };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-100 to-gray-200 py-10">
+    <div className="min-h-screen bg-gray-100 py-10">
       <div className="container mx-auto px-6 flex flex-col md:flex-row gap-6">
         <div className="md:w-2/3 w-full">
           <h1 className="text-3xl font-bold mb-6 text-[#3087d1]">{t("Your Shopping Cart")}</h1>
@@ -60,79 +77,31 @@ const CartPage = () => {
             </div>
           ) : (
             cartItems.map((item) => (
-              <div
-                key={item.id}
-                className="flex items-center justify-between p-5 mb-4 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-24 h-24 object-cover rounded-lg"
-                />
+              <div key={item.id} className="flex items-center justify-between p-5 mb-4 bg-white rounded-lg shadow-md">
+                <img src={item.image} alt={item.title} className="w-24 h-24 object-cover rounded-lg" />
                 <div className="flex-1 ml-6">
                   <h2 className="text-lg font-semibold text-gray-800">{item.title}</h2>
                   <p className="text-black font-bold mt-1">₹{item.price}</p>
                   <div className="flex items-center mt-3">
-                    <button
-                      onClick={() =>
-                        updateQuantity(item.id, Math.max(1, item.quantity - 1))
-                      }
-                      className="px-3 py-1 bg-gray-200 rounded-l-md hover:bg-gray-300 text-gray-700"
-                    >
-                      -
-                    </button>
-                    <span className="px-4 text-gray-800">{item.quantity}</span>
-                    <button
-                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                      className="px-3 py-1 bg-gray-200 rounded-r-md hover:bg-gray-300 text-gray-700"
-                    >
-                      +
-                    </button>
+                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-3 py-1 bg-gray-200 rounded-l-md hover:bg-gray-300">-</button>
+                    <span className="px-4">{item.quantity}</span>
+                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="px-3 py-1 bg-gray-200 rounded-r-md hover:bg-gray-300">+</button>
                   </div>
                 </div>
-                <button
-                  onClick={() => removeFromCart(item.id)}
-                  className="px-4 py-2 !bg-[#3087d1] text-white rounded-full hover:bg-red-700 transition-colors"
-                >
-                {t("Remove")}
-                </button>
+                <button onClick={() => removeFromCart(item.id)} className="px-4 py-2 bg-red-600 text-white rounded-full">{t("Remove")}</button>
               </div>
             ))
           )}
         </div>
-
-        <div className="md:w-1/2 w-full mt-20 p-10 bg-white rounded-lg shadow-md h-[350px]">
+        <div className="md:w-1/3 w-full mt-10 p-6 bg-white rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-5 text-[#3087d1]">{t("Order Summary")}</h2>
-          <div className="mb-3">
-            <p className="flex justify-between text-gray-700">
-              <span>{t("Total MRP")}</span> <span>{t("")}{totalMRP.toFixed(2)}</span>
-            </p>
-            <p className="flex justify-between text-green-600">
-              <span>{t("Offer Discount")}</span> <span>{t("- AED")}{discount.toFixed(2)}</span>
-            </p>
-            <p className="flex justify-between text-gray-700">
-              <span>{t("Shipping Fee")}</span> <span>{t("AED")}{shippingFee.toFixed(2)}</span>
-            </p>
-            <p className="flex justify-between text-gray-700">
-              <span>{t("Platform Fee")}</span> <span>{t("AED")}{platformFee.toFixed(2)}</span>
-            </p>
-          </div>
-          <hr className="my-4 border-gray-300" />
-          <p className="flex justify-between text-lg font-bold text-gray-800">
-            <span>{t("Total")}</span> <span>{t("AED")}{total.toFixed(2)}</span>
-          </p>
-          <button
-  className="w-full mt-6 !bg-[#3087d1] text-white py-3 rounded-full font-semibold transition-colors"
-  onClick={() => {
-    if (cartItems.length > 0) {
-      navigate("/checkout"); // Replace with your actual checkout page route
-    } else {
-      alert("Your cart is empty.");
-    }
-  }}
->
- {t("Proceed to Checkout")}
-</button>
+          <p className="flex justify-between"><span>{t("Total MRP")}</span> <span>₹{cartSummary.totalMRP.toFixed(2)}</span></p>
+          <p className="flex justify-between text-green-600"><span>{t("Offer Discount")}</span> <span>-₹{cartSummary.discount.toFixed(2)}</span></p>
+          <p className="flex justify-between"><span>{t("Shipping Fee")}</span> <span>₹{cartSummary.shippingFee.toFixed(2)}</span></p>
+          <p className="flex justify-between"><span>{t("Platform Fee")}</span> <span>₹{cartSummary.platformFee.toFixed(2)}</span></p>
+          <hr className="my-4" />
+          <p className="flex justify-between text-lg font-bold"><span>{t("Total")}</span> <span>₹{cartSummary.total.toFixed(2)}</span></p>
+          <button className="w-full mt-6 bg-[#3087d1] text-white py-3 rounded-full" onClick={() => cartItems.length > 0 ? navigate("/checkout") : alert("Your cart is empty.")}>{t("Proceed to Checkout")}</button>
         </div>
       </div>
     </div>
