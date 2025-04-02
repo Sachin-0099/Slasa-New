@@ -65,7 +65,7 @@ const GridSection = ({ title, items, linkText, linkHref, specialLayout }) => {
   }
 
   return (
-    <div className="bg-white p-4 shadow rounded-lg w-full min-h-[250px]">
+    <div className="bg-white p-4 shadow rounded-lg w-full min-h-[250px] ">
       <h3 className="font-bold text-sm sm:text-base md:text-lg text-center border-b pb-2">
         {t(title)}
       </h3>
@@ -125,7 +125,7 @@ const Grid = ({ sections }) => {
 
   return (
     <div className="p-4  mt-15">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-8xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-8xl mx-auto bg-[#3087d1]">
         {loading ? (
           <p className="text-white text-center col-span-full text-sm sm:text-lg">
             {t("Loading products...")}
