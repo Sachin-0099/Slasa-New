@@ -44,7 +44,7 @@ const VerifyOtp = () => {
       
       
       
-      console.log(response)
+      
 
       if (response.data.success) {
         alert("OTP Verified Successfully! Please log in.");
