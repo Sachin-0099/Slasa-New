@@ -1,5 +1,9 @@
+
 import React from "react";
+import { useSelector } from "react-redux";
 import {  Routes, Route } from "react-router-dom";
+
+
 import Home from "./Pages/Home";
 import PageLayout from "./Components/PageLayout";
 import { ProductProvider } from "./Context/ProductContext";
@@ -110,23 +114,10 @@ import Solana from "./Components/Solana";
 import VerifyOtp from "./Components/VerifyOtp";
 import AuthPage from "./Components/AuthPage";
 import Confirmation from "./Components/Confirmation";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import AdminDashboard from "./Components/AdminDashboard";
+import Products from "./Components/Products";
+import  Analytics  from "./Components/Analytics";
+import FormAdd from "./Components/FormAdd";
 function App() {
   const { i18n } = useTranslation();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -169,6 +160,47 @@ function App() {
       <GridProvider>
     
           <Routes>
+
+            {/* Routing for the Dashboard pages */}
+
+            <Route
+              path="/admin"
+              element={
+                <PageLayout>
+                 <AdminDashboard/>
+                </PageLayout>
+              }
+            />
+             <Route
+              path="/products"
+              element={
+                <PageLayout>
+   <Products/>
+                </PageLayout>
+              }
+            />
+               <Route
+              path="/analytics"
+              element={
+                <PageLayout>
+                  <Analytics/>
+    
+                </PageLayout>
+              }
+            />
+               <Route
+              path="/formAdd"
+              element={
+                <PageLayout>
+                 <FormAdd/>
+    
+                </PageLayout>
+              }
+            />
+         
+
+
+
             <Route
               path="/"
               element={
@@ -923,6 +955,8 @@ function App() {
               </PageLayout>
               }
             />
+
+            
 
             
           </Routes>

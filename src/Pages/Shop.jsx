@@ -1,6 +1,9 @@
 import React from 'react'
 import Layout from '../Components/Layout'
 import ImageGrid from '../Components/ImageGrid'
+import ProductList from "../Components/ProductList"
+import ProductCard from '../Components/ProductCard'
+
 
 const Shop = () => {
   const images2 = [
@@ -17,9 +20,15 @@ const Shop = () => {
   ];
   return (
     <div>
+      <Layout/>
            <ImageGrid  images={images2} />
       
       <Layout/>
+      <div className="flex justify-center gap-4 flex-wrap p-4">
+        <ProductList/>
+     <ProductCard/>
+       
+      </div>
  
       
       
