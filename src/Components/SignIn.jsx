@@ -16,7 +16,7 @@ const SignIn = () => {
     setError(null);
 
     try {
-      const response = await axios.post("http://api.slasaetrade.com/api/user/login", {
+      const response = await axios.post("http://api.slasaetrade.com/api/user/Login", {
         username: email, // Change this if required
         password
       });

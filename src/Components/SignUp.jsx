@@ -95,7 +95,7 @@ const Signup = () => {
 
         
         // Navigate to OTP verification page, passing email
-        navigate("/verify", { state: { username: userDataObject.username, email: userDataObject.email } });
+        navigate("/verify", { state: { username: userDataObject.email, email: userDataObject.email } });
 
 
       
