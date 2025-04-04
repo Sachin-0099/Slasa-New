@@ -27,7 +27,9 @@ const SignIn = () => {
       localStorage.setItem("authToken", token);
       localStorage.setItem("user", JSON.stringify({ firstname, lastname }));
 
-      navigate("/"); // Change route if needed
+      navigate("/"); 
+      window.location.reload();
+      // Change route if needed
     } catch (error) {
       console.error("Login Error:", error.response?.data || error.message);
       setError(error.response?.data?.message || "Login failed! Try again.");

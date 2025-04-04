@@ -96,9 +96,8 @@ const Signup = () => {
         
         // Navigate to OTP verification page, passing email
         navigate("/verifyOtp", { state: { username: userDataObject.email, email: userDataObject.email } });
-
-
-      
+        window.location.reload(); // Auto-refresh after signup
+        
         // Reset form
         setFormData({
           email: "",
