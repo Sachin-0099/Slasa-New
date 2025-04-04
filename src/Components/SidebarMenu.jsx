@@ -7,8 +7,11 @@ import { useTranslation } from "react-i18next";
 
 const SideMenu = ({ isOpen, onClose }) => {
     const { t } = useTranslation();
-  const menuRef = useRef(null);
+    const [firstName, setFirstName] = useState("");
+      const [forceUpdate, setForceUpdate] = useState(0); // Used to force re-render
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  const menuRef = useRef(null);
   const [openSections, setOpenSections] = useState({});
 
   const toggleSection = useCallback((section) => {
@@ -17,6 +20,50 @@ const SideMenu = ({ isOpen, onClose }) => {
       [section]: !prev[section],
     }));
   }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("authToken");
+    localStorage.removeItem("user");
+
+    setIsLoggedIn(false);
+    setFirstName("");
+
+    // ✅ Dispatch event to update all components
+    window.dispatchEvent(new Event("authChange"));
+  };
+
+  const checkAuthStatus = () => {
+    const storedUser = localStorage.getItem("user");
+    const authToken = localStorage.getItem("authToken");
+
+    if (storedUser && authToken) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setFirstName(parsedUser.firstname || "User");
+        setIsLoggedIn(true);
+      } catch (error) {
+        console.error("Error parsing user data:", error);
+      }
+    } else {
+      setIsLoggedIn(false);
+    }
+  };
+
+  useEffect(() => {
+    checkAuthStatus(); // Initial check
+
+    // ✅ Listen for authChange events from SignIn
+    const handleAuthChange = () => {
+      checkAuthStatus();
+    };
+
+    window.addEventListener("authChange", handleAuthChange);
+
+    return () => {
+      window.removeEventListener("authChange", handleAuthChange);
+    };
+  }, []);
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -46,7 +93,7 @@ const SideMenu = ({ isOpen, onClose }) => {
         &#10006;
       </div>
       <div style={styles.header}>
-        <h2> {t("👨🏻 Hello Users")}</h2>
+      <h2>👨🏻 Hello, {firstName ? firstName : "User"}</h2>
       </div>
 
       <MenuSection title={t("Trending")} className="text-xl">
@@ -204,8 +251,16 @@ const SideMenu = ({ isOpen, onClose }) => {
       <MenuSection title={t("Help and Settings")}>
         <MenuItem text={t("Your Account")} link="/account" />
         <MenuItem text={t("Customer Section")} link="/customer" />
-        <MenuItem text={t("Sign In")} link="/signIn" />
-        <MenuItem text={t("Sign Up")} link="/signUp" />
+        {isLoggedIn ? (
+          <button onClick={handleLogout} >
+            <MenuItem text={t("Log Out")} link="/" />
+          </button>
+      ) : (
+        <div className="flex flex-col space-y-2 mt-4">
+          <MenuItem text={t("Sign In")} link="/signIn" />
+          <MenuItem text={t("Sign Up")} link="/signUp" />
+        </div>
+      )}
       </MenuSection>
     </div>
   );

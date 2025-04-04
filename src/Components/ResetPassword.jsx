@@ -38,7 +38,7 @@ const VerifyOtp = () => {
 
     try {
       const response = await axios.post(
-        "http://api.slasaetrade.com/api/forgot-password/verify",
+        "http://api.slasaetrade.com/api/verifyOtp",
         null, // No body, using params instead
         {
           params: { otp, role: "USER", username },
@@ -109,9 +109,6 @@ const VerifyOtp = () => {
 };
 
 export default VerifyOtp;
-
-
-
 
 
 
