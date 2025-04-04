@@ -109,7 +109,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import { LanguageProvider } from "./Context/LanguageContext"; 
 import WalletContext from "./Context/WalletProvider";
-
+import ResetPassword from "./Components/ResetPassword";
 import Solana from "./Components/Solana";
 import VerifyOtp from "./Components/VerifyOtp";
 import AuthPage from "./Components/AuthPage";
@@ -118,6 +118,7 @@ import AdminDashboard from "./Components/AdminDashboard";
 import Products from "./Components/Products";
 import  Analytics  from "./Components/Analytics";
 import FormAdd from "./Components/FormAdd";
+import ForgotPassword from "./Components/ForgotPassword";
 function App() {
   const { i18n } = useTranslation();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -234,13 +235,15 @@ function App() {
               }
             />
             <Route
-              path="/verify"
+              path="/verifyOtp"
               element={
                 <PageLayout>
              <VerifyOtp/>
                 </PageLayout>
               }
             />
+             <Route path="/forgot-password" element={<ForgotPassword />} />
+             <Route path="/reset-password" element={<ResetPassword />} />
             {/* Routing for the product pages */}
             <Route path="/" element={<ProductList />} />
             <Route path="/product-details/:id" element={<ProductDetail />} />

@@ -10,7 +10,6 @@ const PageLayout = ({ children }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log("Scroll Y Position:", window.scrollY); // Debugging
       setHideHeaderTop(window.scrollY > 30);
     };
 
