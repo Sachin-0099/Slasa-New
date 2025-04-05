@@ -41,10 +41,10 @@ const HeroSection = ({
             {slides.map((slide, index) => (
               <div key={index} className="w-full h-[30vh] bg-red-300 md:h-[30vh] lg:h-[40vh] xl:h-[60vh]">
               <img
-  src={slide}
-  alt={`Hero Background ${index + 1}`}
-  className="w-full h-full object-cover object-center bg-white"
-/>
+              src={slide}
+              alt={`Hero Background ${index + 1}`}
+              className="w-full h-full object-cover object-center bg-white"
+              />
 
               </div>
             ))}
