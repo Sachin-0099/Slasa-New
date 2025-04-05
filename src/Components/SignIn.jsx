@@ -5,6 +5,7 @@ import { useNavigate, Link } from "react-router-dom";
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("USER"); // Default role is USER
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
@@ -16,20 +17,29 @@ const SignIn = () => {
 
     try {
       const response = await axios.post("http://api.slasaetrade.com/api/user/Login", {
-        username: email, // Change this if required
+        username: email,
         password,
+        role,
       });
 
-      console.log("Login Successful:", response.data);
       const { firstname, lastname, token } = response.data;
 
-      // Store in localStorage
+      // Save token and user details
       localStorage.setItem("authToken", token);
-      localStorage.setItem("user", JSON.stringify({ firstname, lastname }));
+      localStorage.setItem("user", JSON.stringify({ firstname, lastname, role }));
 
+<<<<<<< Updated upstream
       navigate("/"); 
       window.location.reload();
       // Change route if needed
+=======
+      // Navigate based on role
+      if (role === "ADMIN") {
+        navigate("/admin/dashboard");
+      } else {
+        navigate("/");
+      }
+>>>>>>> Stashed changes
     } catch (error) {
       console.error("Login Error:", error.response?.data || error.message);
       setError(error.response?.data?.message || "Login failed! Try again.");
@@ -46,6 +56,19 @@ const SignIn = () => {
         {error && <p className="text-red-500 text-center mb-4">{error}</p>}
 
         <form onSubmit={handleLogin} className="space-y-4">
+          {/* Role Selection */}
+          <div>
+            <label className="block text-gray-700 text-sm font-medium mb-1">Login As</label>
+            <select
+              value={role}
+              onChange={(e) => setRole(e.target.value)}
+              className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#3087d1]"
+            >
+              <option value="USER">User</option>
+              <option value="ADMIN">Admin</option>
+            </select>
+          </div>
+
           {/* Email Input */}
           <div>
             <label className="block text-gray-700 text-sm font-medium mb-1">Email</label>

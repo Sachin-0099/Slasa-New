@@ -6,15 +6,16 @@ import { Gift, Tag, RefreshCcw, ShoppingBag } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Signup = () => {
-  const { t, i18n } = useTranslation(); 
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
   const benefits = [
     { icon: Gift, text: "Earn Shukrans on every purchase" },
     { icon: Tag, text: "Get exclusive offers & Coupons" },
     { icon: RefreshCcw, text: "Instant refund with Shukran Pay" },
     { icon: ShoppingBag, text: "Use balance to shop online and in-store" },
   ];
-  
-  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     firstname: "",
@@ -25,9 +26,9 @@ const Signup = () => {
     agree: false,
   });
 
+  const [userType, setUserType] = useState("user"); // "user" or "admin"
   const [errors, setErrors] = useState({});
   const [userData, setUserData] = useState(null);
- 
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -80,8 +81,10 @@ const Signup = () => {
       password: formData.password.trim(),
     };
 
+    const endpoint = userType === "admin" ? "/api/admin/signup" : "/api/user/signup";
+
     try {
-      const response = await axios.post(`${API_URL}/api/user/signup`, userDataObject, {
+      const response = await axios.post(`${API_URL}${endpoint}`, userDataObject, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -89,16 +92,16 @@ const Signup = () => {
 
       if (response.data.status) {
         setUserData(response.data.data);
-        console.log("Signup successful:", response.data);
         alert("Signup successful! Please verify your email.");
-        console.log("✅ Navigating with:", userDataObject.username, userDataObject.email);
 
-        
-        // Navigate to OTP verification page, passing email
         navigate("/verifyOtp", { state: { username: userDataObject.email, email: userDataObject.email } });
+<<<<<<< Updated upstream
         window.location.reload(); // Auto-refresh after signup
         
         // Reset form
+=======
+
+>>>>>>> Stashed changes
         setFormData({
           email: "",
           firstname: "",
@@ -108,10 +111,10 @@ const Signup = () => {
           confirmPassword: "",
           agree: false,
         });
-      
+
         setErrors({});
       }
-      
+
     } catch (error) {
       console.error("Signup error:", error.response?.data || error.message);
       alert(error.response?.data?.message || "Signup failed!");
@@ -120,12 +123,36 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-          <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl border-1">
+      <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl border-1">
         {/* Signup Form */}
         <div className="w-full md:w-1/2 p-4 border-1">
           <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">
-          {t("Create an Account")}
+            {userType === "admin" ? "Create Admin Account" : t("Create an Account")}
           </h2>
+
+          {/* User/Admin Switch */}
+          <div className="flex justify-center mb-4 space-x-4">
+            <label className="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="userType"
+                value="user"
+                checked={userType === "user"}
+                onChange={() => setUserType("user")}
+              />
+              <span>User</span>
+            </label>
+            <label className="flex items-center space-x-2">
+              <input
+                type="radio"
+                name="userType"
+                value="admin"
+                checked={userType === "admin"}
+                onChange={() => setUserType("admin")}
+              />
+              <span>Admin</span>
+            </label>
+          </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
             {["firstname", "lastname", "username", "email"].map((field) => (
@@ -173,7 +200,7 @@ const Signup = () => {
                 className="w-4 h-4 text-[#3087d1] border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
               />
               <label className="ml-2 text-sm text-gray-600">
-               {t("I agree to the")}{" "}
+                {t("I agree to the")}{" "}
                 <a href="#" className="text-blue-500 hover:underline">
                   {t("Terms and Conditions")}
                 </a>
@@ -185,36 +212,33 @@ const Signup = () => {
               type="submit"
               className="w-full !bg-[#3087d1] text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
             >
-             {t("Sign Up")}
+              {t("Sign Up")}
             </button>
           </form>
         </div>
 
-     <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col items-center">
+        {/* Right Side */}
+        <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col items-center">
+          <div className="w-full bg-gray-100 p-4 rounded-lg mb-4 text-center">
+            <h3 className="text-lg font-semibold text-gray-700">
+              {t("Link your Shukran account to earn benefits when you shop")}
+            </h3>
+          </div>
 
-      {/* Title Section */}
-      <div className="w-full bg-gray-100 p-4 rounded-lg mb-4 text-center ">
-        <h3 className="text-lg font-semibold text-gray-700">
-        {t("Link your Shukran account to earn benefits when you shop")}
-        </h3>
-      </div>
+          <img src="/Images/Untitled design.svg" alt="Shukran" className="w-40 h-40 mb-4" />
 
-      {/* Logo */}
-      <img src="/Images/Untitled design.svg" alt="Shukran" className="w-40 h-40 mb-4" />
-
-      {/* Benefits List */}
-      <ul className="mt-2 space-y-4 text-sm text-gray-600">
-        {benefits.map(({ icon: Icon, text }, index) => (
-          <li
-            key={index}
-            className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200 transition"
-          >
-            <Icon className="text-[#3087d1] w-5 h-5" />
-            {text}
-          </li>
-        ))}
-      </ul>
-    </div>
+          <ul className="mt-2 space-y-4 text-sm text-gray-600">
+            {benefits.map(({ icon: Icon, text }, index) => (
+              <li
+                key={index}
+                className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200 transition"
+              >
+                <Icon className="text-[#3087d1] w-5 h-5" />
+                {text}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
