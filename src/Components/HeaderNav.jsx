@@ -9,9 +9,29 @@ import { useTranslation } from "react-i18next";
 const HeaderNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
-  const [firstName, setFirstName] = useState(null); // Fix: Store first name
-  const [isLoggedIn, setIsLoggedIn] = useState(false); // Fix: Store login status
+  const [userName, setUserName] = useState(null);
   const { t, i18n } = useTranslation();
+
+  // ✅ Fetch and update userName from localStorage
+  useEffect(() => {
+    const fetchUserName = () => {
+      const name = localStorage.getItem("userName");
+      setUserName(name);
+    };
+
+    fetchUserName(); // initial fetch on component mount
+
+    // Listen for custom "userLogin" event to update userName
+    window.addEventListener("userLogin", fetchUserName);
+
+    // Optional: listen for localStorage updates from other tabs
+    window.addEventListener("storage", fetchUserName);
+
+    return () => {
+      window.removeEventListener("userLogin", fetchUserName);
+      window.removeEventListener("storage", fetchUserName);
+    };
+  }, []);
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -20,54 +40,18 @@ const HeaderNav = () => {
     setShowLanguageDropdown(false);
   };
 
-  const checkAuthStatus = () => {
-    const storedUser = localStorage.getItem("user");
-    const authToken = localStorage.getItem("authToken");
-
-    if (storedUser && authToken) {
-      try {
-        const parsedUser = JSON.parse(storedUser);
-        setFirstName(parsedUser.firstname || "User"); // Fix: Set first name
-        setIsLoggedIn(true);
-      } catch (error) {
-        console.error("Error parsing user data:", error);
-      }
-    } else {
-      setIsLoggedIn(false);
-      setFirstName(null); // Fix: Clear name when logged out
-    }
-  };
-  
-  useEffect(() => {
-    checkAuthStatus(); // Initial check
-
-    // ✅ Listen for authChange events from SignIn
-    const handleAuthChange = () => {
-      checkAuthStatus();
-    };
-
-    window.addEventListener("authChange", handleAuthChange);
-
-    return () => {
-      window.removeEventListener("authChange", handleAuthChange);
-    };
-  }, []);
-
-
   return (
     <>
       <header className="py-2 bg-white shadow-md w-full">
         <div className="sm:px-4 px-2 md:px-4 flex items-center justify-between flex-wrap">
-          {/* Left Section - Menu Button and Logo */}
+          {/* Left section - Hamburger and Logo */}
           <div className="flex items-center flex-1 md:flex-none">
             <button
-              className="flex items-center !bg-white text-black hover:text-[#3087d1] bg-white"
+              className="flex items-center text-black hover:text-[#3087d1] !bg-white"
               onClick={() => setIsMenuOpen(true)}
             >
               <MdOutlineMenu size={30} />
             </button>
-
-            {/* Logo */}
             <div className="flex justify-center flex-grow lg:flex-grow-0">
               <div className="w-36 sm:w-40 h-20 sm:h-22 mr-6">
                 <img
@@ -79,7 +63,7 @@ const HeaderNav = () => {
             </div>
           </div>
 
-          {/* Search Bar */}
+          {/* Middle - Search */}
           <div className="hidden md:flex flex-1 max-w-xl mx-4 lg:mx-6">
             <div className="relative w-full">
               <input
@@ -90,24 +74,26 @@ const HeaderNav = () => {
             </div>
           </div>
 
-          {/* Right Section - Desktop Navigation */}
+          {/* Right - Desktop nav */}
           <div className="hidden lg:flex items-center space-x-4 xl:space-x-5">
-            <a className="text-base xl:text-lg font-medium hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/acrylic">
+            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/acrylic">
               {t("Acrylic")}
             </a>
-            <a className="text-base xl:text-lg font-medium hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/shop">
+            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/shop">
               {t("Shops")}
             </a>
-            <a className="text-base xl:text-lg font-medium hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/photography">
+            <a className="text-base xl:text-lg font-medium transition-all duration-200 ease-in-out hover:text-[#3087d1] hover:border-2 rounded-md border-[#3087d1] px-2 py-1" href="/photography">
               {t("Photography & Videography")}
             </a>
 
-            {/* User Authentication */}
-            <a className="flex items-center text-base xl:text-lg hover:text-[#3087d1]" href={isLoggedIn ? "/profile" : "/signin"}>
+            {/* User Icon */}
+            <a className="flex items-center text-base xl:text-lg hover:text-[#3087d1]" href={userName ? "/profile" : "/signin"}>
               <div className="w-6 h-6 rounded-full border border-black flex items-center justify-center text-sm font-bold">
-                {isLoggedIn ? firstName.charAt(0).toUpperCase() : "S"}
+                {userName ? userName.charAt(0).toUpperCase() : "S"}
               </div>
-              <span className="ml-2">{isLoggedIn ? firstName : t("Sign Up / Sign In")}</span>
+              <span className="ml-2">
+                {userName ? userName : t("Sign Up / Sign In")}
+              </span>
             </a>
 
             <a href="/wishlist">
@@ -117,7 +103,7 @@ const HeaderNav = () => {
               <FiShoppingBag size={24} className="cursor-pointer hover:text-[#3087d1]" />
             </a>
 
-            {/* Language Selector */}
+            {/* Language Switcher */}
             <div className="relative">
               <CiGlobe
                 size={24}
@@ -125,21 +111,83 @@ const HeaderNav = () => {
                 onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
               />
               {showLanguageDropdown && (
-                <div className="absolute right-0 mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50">
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("en")}>
-                    English
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("fr")}>
-                    Français
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("hi")}>
-                    हिन्दी
-                  </button>
-                  <button className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100" onClick={() => changeLanguage("ar")}>
-                    Arabic
-                  </button>
+                <div
+                  className={`absolute ${
+                    document.documentElement.dir === "rtl" ? "left-0" : "right-0"
+                  } mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50`}
+                >
+                  {["en", "fr", "hi", "ar"].map((lang) => (
+                    <button
+                      key={lang}
+                      className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 !bg-white"
+                      onClick={() => changeLanguage(lang)}
+                    >
+                      {lang === "en"
+                        ? "English"
+                        : lang === "fr"
+                        ? "Français"
+                        : lang === "hi"
+                        ? "हिन्दी"
+                        : "Arabic"}
+                    </button>
+                  ))}
                 </div>
               )}
+            </div>
+          </div>
+
+          {/* Mobile Icons */}
+          <div className="flex lg:hidden flex-nowrap items-center space-x-3 sm:space-x-2">
+            <a href="/wishlist">
+              <CiHeart size={22} className="cursor-pointer hover:text-[#3087d1]" />
+            </a>
+            <a href="/cart">
+              <FiShoppingBag size={22} className="cursor-pointer hover:text-[#3087d1]" />
+            </a>
+
+            <div className="relative text-black">
+              <CiGlobe
+                size={22}
+                className="cursor-pointer hover:text-[#3087d1]"
+                onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+              />
+              {showLanguageDropdown && (
+                <div
+                  className={`absolute ${
+                    document.documentElement.dir === "rtl" ? "left-0" : "right-0"
+                  } mt-2 w-28 bg-white shadow-md border border-gray-200 rounded-md z-50`}
+                >
+                  {["en", "fr", "hi", "ar"].map((lang) => (
+                    <button
+                      key={lang}
+                      className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100"
+                      onClick={() => changeLanguage(lang)}
+                    >
+                      {lang === "en"
+                        ? "English"
+                        : lang === "fr"
+                        ? "Français"
+                        : lang === "hi"
+                        ? "हिन्दी"
+                        : "Arabic"}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile Search */}
+          <div className="w-full px-4 sm:px-6 py-2 md:hidden">
+            <div className="relative w-full">
+              <input
+                className="h-10 w-full bg-white rounded-md pl-10 pr-4 border border-gray-300 shadow-sm focus:border-[#3087d1] placeholder-gray-600"
+                placeholder={t("What do you want?")}
+              />
+              <FaSearch
+                className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-[#3087d1]"
+                size={20}
+              />
             </div>
           </div>
         </div>
