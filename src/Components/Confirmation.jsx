@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+// import PayPalButton from "./PayPalButton";
+// import Product from "./ProductList"
 const Confirmation = () => {
   const navigate = useNavigate();
   const [orderDetails, setOrderDetails] = useState(null);
@@ -97,6 +98,7 @@ const Confirmation = () => {
         }} 
         onClick={handleContinueShopping}
       >
+        {/* <PayPalButton amount={product.price} /> */}
         Continue Shopping
       </button>
     </div>
