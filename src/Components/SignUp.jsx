@@ -95,13 +95,6 @@ const Signup = () => {
         alert("Signup successful! Please verify your email.");
 
         navigate("/verifyOtp", { state: { username: userDataObject.email, email: userDataObject.email } });
-<<<<<<< Updated upstream
-        window.location.reload(); // Auto-refresh after signup
-        
-        // Reset form
-=======
-
->>>>>>> Stashed changes
         setFormData({
           email: "",
           firstname: "",

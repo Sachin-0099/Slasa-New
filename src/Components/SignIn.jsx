@@ -28,18 +28,12 @@ const SignIn = () => {
       localStorage.setItem("authToken", token);
       localStorage.setItem("user", JSON.stringify({ firstname, lastname, role }));
 
-<<<<<<< Updated upstream
-      navigate("/"); 
-      window.location.reload();
-      // Change route if needed
-=======
       // Navigate based on role
       if (role === "ADMIN") {
         navigate("/admin/dashboard");
       } else {
         navigate("/");
       }
->>>>>>> Stashed changes
     } catch (error) {
       console.error("Login Error:", error.response?.data || error.message);
       setError(error.response?.data?.message || "Login failed! Try again.");

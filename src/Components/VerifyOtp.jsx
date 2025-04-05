@@ -6,28 +6,17 @@ const VerifyOtp = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-<<<<<<< Updated upstream
-  // Extract username from state (passed from Signup page)
-  const username = location.state?.username || "";
-  
-=======
   // Extract username and role from state (passed from Signup page)
   const username = location.state?.username || "";
   const role = location.state?.role || "USER"; // Default to USER if not passed
 
->>>>>>> Stashed changes
   const [otp, setOtp] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-<<<<<<< Updated upstream
-    if (!username) {
-      alert("No username found! Redirecting to signup.");
-=======
     if (!username || !role) {
       alert("Missing info! Redirecting to signup.");
->>>>>>> Stashed changes
       navigate("/signup");
     }
   }, [username, role, navigate]);
@@ -39,41 +28,23 @@ const VerifyOtp = () => {
 
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
-<<<<<<< Updated upstream
-    
-=======
-
->>>>>>> Stashed changes
     if (otp.length !== 6) {
       setError("OTP must be 6 digits.");
       return;
     }
 
-<<<<<<< Updated upstream
-    setLoading(true); // Set loading before API call
-=======
     setLoading(true);
->>>>>>> Stashed changes
 
     try {
       const response = await axios.post("http://api.slasaetrade.com/api/verifyOtp", null, {
         params: {
           otp,
-<<<<<<< Updated upstream
-          role: "USER",
-          username, // Ensure this is correctly passed
-=======
           role: role.toUpperCase(), // Pass "USER" or "ADMIN"
           username,
->>>>>>> Stashed changes
         },
       });
 
       if (response.data.success) {
-<<<<<<< Updated upstream
-        alert("OTP Verified Successfully! Please log in.");
-        navigate("/signin"); // Redirect to login page after successful verification
-=======
         alert("OTP Verified Successfully!");
 
         if (role.toUpperCase() === "ADMIN") {
@@ -81,7 +52,6 @@ const VerifyOtp = () => {
         } else {
           navigate("/signin"); // Redirect to sign-in for users
         }
->>>>>>> Stashed changes
       } else {
         setError(response.data.message || "Invalid OTP. Please try again.");
       }
@@ -93,17 +63,11 @@ const VerifyOtp = () => {
   };
 
   return (
-<<<<<<< Updated upstream
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-blue-100 to-blue-300">
-      <div className="bg-white p-8 rounded-xl shadow-xl w-full max-w-md">
-        <h2 className="text-3xl font-semibold text-gray-800 text-center mb-4">🔐 Verify OTP</h2>
-=======
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
       <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-semibold text-gray-700 text-center mb-4">
           Verify OTP ({role})
         </h2>
->>>>>>> Stashed changes
         <p className="text-gray-600 text-center mb-6">
           Enter the OTP sent to your email to continue.
         </p>
@@ -144,11 +108,7 @@ const VerifyOtp = () => {
         </form>
 
         <p className="text-center text-gray-600 mt-4">
-<<<<<<< Updated upstream
-          Didn't receive OTP? <span className="text-blue-500 cursor-pointer hover:underline">Resend</span>
-=======
           Didn't receive OTP?
->>>>>>> Stashed changes
         </p>
       </div>
     </div>
@@ -156,13 +116,3 @@ const VerifyOtp = () => {
 };
 
 export default VerifyOtp;
-<<<<<<< Updated upstream
-
-
-
-
-
-
-
-=======
->>>>>>> Stashed changes
