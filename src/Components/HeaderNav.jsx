@@ -61,7 +61,7 @@ const HeaderNav = () => {
           {/* Left Section - Menu Button and Logo */}
           <div className="flex items-center flex-1 md:flex-none">
             <button
-              className="flex items-center text-black hover:text-[#3087d1] bg-white"
+              className="flex items-center !bg-white text-black hover:text-[#3087d1] bg-white"
               onClick={() => setIsMenuOpen(true)}
             >
               <MdOutlineMenu size={30} />

@@ -30,7 +30,7 @@ const SignIn = () => {
 
       // Navigate based on role
       if (role === "ADMIN") {
-        navigate("/admin/dashboard");
+        navigate("/admin");
       } else {
         navigate("/");
       }
