@@ -70,6 +70,18 @@ Global styles to prevent overflow
   .main-content > * {
     width: 100%;
   }
+
+  .specButton{
+
+    border-radius: 50px!important;
+
+
+  }
+  .specButton:hover{
+    color: #3087d1!important;
+    background-color: whitesmoke;
+
+  }
   
   /* Responsive adjustments */
   @media (max-width: 768px) {
@@ -113,4 +125,20 @@ html[dir="ltr"] {
 
 
   
-  
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 2s ease-in-out infinite;
+}

@@ -17,9 +17,9 @@ const HeaderMain = () => {
             <a href="/shop" className="text-black text-base sm:text-sm">{t("Shop")}</a>
           </div>
           {/* Category 3 */}
-          <div className="flex-shrink-0 px-3 border-l-2 border-black h-full">
+          {/* <div className="flex-shrink-0 px-3 border-l-2 border-black h-full">
             <a href="/photography" className="text-black text-base sm:text-sm">{t("Photography & VideoGraphy")}</a>
-          </div>
+          </div> */}
           {/* Category 4 */}
           <div className="flex-shrink-0 px-3 border-l-2 border-black h-full">
             <a href="others" className="text-black text-base sm:text-sm">{t("Other Services")}</a>

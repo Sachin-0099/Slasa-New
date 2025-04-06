@@ -36,7 +36,7 @@ const VerifyOtp = () => {
       const response = await axios.post("http://api.slasaetrade.com/api/verifyOtp", null, {
         params: {
           otp,
-          role: "user",
+          role: "USER",
           username, // Ensure this is correctly passed
         },
       });
@@ -46,7 +46,7 @@ const VerifyOtp = () => {
       
       
 
-      if (response.data.status) {
+      if (response.data.success) {
         alert("OTP Verified Successfully! Please log in.");
         navigate("/login"); // Redirect to login page after successful verification
       } else {

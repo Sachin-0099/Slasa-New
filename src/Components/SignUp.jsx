@@ -4,17 +4,13 @@ import { API_URL } from "../utils/Api";
 import { useNavigate } from "react-router-dom";
 import { Gift, Tag, RefreshCcw, ShoppingBag } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import Lottie from "lottie-react";
+import loginBgAnimation from "../LootieFiles/login.json"; // Add your Lottie animation
 
 const Signup = () => {
-  const { t, i18n } = useTranslation(); 
-  const benefits = [
-    { icon: Gift, text: "Earn Shukrans on every purchase" },
-    { icon: Tag, text: "Get exclusive offers & Coupons" },
-    { icon: RefreshCcw, text: "Instant refund with Shukran Pay" },
-    { icon: ShoppingBag, text: "Use balance to shop online and in-store" },
-  ];
-  
+  const { t } = useTranslation();
   const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     email: "",
     firstname: "",
@@ -24,10 +20,14 @@ const Signup = () => {
     confirmPassword: "",
     agree: false,
   });
-
   const [errors, setErrors] = useState({});
-  const [userData, setUserData] = useState(null);
- 
+
+  const benefits = [
+    { icon: Gift, text: "Earn Shukrans on every purchase" },
+    { icon: Tag, text: "Get exclusive offers & Coupons" },
+    { icon: RefreshCcw, text: "Instant refund with Shukran Pay" },
+    { icon: ShoppingBag, text: "Use balance to shop online and in-store" },
+  ];
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -36,10 +36,7 @@ const Signup = () => {
       [name]: type === "checkbox" ? checked : value,
     });
 
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      [name]: "",
-    }));
+    setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
   const validatePassword = (password) => {
@@ -49,21 +46,16 @@ const Signup = () => {
 
   const validateForm = () => {
     let newErrors = {};
-
     if (!formData.firstname.trim()) newErrors.firstname = "First Name is required";
     if (!formData.lastname.trim()) newErrors.lastname = "Last Name is required";
     if (!formData.username.trim()) newErrors.username = "Username is required";
     if (!formData.email.trim()) newErrors.email = "Email is required";
-
     if (!formData.password.trim()) newErrors.password = "Password is required";
     else if (!validatePassword(formData.password))
-      newErrors.password = "Password must be at least 8 characters long, include an uppercase letter, a number, and a special character.";
-
+      newErrors.password = "Password must contain at least 8 characters, uppercase, number & special char.";
     if (formData.password !== formData.confirmPassword)
       newErrors.confirmPassword = "Passwords do not match";
-
     if (!formData.agree) newErrors.agree = "You must agree to the terms";
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -72,7 +64,7 @@ const Signup = () => {
     e.preventDefault();
     if (!validateForm()) return;
 
-    const userDataObject = {
+    const userData = {
       email: formData.email.trim(),
       firstname: formData.firstname.trim(),
       lastname: formData.lastname.trim(),
@@ -81,25 +73,15 @@ const Signup = () => {
     };
 
     try {
-      const response = await axios.post(`${API_URL}/api/user/signup`, userDataObject, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
+      const response = await axios.post(`${API_URL}/api/user/signup`, userData);
       if (response.data.status) {
-        setUserData(response.data.data);
-        console.log("Signup successful:", response.data);
         alert("Signup successful! Please verify your email.");
-        console.log("✅ Navigating with:", userDataObject.username, userDataObject.email);
-
-        
-        // Navigate to OTP verification page, passing email
-        navigate("/verify", { state: { username: userDataObject.username, email: userDataObject.email } });
-
-
-      
-        // Reset form
+        navigate("/verify", {
+          state: {
+            username: userData.email,
+            email: userData.email,
+          },
+        });
         setFormData({
           email: "",
           firstname: "",
@@ -109,47 +91,47 @@ const Signup = () => {
           confirmPassword: "",
           agree: false,
         });
-      
-        setErrors({});
       }
-      
-    } catch (error) {
-      console.error("Signup error:", error.response?.data || error.message);
-      alert(error.response?.data?.message || "Signup failed!");
+    } catch (err) {
+      alert(err.response?.data?.message || "Signup failed!");
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-          <div className="flex flex-col md:flex-row bg-white p-6 rounded-lg shadow-lg w-full max-w-4xl border-1">
-        {/* Signup Form */}
-        <div className="w-full md:w-1/2 p-4 border-1">
-          <h2 className="text-2xl font-semibold text-gray-700 text-center mb-6">
-          {t("Create an Account")}
-          </h2>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#eaf3fb] to-white relative overflow-hidden px-4 py-10">
+      {/* Background Animation */}
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+        <Lottie animationData={loginBgAnimation} loop className="w-full h-full object-cover" />
+      </div>
 
+      <div className="relative z-10 w-full max-w-5xl bg-white shadow-xl rounded-3xl overflow-hidden flex flex-col md:flex-row">
+        {/* Left Form Section */}
+        <div className="w-full md:w-1/2 p-8">
+          <h2 className="text-3xl font-bold text-center text-[#3087d1] mb-4">
+            {t("Create an Account")}
+          </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             {["firstname", "lastname", "username", "email"].map((field) => (
               <div key={field}>
-                <label className="block text-gray-600 text-sm font-medium mb-1">
-                  {field.charAt(0).toUpperCase() + field.slice(1)}
+                <label className="block text-sm font-medium text-gray-600 capitalize">
+                  {field}
                 </label>
                 <input
                   type="text"
                   name={field}
                   value={formData[field]}
                   onChange={handleChange}
-                  className={`w-full p-2 border rounded-md focus:outline-none focus:ring-2 ${
-                    errors[field] ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-blue-500"
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none ${
+                    errors[field] ? "border-red-500" : "border-gray-300 focus:ring-2 focus:ring-[#3087d1]"
                   }`}
                 />
                 {errors[field] && <p className="text-red-500 text-sm">{errors[field]}</p>}
               </div>
             ))}
 
-            {["password", "confirmPassword"].map((field, index) => (
-              <div key={index}>
-                <label className="block text-gray-600 text-sm font-medium mb-1">
+            {["password", "confirmPassword"].map((field, i) => (
+              <div key={i}>
+                <label className="block text-sm font-medium text-gray-600">
                   {field === "password" ? "Password" : "Confirm Password"}
                 </label>
                 <input
@@ -157,65 +139,59 @@ const Signup = () => {
                   name={field}
                   value={formData[field]}
                   onChange={handleChange}
-                  className={`w-full p-2 border rounded-md focus:outline-none focus:ring-2 ${
-                    errors[field] ? "border-red-500 focus:ring-red-500" : "border-gray-300 focus:ring-blue-500"
+                  className={`w-full px-3 py-2 border rounded-lg focus:outline-none ${
+                    errors[field] ? "border-red-500" : "border-gray-300 focus:ring-2 focus:ring-[#3087d1]"
                   }`}
                 />
                 {errors[field] && <p className="text-red-500 text-sm">{errors[field]}</p>}
               </div>
             ))}
 
-            <div className="flex items-center">
+            <div className="flex items-center text-sm">
               <input
                 type="checkbox"
                 name="agree"
                 checked={formData.agree}
                 onChange={handleChange}
-                className="w-4 h-4 text-[#3087d1] border-gray-300 rounded focus:ring-2 focus:ring-blue-500"
+                className="mr-2 rounded text-[#3087d1]"
               />
-              <label className="ml-2 text-sm text-gray-600">
-               {t("I agree to the")}{" "}
-                <a href="#" className="text-blue-500 hover:underline">
+              <span>
+                {t("I agree to the")}{" "}
+                <a href="#" className="text-[#3087d1] hover:underline">
                   {t("Terms and Conditions")}
                 </a>
-              </label>
+              </span>
             </div>
             {errors.agree && <p className="text-red-500 text-sm">{errors.agree}</p>}
 
             <button
               type="submit"
-              className="w-full !bg-[#3087d1] text-white py-2 rounded-md hover:bg-blue-700 transition duration-300"
+              className="w-full bg-[#3087d1] text-white py-2 rounded-lg hover:bg-[#246bb0] transition"
             >
-             {t("Sign Up")}
+              {t("Sign Up")}
             </button>
           </form>
         </div>
 
-     <div className="w-full md:w-1/2 p-4 sm:p-6 flex flex-col items-center">
-
-      {/* Title Section */}
-      <div className="w-full bg-gray-100 p-4 rounded-lg mb-4 text-center ">
-        <h3 className="text-lg font-semibold text-gray-700">
-        {t("Link your Shukran account to earn benefits when you shop")}
-        </h3>
-      </div>
-
-      {/* Logo */}
-      <img src="/Images/Untitled design.svg" alt="Shukran" className="w-40 h-40 mb-4" />
-
-      {/* Benefits List */}
-      <ul className="mt-2 space-y-4 text-sm text-gray-600">
-        {benefits.map(({ icon: Icon, text }, index) => (
-          <li
-            key={index}
-            className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-200 transition"
-          >
-            <Icon className="text-[#3087d1] w-5 h-5" />
-            {text}
-          </li>
-        ))}
-      </ul>
-    </div>
+        {/* Right Visual Section */}
+        <div className="w-full md:w-1/2 bg-[#f0f8ff] flex flex-col justify-center items-center p-6">
+        <img
+            src="/Images/Untitled design.svg"
+            alt="Logo"
+            className="w-32 sm:w-40 h-auto mb-4"
+            style={{ backgroundColor: "transparent",mixBlendMode:"multiply" }}
+          />          <h3 className="text-center text-lg font-semibold text-[#3087d1] mb-6">
+            {t("Link your Shukran account to earn benefits when you shop")}
+          </h3>
+          <ul className="space-y-4 text-gray-600 text-sm w-full max-w-xs">
+            {benefits.map(({ icon: Icon, text }, index) => (
+              <li key={index} className="flex items-center space-x-3 hover:bg-white px-3 py-2 rounded-lg transition">
+                <Icon className="w-5 h-5 text-[#3087d1]" />
+                <span>{text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

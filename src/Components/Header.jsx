@@ -18,13 +18,13 @@ const Header = () => {
       </div>
 
       {/* Right Section - About Image */}
-      <div className="w-full md:w-1/2">
+      {/* <div className="w-full md:w-1/2">
         <img 
           src={about} 
           alt="About" 
           className="w-full h-[40vh] md:h-[50vh] lg:h-[60vh] object-cover"
         />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -406,17 +406,17 @@ function App() {
             <Route
               path="/signin"
               element={
-                <PageLayout>
+                // <PageLayout>
                   <SignIn />
-                </PageLayout>
+                // </PageLayout>
               }
             />
             <Route
               path="/signup"
               element={
-                <PageLayout>
+                // <PageLayout>
                   <SignUp />
-                </PageLayout>
+                // </PageLayout>
               }
             />
             <Route
