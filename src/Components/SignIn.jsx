@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import loginAnimation from "../LootieFiles/login.json";
 import ParticlesBackground from "../Components/ParticlesBackground";
+import { API_URL } from "../utils/Api";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ const SignIn = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://api.slasaetrade.com/api/user/Login", {
+      const response = await axios.post(`${API_URL}/api/user/Login`, {
         username: email,
         password
       });
