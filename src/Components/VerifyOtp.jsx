@@ -44,11 +44,11 @@ const VerifyOtp = () => {
       
       
       
-      
+      console.log(response)
 
       if (response.data.success) {
         alert("OTP Verified Successfully! Please log in.");
-        navigate("/login"); // Redirect to login page after successful verification
+        navigate("/signin"); // Redirect to login page after successful verification
       } else {
         setError(response.data.message || "Invalid OTP. Please try again.");
       }
