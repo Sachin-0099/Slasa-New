@@ -1,3 +1,3 @@
 import axios from 'axios';
 
-export const API_URL = 'http://api.slasaetrade.com'; 
+export const API_URL = 'https://api.slasaetrade.com'; 
